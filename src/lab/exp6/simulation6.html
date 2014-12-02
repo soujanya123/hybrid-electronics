@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+
+<!--
+	This is a jQuery Tools standalone demo. Feel free to copy/paste.
+	                                                         
+	http://flowplayer.org/tools/demos/
+	
+	Do *not* reference CSS files and images from flowplayer.org when in production  
+
+	Enjoy!
+-->
+
+<head>
+	<title>Hybrid Lab Demo</title>
+
+	<!-- include the Tools -->
+	<script type="text/javascript" src="js/jquery.js"> </script>
+		<script src="js/jquery.tools.min.js"></script>
+		<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<link   type="text/css"  rel="stylesheet"  href="css/example.css"  />
+		<script type="text/javascript" src = "js/example.js"></script>
+		<script type="text/javascript" src="js/raphael.js"></script>
+		<script type="text/javascript" src="js/jquery.flot.js"></script>
+		<script type="text/javascript" src="js/utility.js"></script>
+	<!--		<script type="text/javascript" src="js/monostable.js"></script>-->
+		
+	
+	<!-- tab styling -->
+		<link   type="text/css"  rel="stylesheet"  href="css/tabs.css"  />
+	
+	
+	<!-- tab pane styling -->
+	<style>
+	div.wrap {
+		width:700px;
+		margin-bottom:40px;
+	}
+	
+	.wrap .pane  {	
+		background:#fff repeat-x 0 20px;
+		display:none;		
+		padding:20px;
+		border:1px solid #999;
+		border-top:0;
+		font-size:14px;	 
+		font-size:18px;
+		color:#456;	
+		padding-bottom: 20px;
+    padding-left: 9px;
+    padding-right: 20px;
+    padding-top: 11px;
+		
+		_background-image:none;
+	}
+	
+	.wrap .pane p {
+		font-size:38px;	
+		margin:-10px 0 -20px 0;	
+		text-align:right;
+		color:#578;
+	}
+	#header{
+	top:2px;
+	left:2px;
+	position:relative;
+	border:2px groove  #c4c4c4;
+	width:893px;
+	height:130px;
+	overflow:auto;
+	background : url("../images/ui-bg_gloss-wave_35_f6a828_500x100.png") repeat-x scroll 50% 50% #84BFDF;
+}
+.imag{position:absolute;z-index:9999;left:330px;top:4px;}
+	.imag1{position:absolute;z-index:9999;left:1000px;top:85px;}
+	</style>
+</head>
+
+<body>
+<div id = "tabs">
+<div id="header"><span style="font-size:20px; color: #FFFFFF;"><h3>&nbsp;Code Converter</h3></span><img class = "imag" src="../images/coep_logo_sim.png"><!--<a href="../../../logout.htm" ><img id="logout" class ="imag1" src="../../images/logout.png">--></a></div>
+
+
+	
+
+<div class="wrap" style="position:absolute; top:145px;">
+	<!-- experiment 2-->
+	<div class="wrap">
+		<ul class="tabs">
+			<li><a href="#">Binary to Gray</a></li>
+			<li><a href="#">Gray to Binary</a></li>
+			<li><a href="#">BCD to Excess</a></li>
+			<li><a href="#">Excess-3 to BCD</a></li>
+		</ul>
+		<!--Binary to Gray -->
+			<div class="pane">Binary to Gray
+			<div id="switches">
+				<img src="images/off.png" id = "b0_0" style = "position : absolute; top:321px ; left : 104px;"/>
+				<img src="images/off.png" id = "b1_1" style = "position : absolute; top:253px ; left : 104px;"/>
+				<img src="images/off.png" id = "b2_2" style = "position : absolute; top:188px ; left : 104px;"/>
+				<img src="images/off.png" id = "b3_3" style = "position : absolute; top:107px ; left : 104px;"/>
+			</div>
+				<div id = "b_tog_text"  style = "position : absolute; top:450px ; left : 145px; border:1px solid #333;width:50px;height = 30px"><input type="text"  id = "b_tog" size = 4/></div>
+				<img src="images/binarytogrey.png" id= "4bit" style = "position : absolute;top:119px ; left :154px;"/>
+				<div id = "g_tog_text"  style = "position : absolute; top:450px ; left : 723px; border:1px solid #333;width:50px;height = 30px"><input type="text"  id = "g_tog_text" size = 4 disabled="true" /></div>
+				
+				<img src="images/lightbulbleft.png" id = "bulb0" style = "position : absolute; top:311px ; left : 788px;"/>
+				<img src="images/lightbulbleft.png" id = "bulb1" style = "position : absolute; top:250px ; left : 788px;"/>
+				<img src="images/lightbulbleft.png" id = "bulb2" style = "position : absolute; top:183px ; left :788px;"/>
+				<img src="images/lightbulbleft.png" id = "bulb3" style = "position : absolute; top:111px ; left : 788px;"/>
+				<img src="images/binarygraph.png"id= "binarygraph" style = "position : absolute;top:529px ; left :4px;"/>
+				<img src="images/binarygraph1.png"id= "binarygraph1" style = "position : absolute;top:529px ; left :521px;"/>
+				<img src="images/binaryimg.png"id= "binaryimg" style = "position : absolute;top:412px ; left :211px;"/>
+			</div>
+		<!--Gray to Binary -->
+			<div class="pane">Gray to Binary 
+			<div id="switches1">
+				<img src="images/off.png" id = "g0_0" style = "position : absolute; top:289px ; left : 127px;"/>
+				<img src="images/off.png" id = "g1_1" style = "position : absolute; top:211px ; left : 127px;"/>
+				<img src="images/off.png" id = "g2_2" style = "position : absolute; top:127px ; left : 127px;"/>
+				<img src="images/off.png" id = "g3_3" style = "position : absolute; top:77px ; left : 126px;"/>
+			</div>
+				<div id = "g_graytobinary"  style = "position : absolute; top:390px ; left : 136px; border:1px solid #333;width:50px;height = 30px"><input type="text"  id = "b_tog"  size = 4/></div>
+				<img src="images/gray to binary.png"id= "graytobinary" style = "position : absolute;top:94px ; left :175px;"/>
+				<div id = "b_graytobinary"  style = "position : absolute; top:393px ; left : 735px; border:1px solid #333;width:50px;height = 30px"><input type="text"  id = "g_tog_text" size = 4 disabled="true" /></div>
+				<img src="images/lightbulbleft.png" id = "bulb4" style = "position : absolute; top:285px ; left : 620px;"/>
+				<img src="images/lightbulbleft.png" id = "bulb5" style = "position : absolute; top:207px ; left : 620px;"/>
+				<img src="images/lightbulbleft.png" id = "bulb6" style = "position : absolute; top:136px ; left : 620px;"/>
+				<img src="images/lightbulbleft.png" id = "bulb7" style = "position : absolute; top:84px ; left : 620px;"/>
+				<img src="images/graph2.png"id= "graph_excesstobcd" style = "position : absolute;top:495px ; left :491px;"/>
+				<img src="images/graphgraytobinary.png"id= "graph2_excesstobcd" style = "position : absolute;top:495px ; left :3px;"/>
+				<img src="images/graytobin.png"id= "img22_excesstobcd" style = "position : absolute;top:349px ; left :197px;"/>
+			</div>
+		<!--BCD to Excess -->
+			<div class="pane">BCD to Excess
+			
+				<!--<label id="e2_bte"> E2</label>
+				<label id="e1_bte"> E1</label>
+				<label id="e0_bte"> E0</label>-->
+				<img src="images/bcdtoexcess.png"id= "bcdtoexcess" style = "position : absolute;top:103px ; left :214px;"/>
+				<div id="switches2">
+				<img src="images/off.png" id = "b4_0" style = "position : absolute; top:352px ; left : 164px;"/>
+				<img src="images/off.png" id = "b5_1" style = "position : absolute; top:284px ; left : 164px;"/>
+				<img src="images/off.png" id = "b6_2" style = "position : absolute; top:231px ; left : 164px;"/>
+				<img src="images/off.png" id = "b7_3" style = "position : absolute; top:103px ; left : 164px;"/>
+				</div>
+				<img src="images/lightbulbleft.png" id = "bulb8" style = "position : absolute; top:392px ; left : 740px;"/>
+				<img src="images/lightbulbleft.png" id = "bulb9" style = "position : absolute; top:346px; left: 740px;"/>
+				<img src="images/lightbulbleft.png" id = "bulb10" style = "position : absolute;top: 234px; left: 740px;"/>
+				<img src="images/lightbulbleft.png" id = "bulb11" style = "position : absolute; top:133px ; left : 740px;"/>
+				<img src="images/graphbcdtoexcess.png"id= "graph_bcdtoexcess" style = "position : absolute;top:550px ; left :5px;"/>
+				<img src="images/excess3.png"id= "graph2_bcdtoexcess" style = "position : absolute;top:533px ; left :499px;"/>
+				<div id = "b_bcdtoexcess"  style = "position : absolute; top:469px ; left : 72px; border:1px solid #333;width:50px;height = 30px"><input type="text"  id = "b_tog" size = 6/></div>
+				<img src="images/img1.png"id= "img1_bcdtoexcess" style = "position : absolute;top:422px ; left :152px;"/>
+				<div id = "e_bcdtoe3"  style = "position : absolute; top:469px ; left : 765px; border:1px solid #333;width:50px;height = 30px"><input type="text"  id = "g_tog_text" size = 4 disabled="true" /></div>
+			</div>
+			
+		<!--Excess-3 to BCD -->
+			<div class="pane">Excess-3 to BCD 
+				<img src="images/excesstobcd.png"id= "excesstobcd" style = "position : absolute;top:60px ; left :214px;"/>
+				<div id="switches3">
+				<img src="images/off.png" id = "e0_0" style = "position : absolute; top:93px ; left : 163px;"/>
+				<img src="images/off.png" id = "e1_1" style = "position : absolute; top:161px ; left : 163px;"/>
+				<img src="images/off.png" id = "e2_2" style = "position : absolute; top:232px ; left : 163px;"/>
+				<img src="images/off.png" id = "e3_3" style = "position : absolute; top:311px ; left : 163px;"/>
+				</div>
+				<img src="images/lightbulbleft.png" id = "bulb12" style = "position : absolute; top:113px ; left : 748px;"/>
+				<img src="images/lightbulbleft.png" id = "bulb13" style = "position : absolute; top:183px ; left : 748px;"/>
+				<img src="images/lightbulbleft.png" id = "bulb14" style = "position : absolute; top:337px ; left : 748px;"/>
+				<img src="images/lightbulbleft.png" id = "bulb15" style = "position : absolute; top:251px ; left : 748px;"/>
+				<img src="images/excess3.png"id= "graph_excesstobcd" style = "position : absolute;top:531px ; left :7px;"/>
+				<img src="images/graphexcesstobcd.png"id= "graph2_excesstobcd" style = "position : absolute;top:531px ; left :502px;"/>
+				<div id = "e_excesstobcd"  style = "position : absolute; top:462px ; left : 109px; border:1px solid #333;width:50px;height = 30px"><input type="text"  id = "b_tog" size = 4/></div>
+				<img src="images/img22.png"id= "img22_excesstobcd" style = "position : absolute;top:419px ; left :169px;"/>
+				<div id = "b_excesstobcd"  style = "position : absolute; top:462px ; left : 704px; border:1px solid #333;width:50px;height = 30px"><input type="text"  id = "g_tog_text" size = 4 disabled="true" /></div>
+			</div>
+	</div>
+	</div>
+
+<div style="position:absolute; top:998px; width:897px;margin:0 auto;">
+			<div class="art-footer">
+                <div class="art-footer-t"></div>
+                <div class="art-footer-l"></div>
+                <div class="art-footer-b"></div>
+                <div class="art-footer-r"></div>
+                <div class="art-footer-body">
+                    <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+					<!--<a href="./../../../feedback.htm" class="art-rss-feedback-icon" title="RSS"></a>-->
+                            <div class="art-footer-text">
+                                <p><a href="#">About Us</a> | <a href="./../../../contacts.htm">Contact Us</a> | <a href="./../../../feedback.htm">Feedback</a></p><p>Copyright &#169;2011.COEP Virtual Lab.</p>
+                                                            </div>
+                    <div class="cleared"></div>
+                </div>
+            </div>
+</div>
+</div>
+</body>
+
+</html>

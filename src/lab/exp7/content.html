@@ -1,0 +1,636 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">Hybrid Electronics Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+   Design and Implementation of Various Arithmetic Circuits
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Aim
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+          
+
+<p style="text-align: justify;"><span style="color: rgb(51, 102, 255); font-family: trebuchet ms,geneva;"><em><span style="font-size: medium;">Aim</span></em></span></p>
+<p style="padding-left: 30px; text-align: justify;">Implementation of Arithmetic circuits&nbsp;</p>
+<p style="padding-left: 30px; text-align: justify;">&nbsp;</p>
+<hr>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><em><span style="font-size: medium; color: rgb(51, 102, 255); font-family: trebuchet ms,geneva;">Pre-Requisites</span></em></p>
+<ol>
+    <li style="text-align: justify;">Knowledge of number system</li>
+    <li style="text-align: justify;">NI LabVIEW tool</li>
+</ol>
+<p>&nbsp;</p>
+<hr>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: trebuchet ms,geneva;"><em><span style="font-size: medium; color: rgb(51, 102, 255);">Objectives</span></em></span></p>
+<ol>
+    <li style="text-align: justify;">To understand the arithmetic and logical operations</li>
+    <li style="text-align: justify;">To understand architecture of ALU</li>
+</ol>
+<p>&nbsp;</p>                
+            </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/content_94.png" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag.-->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Pre Test 
+        </div> 
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag-->
+        <div id="experiment-article-section-2-content" 
+        class="content">
+
+
+<div class="divQuiz" ><div id="displayQuiz" ><form name="form11" id="form11" method="post"><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">1)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">2s complement of 11011000 .</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4928" style="vertical-align:middle" type="radio" name="ans0"  value="4928"> </input><label for="ans4928" id="textAnsChoice">11001000</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4929" style="vertical-align:middle" type="radio" name="ans0"  value="4929"> </input><label for="ans4929" id="textAnsChoice">01101000</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4930" style="vertical-align:middle" type="radio" name="ans0"  value="4930"> </input><label for="ans4930" id="textAnsChoice">00101000</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4931" style="vertical-align:middle" type="radio" name="ans0"  value="4931"> </input><label for="ans4931" id="textAnsChoice">10101010</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">2)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">Binary number representation by decimal number 37</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4932" style="vertical-align:middle" type="radio" name="ans1"  value="4932"> </input><label for="ans4932" id="textAnsChoice">101010</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4933" style="vertical-align:middle" type="radio" name="ans1"  value="4933"> </input><label for="ans4933" id="textAnsChoice">111000</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4934" style="vertical-align:middle" type="radio" name="ans1"  value="4934"> </input><label for="ans4934" id="textAnsChoice">100101</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4935" style="vertical-align:middle" type="radio" name="ans1"  value="4935"> </input><label for="ans4935" id="textAnsChoice">101101</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">3)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">Decimal number representation by the binary number 1111 1111</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4936" style="vertical-align:middle" type="radio" name="ans2"  value="4936"> </input><label for="ans4936" id="textAnsChoice">255</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4937" style="vertical-align:middle" type="radio" name="ans2"  value="4937"> </input><label for="ans4937" id="textAnsChoice">247</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4938" style="vertical-align:middle" type="radio" name="ans2"  value="4938"> </input><label for="ans4938" id="textAnsChoice">251</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4939" style="vertical-align:middle" type="radio" name="ans2"  value="4939"> </input><label for="ans4939" id="textAnsChoice">249</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">4)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">Ones complement of 10100111</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4940" style="vertical-align:middle" type="radio" name="ans3"  value="4940"> </input><label for="ans4940" id="textAnsChoice">01100110</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4941" style="vertical-align:middle" type="radio" name="ans3"  value="4941"> </input><label for="ans4941" id="textAnsChoice">01011000</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4942" style="vertical-align:middle" type="radio" name="ans3"  value="4942"> </input><label for="ans4942" id="textAnsChoice">11100111</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4943" style="vertical-align:middle" type="radio" name="ans3"  value="4943"> </input><label for="ans4943" id="textAnsChoice">11100101</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><input type="hidden" align="middle" id="loadTime" name="loadTime" value=1389873169/><br /><div style="padding-left:40px;"><input type="submit" name="submit1" id="submit1" value="&nbsp;Submit&nbsp;" style="width:8%;" onclick="get_radio_value();"  />&nbsp;&nbsp;<input type="reset" name="cancel1" id="cancel1" value="&nbsp;Cancel&nbsp;" style="width:8%;"  /></div></form><br />
+
+
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.--> 
+	  <img src="../images/theory.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Theory
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+
+<h1 class="title" style="text-align: justify;"><span style="color: rgb(204, 0, 51);"><u>Theory</u></span></h1>
+<p style="text-align: justify;"><span style="font-weight: bold; font-size: small;">1. Binary Adder - Subtractor </span><br>
+<br>
+<span style="font-size: small;">Digital computers perform variety of information tasks. Among the functions encountered are the various arithmetic operations. The most basic arithmetic operation is the addition of two binary digits. This simple addition consists of four possible elementary operations. 0 + 0 = 0, 0 + 1 = 1, 1 + 0 = 1, 1 + 1 = 10. The first three operations produce sum of one digit, but when the both augends and addend bits are equal 1, the binary sum consists of two digits. The higher significant bit of the result is called carry .When the augend and addend number contains more significant digits, the carry obtained from the addition of the two bits is called half adder. One that performs the addition of three bits (two significant bits and a previous carry) is called half adder. The name of circuits from the fact that two half adders can be employed to implement a full adder. </span><br>
+<br>
+<span style="font-size: small;">A binary adder-subtractor is a combinational circuit that performs the arithmetic operations of addition and subtraction with binary numbers. We will develop this circuit by </span><span style="font-size: small;">means of a hierarchical design. The half adder design is carried out first, from which we develop the adder. Connecting n full adders in cascade produces a binary adder for two n-bit numbers. </span><br>
+<br>
+<span style="font-size: small;">The subtraction circuit is included by providing a complementing circuit. </span><br>
+<br>
+<span style="font-weight: bold; font-size: small;">1.1 Half Adder </span><br>
+<br>
+<span style="font-size: small;">From the verbal explanation of a half adder, we find that this circuit needs two binary inputs and two binary outputs. The input variables designated the augend and addend bits; the output variables produce the sum and carry. We assign symbols x and y to the inputs and S (for sum) and C (for carry) to the outputs. The truth table for the half adder is listed in Table 1. The C output is 1 only when both inputs are 1. The S output represents the least significant bit of the sum. </span><br>
+<br>
+<span style="font-size: small;">The simplified Boolean functions for the two outputs can be obtained directly from the truth table. The simplified sum of products expressions are:</span><br>
+&nbsp;</p>
+<div style="text-align: center;"><span style="font-size: small;"><img title="fig1" alt="fig1" border="0" vspace="0" width="91" height="46" hspace="0" src="Theory/fig1.JPG"></span></div>
+<p style="text-align: justify;"><br>
+<span style="font-size: small;">The logic diagram of the half adder implemented in sum of product is shown in fig. 1(a). It can be also implemented with an exclusive-OR and AND gate as shown in fig. 1(b). This form is used to show that two half adders can be used to construct a full adder. </span><br>
+<br>
+<span style="font-size: small;"><img style="display: block; margin-left: auto; margin-right: auto;" title="fig2" alt="fig2" border="0" vspace="0" width="316" height="157" hspace="0" src="Theory/fig2.JPG"></span><br>
+<span style="font-size: small;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: small;">Table 1: Half Adder</span></p>
+<p style="text-align: justify;"><span style="font-size: small;"> </span><br>
+<br>
+<span style="font-size: small;"><img style="display: block; margin-left: auto; margin-right: auto;" title="fig3" alt="fig3" border="0" vspace="0" width="689" height="340" hspace="0" src="Theory/fig3.JPG"></span></p>
+<p style="text-align: center;"><br>
+<span style="font-size: small;"> Fig 1: Implementation of Half-Adder </span></p>
+<p style="text-align: justify;"><br>
+<br>
+<br>
+<span style="font-weight: bold; font-size: small;">1.2 Full-adder </span><br>
+<br>
+<span style="font-size: small;">A full adder is a combinational circuit that forms the arithmetic sum of three bits. It consists of three inputs and two outputs. Two of the inputs variables, denoted by x and y, represent the two significant bits to be added. The third input, z, represents the carry from the previous lower significant position. Two outputs are necessary because the arithmetic sum of three binary digits ranges in value from 0 to 3, and binary 2 or 3 needs two digits. The two outputs are designated by the symbols S for sum and C for carry. The binary variable S gives the value of the least significant bit of the sum. The binary variable C gives the output carry. The truth table of the full adder is listed in table 2. The eight row under the input variables designate all possible combinations of the three variables. The output variables are determined from the arithmetic sum of the input bits. When all input bits are 0, the output is 0. The S output is equal to 1 when only one input is equal to 1 or when all three inputs are equal to 1. The C output has a carry of 1 if two or three inputs are equal to 1. </span><br>
+<br>
+<span style="font-size: small;">A input and output bits of the combinational circuit have different interpretations at various stages of the problem. Physically, the binary signals of the inputs are considered binary digits to be added arithmetically to form a two-digit sum at output. On the other hand, the binary values are considered as variables of Boolean functions when expressed in the truth table or when the circuit is implemented with logic gates.</span><br>
+<br>
+<span style="font-size: small;"><img style="display: block; margin-left: auto; margin-right: auto;" title="fig4" alt="fig4" border="0" vspace="0" width="357" height="479" hspace="0" src="Theory/fig4.JPG"></span></p>
+<p style="text-align: center;"><br>
+<span style="font-size: small;">Table 2: Full Adder </span></p>
+<p style="text-align: justify;"><br>
+<br>
+<span style="font-size: small;"><img style="display: block; margin-left: auto; margin-right: auto;" title="fig5" alt="fig5" border="0" vspace="0" width="808" height="329" hspace="0" src="Theory/fig5.JPG"></span></p>
+<p style="text-align: center;"><br>
+<span style="font-size: small;">Fig 2: Implement of Full – Adder with two half adders and an OR gate </span></p>
+<p style="text-align: justify;"><br>
+<br>
+<br>
+<span style="font-size: small;">The simplified expressions are </span></p>
+<div style="text-align: center;"><br>
+<span style="font-size: small;">S = x’ y’ z + x’ y z’ + x y’ z’ + xyz</span></div>
+<div style="text-align: center;"><span style="font-size: small;">C = x y + x z + y z</span></div>
+<p style="text-align: justify;"><br>
+<span style="font-size: small;">It can be also implemented with two half adders and OR gate. As shown in fig 2.The S output from the second half adder is the exclusive-OR of z and the output of the first half adder, giving </span><br>
+&nbsp;</p>
+<div style="text-align: center;"><span style="font-size: small;"><img style="width: 316px; height: 189px;" title="fig6" alt="fig6" border="0" vspace="0" hspace="0" src="Theory/fig6.JPG"></span></div>
+<p style="text-align: justify;"><br>
+<span style="font-size: small;">The carry output is </span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: small;">C= z (x y’ + x’ y) + x y = x y’ z + x’ y z + x y </span><br>
+<br>
+<br>
+<span style="font-weight: bold; font-size: small;">1.3 Binary Adder </span><br>
+<br>
+<span style="font-size: small;">A binary adder is a digital circuit that produces the arithmetic sum of two binary numbers. It can be constructed with full adder connected in cascade, the output carry from each full adder connected to the input carry of the next full adder in the chain. Fig 3 shows the interconnection of four full adder (FA) circuits to provide a 4-bit binary ripple carry adder. The augend bits of A and addend bits of B are designated by subscript numbers from right to left , with subscript 0denoting the least significant bit. The carries are connected in the chain through the full adders. The input carry to the adder is C0 and it ripples through the full adder to the output carry C4.The S output generate the required sum bits. An n-bit adder requires n full adders with each output connected to the input carry of the next higher order full adder.</span><br>
+<br>
+<span style="font-size: small;"><img style="display: block; margin-left: auto; margin-right: auto;" title="fig7" alt="fig7" border="0" vspace="0" width="812" height="334" hspace="0" src="Theory/fig7.JPG"></span></p>
+<p style="text-align: center;"><span style="font-size: small;">Fig 3: 4-Bit Adder</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-size: small;">The bits are added with full adders, starting from the position to form the sum bit and carry. The input carry C0 in the least significant position must be 0. The value of Ci+1 in a given significant position is the output carry of the full adder. This value is transferred into the input carry of the full adder that adds the bits one higher significant position to the left. The sum bits are thus generated starting from the rightmost position and are available for the correct sum bits to appears at the outputs. </span><br>
+<br>
+<span style="font-size: small;">The 4bit adder is a typical example of a standard component. It can be used in many applications involving arithmetic operations. Observe that the design of this circuit by the classical method would require a truth table with 2<sup>9</sup> = 512 entries, since there are nine inputs to the circuit. By using an iterative method of cascading a standard function, it is possible to obtain a simple and straightforward implementation. </span><br>
+<br>
+<span style="font-weight: bold; font-size: small;">1.4 Binary Subtractor </span><br>
+<br>
+<span style="font-size: small;">The subtraction of unsigned binary numbers can be done most conveniently by means of complement. Subtraction A–B can be done by tacking the 2’s complement of B and adding it to A. The 2’s complement can be obtained by taking the 1’s complement and adding one to the least significant pair of bits. The 1’s complement can be implemented with the inverters and a one can be added to the sum through the input carry. </span><br>
+<br>
+<span style="font-size: small;">The circuit for subtracting A–B consists of an adder with inverter placed between each data input B and the corresponding input of the full adder. The input carry C0 must be equal to 1when performing subtraction. The operation thus performed becomes A, plus the 1’s complement of B, plus 1.This is equal to A plus 2’s complement of B. For unsigned numbers this gives A–B if A ≥ B or the 2’s complement of (B–A) if A &lt; B. for signed numbers, the result is A – B, provided that there is no overflow. </span><br>
+<br>
+<span style="font-size: small;">The addition and subtraction operations can be combined into one circuit with one common binary adder. This is done by including an EX-OR gate with each full adder. A 4-bit adder-subtractor circuit is shown in fig 4. The mode input M controls the operation. When M = 0, the circuit is an adder, and when M = 1, the circuit becomes a subtractor. Each EX-OR gate receives input M and one of the inputs of B. when M = 0, we have B (Ex-OR) 0 = B. the full adder receive the value of B, the input carry is 0, and the circuit performs A plus B. when M = 1, we have B (Ex-OR) 1= B’ and C<sub>0</sub> = 1. The B inputs are complemented and a 1 is added through the input carry. The circuit performs the operation A plus the 2’s complement of B. (The EX-OR with output is for detecting an overflow.) </span><br>
+<br>
+<span style="font-size: small;">It is worth noting that binary numbers in the signed-complemented system are added and subtracted by the same basic addition and subtraction rules as unsigned numbers. Therefore, computers need only one common hardware circuit to handle both type of arithmetic. The user or programmer must interpret the results of such addition or subtraction differently. Depending on whether it is assumed that the numbers are signed or unsigned. </span><br>
+<br>
+<img style="display: block; margin-left: auto; margin-right: auto;" title="a" alt="a" border="0" vspace="0" width="856" height="453" hspace="0" src="Theory/fig8_new.JPG"></p>
+<p style="text-align: center;"><br>
+<span style="font-size: small;">Fig 4: 4-Bit Adder Subtractor</span></p>
+<p style="text-align: justify;"><span style="font-weight: bold; font-size: small;">1.5 Overflow </span><br>
+<br>
+<span style="font-size: small;">When two numbers of n digits are added and the sum occupies n + 1 digits, we say that an overflow occurred. This is true for binary or decimal numbers whether signed or unsigned. When the addition is performed with paper and pencil, an overflow is not a problem, since there is no limit by the width of the page to write down the sum. Overflow is a problem in digital computers because the number of bits that hold the number is finite and a result that contains n + 1 not be accommodated. For this reason, many computers detect the occurrence of an overflow and when it occurs, a corresponding flip-flop is set that can then be checked by the user. </span><br>
+<br>
+<span style="font-size: small;">The detection of an overflow after the addition of two binary numbers depends on the numbers are considered to be signed or unsigned. When two unsigned numbers are an overflow is detected from the end carry out of the most significant position. In the signed numbers, the leftmost bit always represents the sign and negative numbers are in 2’s complement form. When two signed numbers are added, the sign bit is treated as part of the number and the end carry does not indicate an overflow. </span><br>
+<br>
+<span style="font-size: small;">An overflow cannot occur after an addition if one number is positive and the other is negative, since adding a positive number to a negative number produces a result which is than the larger of the two original numbers. An overflow may occur if the two numbers are both positive and both negative. To see how this can happen, consider the following example. Two signed binary numbers, +70 and +80, are stored in two 8-bit registers. The range of numbers that each register can accommodate is from binary + 127 to binary -128. Since sum of the two numbers is + 150, it exceeds the capacity of an 8-bit register. This is true if numbers are both positive or both negative. The two additions in binary are shown next, together with the last two carries; </span><br>
+<br>
+<span style="font-size: small;"><img style="display: block; margin-left: auto; margin-right: auto;" title="fig9" alt="fig9" border="0" vspace="0" width="660" height="128" hspace="0" src="Theory/fig9.JPG"></span><br>
+<br>
+<span style="font-size: small;">Note that the 8-bit result that should have been positive has a negative sign bit and the 8-bit that should have been negative has a positive sign bit. If, however, the carry out of the sign bit position is taken as the sign bit of the result, then the 9-bit answer so obtained will be correct. Since the answer cannot be accommodated within 8-bits, we say that an overflow has occurred. An overflow condition can be detected by observing the carry into the sign bit position and the carry out of the sign bit position. If these two carries are not equal, an overflow has occurred. </span><br>
+<br>
+<span style="font-size: small;">This is indicated in the examples where the two carries are explicitly shown. If the two carries are applied to an exclusive-OR gate, an overflow is detected when the output of the gate equal to 1. For this method to work correctly the 2&#039;s complement must be computed by taking the 1 &#039;s complement and adding one. This takes care of the condition when the maximum negative number is complemented. </span><br>
+<br>
+<span style="font-size: small;">The binary adder- subtractor circuit with outputs C and V as shown in fig 6. If the two binary numbers are considered to be unsigned, then the C bit detects a carry after addition or a borrow after subtraction. If the numbers are considered to be signed, then the V bit detects an overflow. If V = 0 after an addition or subtraction, it indicates that no overflow occurred and the n-bit result is correct. If V = 1, then the result of the operation contains n + 1 bits, but only the rightmost n bits of the number fit in the space available, so an overflow has occurred. The (n + 1) th bit is the actual sign and has been shifted out of position.</span></p>
+
+          
+        </div>
+
+      </section>
+
+
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/procedure.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Procedure
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+
+<h1 class="title"><span style="color: rgb(204, 0, 51);"><u>Procedure</u></span></h1>
+<p>&nbsp;</p>
+<ol>
+    <li><span style="font-size: small;">Select appropriate arithmetic operation </span></li>
+    <li><span style="font-size: small;">Enter input A and / or B </span></li>
+    <li><span style="font-size: small;">Select run button in the top to execute the operation </span></li>
+    <li><span style="font-size: small;">Interpret the result </span></li>
+</ol>
+<p>&nbsp;</p>
+
+
+        </div>
+
+      </section>
+
+     <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Lab Manual
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+    
+        <p style="text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 24pt; line-height: 115%;">Hybrid Electronics Laboratory</span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 18pt; line-height: 115%;">Experiment No.<span style="">&nbsp; </span>1</span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: center;" class="MsoNormal" align="center"><b style="">&nbsp;</b></p>
+<p style="margin-bottom: 0.0001pt; text-align: center;" class="MsoNormal" align="center"><span style="font-size: 14pt; line-height: 115%;">Design and Implementation of Various Arithmetic Circuits</span></p>
+<p class="MsoNormal"><b style="">&nbsp;</b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%;">Aim</span>:</b> Implementation of Arithmetic circuits</p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%;">Objectives:</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style="">&nbsp;</b></p>
+<p style="margin: 0in 0in 0.0001pt 40.5pt; text-indent: -0.25in;" class="MsoListParagraphCxSpFirst"><span style=""><span style="">1.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>To understand the arithmetic and logical operations</p>
+<p style="margin: 0in 0in 0.0001pt 40.5pt; text-indent: -0.25in;" class="MsoListParagraphCxSpLast"><span style=""><span style="">2.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>To understand architecture of ALU</p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%;">Theory</span>:</b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style="">&nbsp;</b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style="">Binary Adder - Subtractor </b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style="">&nbsp;</b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Digital computers perform variety of information tasks. Among the functions encountered are the various arithmetic operations. The most basic arithmetic operation is the addition of two binary digits. This simple addition consists of four possible elementary operations. 0 + 0 = 0, 0 + 1 = 1, 1 + 0 = 1, 1 + 1 = 10. The first three operations produce sum of one digit, but when the both augends and addend bits are equal 1, the binary sum consists of two digits. The higher significant bit of the result is called carry .When the augend and addend number contains more significant digits, the carry obtained from the addition of the two bits is called half adder. One that performs the addition of three bits (two significant bits and a previous carry) is called half adder. The name of circuits from the fact that two half adders can be employed to implement a full adder.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>A binary adder-subtractor is a combinational circuit that performs the arithmetic operations of addition and subtraction with binary numbers. We will develop this circuit by means of a hierarchical design. The half adder design is carried out first, from which we develop the adder. Connecting n full adders in cascade produces a binary adder for two n-bit numbers.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">The subtraction circuit is included by providing a complementing circuit.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style="">Half Adder </b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style="">&nbsp;</b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>From the verbal explanation of a half adder, we find that this circuit needs two binary inputs and two binary outputs. The input variables designated the augend and addend bits; the output variables produce the sum and carry. We assign symbols x and y to the inputs and S (for sum) and C (for carry) to the outputs. The truth table for the half adder is listed in Table 1. The C output is 1 only when both inputs are 1. The S output represents the least significant bit of the sum.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">The simplified Boolean functions for the two outputs can be obtained directly from the truth table. The simplified sum of products expressions are:</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="text-align: center; line-height: normal;" class="MsoNormal" align="center">S = x’y + xy’</p>
+<p style="margin-left: 193.5pt; line-height: normal;" class="MsoNormal"><span style="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>C = xy</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">The logic diagram of the half adder implemented in sum of product is shown in fig. 1(a). It can be also implemented with an exclusive-OR and AND gate as shown in fig. 1(b). This form is used to show that two half adders can be used to construct a full adder.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;<span style="font-size: small;"><img style="display: block; margin-left: auto; margin-right: auto;" title="fig2" alt="fig2" src="Lab Manual/fig2.JPG" border="0" height="157" hspace="0" vspace="0" width="316"></span></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><span style="">                                                  </span></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style="">Table 1</i></b><i style="">: Half Adder</i></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: small;"><img style="display: block; margin-left: auto; margin-right: auto;" title="fig3" alt="fig3" src="Lab Manual/fig3.JPG" border="0" height="340" hspace="0" vspace="0" width="689"></span></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><span style="">   </span></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style="">Fig 1</i></b><i style="">: Implementation of Half-Adder</i></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><i style="">&nbsp;</i></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">Full-adder </b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style=""><span style="">&nbsp;</span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>A full adder is a combinational circuit that forms the arithmetic sum of three bits. It consists of three inputs and two outputs. Two of the inputs variables, denoted by x and y, represent the two significant bits to be added. The third input, z, represents the carry from the previous lower significant position. Two outputs are necessary because the arithmetic sum of three binary digits ranges in value from 0 to 3, and binary 2 or 3 needs two digits. The two outputs are designated by the symbols S for sum and C for carry. The binary variable S gives the value of the least significant bit of the sum. The binary variable C gives the output carry. The truth table of the full adder is listed in table 2. The eight row under the input variables designate all possible combinations of the three variables. The output variables are determined from the arithmetic sum of the input bits. When all input bits are 0, the output is 0. The S output is equal to 1 when only one input is equal to 1 or when all three inputs are equal to 1. The C output has a carry of 1 if two or three inputs are equal to 1.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp; </span>A input and output bits of the combinational circuit have different interpretations at various stages of the problem. Physically, the binary signals of the inputs are considered binary digits to be added arithmetically to form a two-digit sum at output. On the other hand, the binary values are considered as variables of Boolean functions when expressed in the truth table or when the circuit is implemented with logic gates.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;<span style="font-size: small;"><img style="display: block; margin-left: auto; margin-right: auto;" title="fig4" alt="fig4" src="Lab Manual/fig4.JPG" border="0" height="479" hspace="0" vspace="0" width="357"></span></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><span style="">   </span></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style="">Table 2:</i></b><i style=""> Full Adder</i></p>
+<p style="text-align: justify;" class="MsoNormal">&nbsp;<span style="font-size: small;"><img style="display: block; margin-left: auto; margin-right: auto;" title="fig5" alt="fig5" src="Lab Manual/fig5.JPG" border="0" height="329" hspace="0" vspace="0" width="808"></span></p>
+<p style="text-align: justify;" class="MsoNormal"><b style=""><span style="">   </span></b></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style="">Fig 2:</i></b><i style=""> Implement of Full Adder with two half adders and an OR gate</i></p>
+<p style="text-align: justify;" class="MsoNormal">The simplified expressions are</p>
+<p style="text-align: center;" class="MsoNormal" align="center">S = x’ y’ z + x’ y z’ + x y’ z’ + xyz</p>
+<p style="margin-left: 1in; text-indent: 49.5pt;" class="MsoNormal"><span style="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>C = x y + x z + y z</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp; </span>It can be also implemented with two half adders and OR gate. As shown in fig 2.The S output from the second half adder is the exclusive-OR of z and the output of the first half adder, giving</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<div style="text-align: center;"><span style="font-size: small;"><img style="width: 316px; height: 189px;" title="fig6" alt="fig6" src="Lab Manual/fig6.JPG" border="0" hspace="0" vspace="0"></span></div>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="text-align: center;" class="MsoNormal" align="center"><span style="">   </span></p>
+<p style="text-align: justify;" class="MsoNormal">The carry output is</p>
+<p style="text-align: center;" class="MsoNormal" align="center">C= z (x y’ + x’ y) + x y = x y’ z + x’ y z + x y</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">Binary Adder </b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">&nbsp;</b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp; </span>A binary adder is a digital circuit that produces the arithmetic sum of two binary numbers. It can be constructed with full adder connected in cascade, the output carry from each full adder connected to the input carry of the next full adder in the chain. Fig 3 shows the interconnection of four full adder (FA) circuits to provide a 4-bit binary ripple carry adder. The augend bits of A and addend bits of B are designated by subscript numbers from right to left , with subscript 0denoting the least significant bit. The carries are connected in the chain through the full adders. The input carry to the adder is C0 and it ripples through the full adder to the output carry C4.The S output generate the required sum bits. An n-bit adder requires n full adders with each output connected to the input carry of the next higher order full adder.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;<span style="font-size: small;"><img style="display: block; margin-left: auto; margin-right: auto;" title="fig7" alt="fig7" src="Lab Manual/fig7.JPG" border="0" height="334" hspace="0" vspace="0" width="812"></span></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><span style="">   </span><b style=""><i style="">Fig 3</i></b><i style="">: 4-Bit Adder</i></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The bits are added with full adders, starting from the position to form the sum bit and carry. The input carry C0 in the least significant position must be 0. The value of Ci+1 in a given significant position is the output carry of the full adder. This value is transferred into the input carry of the full adder that adds the bits one higher significant position to the left. The sum bits are thus generated starting from the rightmost position and are available for the correct sum bits to appears at the outputs.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>The 4 bit adder is a typical example of a standard component. It can be used in many applications involving arithmetic operations. Observe that the design of this circuit by the classical method would require a truth table with 29 = 512 entries, since there are nine inputs to the circuit. By using an iterative method of cascading a standard function, it is possible to obtain a simple and straightforward implementation.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">Binary Subtractor </b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">&nbsp;</b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The subtraction of unsigned binary numbers can be done most conveniently by means of complement. Subtraction A–B can be done by tacking the 2’s complement of B and adding it to A. The 2’s complement can be obtained by taking the 1’s complement and adding one to the least significant pair of bits. The 1’s complement can be implemented with the inverters and a one can be added to the sum through the input carry.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The circuit for subtracting A–B consists of an adder with inverter placed between each data input B and the corresponding input of the full adder. The input carry C0 must be equal to 1when performing subtraction. The operation thus performed becomes A, plus the 1’s complement of B, plus 1.This is equal to A plus 2’s complement of B. For unsigned numbers this gives A–B if A ≥ B or the 2’s complement of (B–A) if A &lt; B. for signed numbers, the result is A – B, provided that there is no overflow.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The addition and subtraction operations can be combined into one circuit with one common binary adder. This is done by including an EX-OR gate with each full adder. A 4-bit adder-subtractor circuit is shown in fig 4. The mode input M controls the operation. When M = 0, the circuit is an adder, and when M = 1, the circuit becomes a subtractor. Each EX-OR gate receives input M and one of the inputs of B. when M = 0, we have B (Ex-OR) 0 = B. the full adder receive the value of B, the input carry is 0, and the circuit performs A plus B. when M = 1, we have B (Ex-OR) 1= B’ and C0 = 1. The B inputs are complemented and a 1 is added through the input carry. The circuit performs the operation A plus the 2’s complement of B. (The EX-OR with output is for detecting an overflow.)</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>It is worth noting that binary numbers in the signed-complemented system are added and subtracted by the same basic addition and subtraction rules as unsigned numbers. Therefore, computers need only one common hardware circuit to handle both type of arithmetic. The user or programmer must interpret the results of such addition or subtraction differently. Depending on whether it is assumed that the numbers are signed or unsigned.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><img style="display: block; margin-left: auto; margin-right: auto;" title="a" alt="a" src="Lab Manual/fig8_new.JPG" border="0" height="453" hspace="0" vspace="0" width="856"></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><span style="">   </span></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style="">Fig 4: </i></b><i style="">4-Bit Adder Subtractor</i></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">Overflow </b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">&nbsp;</b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>When two numbers of n digits are added and the sum occupies n + 1 digits, we say that an overflow occurred. This is true for binary or decimal numbers whether signed or unsigned. When the addition is performed with paper and pencil, an overflow is not a problem, since there is no limit by the width of the page to write down the sum. Overflow is a problem in digital computers because the number of bits that hold the number is finite and a result that contains n + 1 not be accommodated. For this reason, many computers detect the occurrence of an overflow and when it occurs, a corresponding flip-flop is set that can then be checked by the user.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>The detection of an overflow after the addition of two binary numbers depends on the numbers are considered to be signed or unsigned. When two unsigned numbers are an overflow is detected from the end carry out of the most significant position. In the signed numbers, the leftmost bit always represents the sign and negative numbers are in 2’s complement form. When two signed numbers are added, the sign bit is treated as part of the number and the end carry does not indicate an overflow.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>An overflow cannot occur after an addition if one number is positive and the other is negative, since adding a positive number to a negative number produces a result which is than the larger of the two original numbers. An overflow may occur if the two numbers are both positive and both negative. To see how this can happen, consider the following example. Two signed binary numbers, +70 and +80, are stored in two 8-bit registers. The range of numbers that each register can accommodate is from binary + 127 to binary -128. Since sum of the two numbers is + 150, it exceeds the capacity of an 8-bit register. This is true if numbers are both positive and<span style="">&nbsp; </span>negative. The two additions in binary are shown next, together with the last two carries;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;<span style="font-size: small;"><img style="display: block; margin-left: auto; margin-right: auto;" title="fig9" alt="fig9" src="Lab Manual/fig9.JPG" border="0" height="128" hspace="0" vspace="0" width="660"></span></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><span style="">   </span></p>
+<p style="text-align: center;" class="MsoNormal" align="center">&nbsp;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>Note that the 8-bit result that should have been positive has a negative sign bit and the 8-bit that should have been negative has a positive sign bit. If, however, the carry out of the sign bit position is taken as the sign bit of the result, then the 9-bit answer so obtained will be correct. Since the answer cannot be accommodated within 8-bits, we say that an overflow has occurred. An overflow condition can be detected by observing the carry into the sign bit position and the carry out of the sign bit position. If these two carries are not equal, an overflow has occurred.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>This is indicated in the examples where the two carries are explicitly shown. If the two carries are applied to an exclusive-OR gate, an overflow is detected when the output of the gate equal to 1. For this method to work correctly the 2&#039;s complement must be computed by taking the 1’s complement and adding one. This takes care of the condition when the maximum negative number is complemented.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The binary adder- subtractor circuit with outputs C and V as shown in fig 6. If the two binary numbers are considered to be unsigned, then the C bit detects a carry after addition or a borrow after subtraction. If the numbers are considered to be signed, then the V bit detects an overflow. If V = 0 after an addition or subtraction, it indicates that no overflow occurred and the n-bit result is correct. If V = 1, then the result of the operation contains n + 1 bits, but only the rightmost n bits of the number fit in the space available, so an overflow has occurred. The (n + 1) th bit is the actual sign and has been shifted out of position.</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<p style="text-align: justify;" class="MsoNormal"><b style="">Procedure</b></p>
+<p style="margin: 0in 0in 0.0001pt 0.75in; text-align: justify; text-indent: -0.5in;" class="MsoNormal"><span style=""><span style="">1.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>Select appropriate arithmetic operation</p>
+<p style="margin: 0in 0in 0.0001pt 0.75in; text-align: justify; text-indent: -0.5in;" class="MsoNormal"><span style=""><span style="">2.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>Enter input A and / or B</p>
+<p style="margin: 0in 0in 0.0001pt 0.75in; text-align: justify; text-indent: -0.5in;" class="MsoNormal"><span style=""><span style="">3.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>Select run button in the top to execute the operation</p>
+<p style="margin: 0in 0in 0.0001pt 0.75in; text-align: justify; text-indent: -0.5in;" class="MsoNormal"><span style=""><span style="">4.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>Interpret the result</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;&nbsp;&nbsp;</p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">Simulation Screenshots:</b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">&nbsp;</b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;<b style=""><span style="font-size: 24pt; line-height: 115%;"><img src="Lab Manual/L1_1.png" alt="" style="width: 913px; height: 917px;"></span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;">   </span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;">&nbsp;<img src="Lab Manual/L1_2.png" alt="" style="width: 906px; height: 663px;"></span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;">   </span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;">&nbsp;<img src="Lab Manual/L1_3%281%29.png" alt="" style="width: 909px; height: 638px;"><img src="Lab Manual/L1_4.png" alt="" style="width: 914px; height: 794px;"></span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;">   </span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;">   </span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;">&nbsp;</span></p>
+<p style="text-align: justify;" class="MsoNormal"><b style=""><span style="font-size: 11pt; line-height: 115%;">&nbsp;</span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">Result:</b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">&nbsp;</b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Binary addition / subtractions can be implemented using half adder and full adder circuits. Overflow will be generated when the result exceed by one bit. Binary Subtraction can be implemented using 2s complement.</span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">Assignment:</b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Implement 2 bit binary multiplier using half adders</span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">Further Reading:</b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style="">&nbsp;</b></p>
+<p style="margin: 0in 0in 0.0001pt 0.75in; text-align: justify; text-indent: -0.5in;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;"><span style="">1.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 11pt; line-height: 115%;">Digital Electronics, Tokheim, Tata-McGraw Hill, 4th Edition</span></p>
+<p style="margin: 0in 0in 0.0001pt 0.75in; text-align: justify; text-indent: -0.5in;" class="MsoNormal"><span style="font-size: 11pt; line-height: 115%;"><span style="">2.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 11pt; line-height: 115%;">Digital Design, M. Morris Mano, Pearson Education, 3rd Edition</span></p>
+
+  
+          
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/content_94.png" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Post Test
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+
+
+<div class="divQuiz" ><div id="displayQuiz" ><form name="form11" id="form11" method="post"><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">1)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">Add binary numbers 1010 and 0001 .</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4944" style="vertical-align:middle" type="radio" name="ans0"  value="4944"> </input><label for="ans4944" id="textAnsChoice">1100</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4945" style="vertical-align:middle" type="radio" name="ans0"  value="4945"> </input><label for="ans4945" id="textAnsChoice">1111</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4946" style="vertical-align:middle" type="radio" name="ans0"  value="4946"> </input><label for="ans4946" id="textAnsChoice">1011</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4947" style="vertical-align:middle" type="radio" name="ans0"  value="4947"> </input><label for="ans4947" id="textAnsChoice">1110</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">2)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">Add binary numbers 1011 and 1101</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4948" style="vertical-align:middle" type="radio" name="ans1"  value="4948"> </input><label for="ans4948" id="textAnsChoice">11011</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4949" style="vertical-align:middle" type="radio" name="ans1"  value="4949"> </input><label for="ans4949" id="textAnsChoice">11111</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4950" style="vertical-align:middle" type="radio" name="ans1"  value="4950"> </input><label for="ans4950" id="textAnsChoice">11000</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4951" style="vertical-align:middle" type="radio" name="ans1"  value="4951"> </input><label for="ans4951" id="textAnsChoice">11010</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">3)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">Subtract decimal numbers 73 and 46 using 2s complement arithmetic</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4952" style="vertical-align:middle" type="radio" name="ans2"  value="4952"> </input><label for="ans4952" id="textAnsChoice">01101111</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4953" style="vertical-align:middle" type="radio" name="ans2"  value="4953"> </input><label for="ans4953" id="textAnsChoice">00110011</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4954" style="vertical-align:middle" type="radio" name="ans2"  value="4954"> </input><label for="ans4954" id="textAnsChoice">10101111</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4955" style="vertical-align:middle" type="radio" name="ans2"  value="4955"> </input><label for="ans4955" id="textAnsChoice">01011111</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">4)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">Subtract 1010 from 1111 using 2s complement</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4956" style="vertical-align:middle" type="radio" name="ans3"  value="4956"> </input><label for="ans4956" id="textAnsChoice">0101</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4957" style="vertical-align:middle" type="radio" name="ans3"  value="4957"> </input><label for="ans4957" id="textAnsChoice">1010</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4958" style="vertical-align:middle" type="radio" name="ans3"  value="4958"> </input><label for="ans4958" id="textAnsChoice">1101</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4959" style="vertical-align:middle" type="radio" name="ans3"  value="4959"> </input><label for="ans4959" id="textAnsChoice">1011</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">5)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">Use 2s complement arithmetic to solve expression given in decimal numbers : 58-33+4</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4963" style="vertical-align:middle" type="radio" name="ans4"  value="4963"> </input><label for="ans4963" id="textAnsChoice">01011111</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4961" style="vertical-align:middle" type="radio" name="ans4"  value="4961"> </input><label for="ans4961" id="textAnsChoice">01011101</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans4960" style="vertical-align:middle" type="radio" name="ans4"  value="4960"> </input><label for="ans4960" id="textAnsChoice">01000100</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans4962" style="vertical-align:middle" type="radio" name="ans4"  value="4962"> </input><label for="ans4962" id="textAnsChoice">01110101</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint14" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><input type="hidden" align="middle" id="loadTime" name="loadTime" value=1389874149/><br /><div style="padding-left:40px;"><input type="submit" name="submit1" id="submit1" value="&nbsp;Submit&nbsp;" style="width:8%;" onclick="get_radio_value();"  />&nbsp;&nbsp;<input type="reset" name="cancel1" id="cancel1" value="&nbsp;Cancel&nbsp;" style="width:8%;"  /></div></form><br />
+       
+          </div>
+
+        </section>
+
+   
+		
+        <section id="experiment-article-section-7">
+   
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/simulation.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+            Simulator
+          </div>
+
+          <div id="experiment-article-section-7-content" 
+          class="content">
+          <a href="simulation1.html">Click here for simulator</a>
+
+
+<div class="divContent"><p style="text-align: justify;">&nbsp;</p>
+<h1 style="text-align: justify;" class="title"><span style="color: rgb(204, 0, 51);"><u>Simulation</u></span></h1>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<h3><big>&nbsp;<a href="simulation7.html" target="_blank">Click Here for Simulator</a>&nbsp;</big></h3>
+<p style="text-align: justify;">&nbsp;</p>
+<h3>&nbsp;</h3>
+<p style="text-align: justify;">&nbsp;&nbsp; <span style="font-size: small;">&nbsp; </span></p>
+<p style="text-align: justify;"><span style="font-size: small;">Click on the <a href="http://coepvlab.ac.in:20092/main.html"><span style="color: rgb(0, 0, 255);"><span class="nolink">link</span></span></a> to start simulation.</span></p>
+<p style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p style="text-align: justify;">&nbsp;Click here to <a href="http://coepvlab.ac.in:20092/Hybrid_Electronics_Laboratory/adder_subtractor.zip"><span style="color: rgb(0, 0, 255);">download </span></a>simulation</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;&nbsp; *Please download supported plug in to run this simulation from download tab</p></div></div></td>
+
+
+          </div>
+
+        </section>
+
+          <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+      <!-- Enclose the icon image of your lab.-->
+      <img src="../images/temp.gif" />
+    </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Conclusion
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+      <div class="divContent"><div class="entry">
+<p>&nbsp;</p>
+<h1 class="title"><span style="color: rgb(204, 0, 51);"><u>Conclusion</u></span><u><br>
+</u></h1>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="color: rgb(51, 102, 255);"><em><span style="font-size: medium; font-family: trebuchet ms,geneva;">Result</span></em></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<div style="padding-left: 30px; text-align: justify;" class="entry">Binary addition / subtractions can be implemented using half adder and  full adder circuits. Overflow will be generated when the result exceed  by one bit. Binary Subtraction can be implemented using 2s complement.</div>
+<div style="padding-left: 30px; text-align: justify;" class="entry">&nbsp;</div>
+<hr>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><em><span style="font-size: medium; font-family: trebuchet ms,geneva; color: rgb(51, 102, 255);">Assignment</span></em></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="padding-left: 30px; text-align: justify;">Implement 2 bit binary multiplier using half adder</p>
+<p style="padding-left: 30px; text-align: justify;">&nbsp;</p>
+<hr>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><em><span style="color: rgb(51, 102, 255); font-family: trebuchet ms,geneva; font-size: medium;">Further Reading</span></em></p>
+<p style="text-align: justify;">&nbsp;</p>
+<ol>
+    <li style="text-align: justify;">Digital Electronics, Tokheim, Tata-McGraw Hill, 4th Edition</li>
+    <li style="text-align: justify;">Digital Design, M. Morris Mano, Pearson Education, 3rd Edition</li>
+</ol>
+
+
+          </div>
+
+        </section>
+
+          
+
+          <section id="experiment-article-section-9">
+   
+          <div id="experiment-article-section-9-icon" 
+          class="icon">
+      <!-- Enclose the icon image of your lab.-->
+      <img src="../images/temp.gif" />
+    </div>
+
+          <div id="experiment-article-section-9-heading" 
+          class="heading">
+            Download
+          </div>
+
+          <div id="experiment-article-section-9-content" 
+          class="content">
+
+<div class="divContent"><p style="text-align: justify;">&nbsp;</p>
+<p style="TEXT-ALIGN: justify"><span style="FONT-SIZE: small">Here are the files which are required for proper viewing of the Simulation.</span><br>
+<span style="FONT-SIZE: small">Install as per operating system. Installation instructions are given below along with the link to download files.</span><br>
+<br>
+<br>
+<span style="FONT-SIZE: small; FONT-WEIGHT: bold">LabVIEW 8.6 Run-Time Engine Patch for Windows:</span><br>
+<span style="FONT-SIZE: small">LabVIEW Run-Time Engine 8.6 - Windows/2000/XP/Vista/Vista x64 - 8.6f1 Patch</span><br>
+<span style="FONT-SIZE: small">To download, click <a href="http://59.163.223.71/LabVIEW_RTE/LVRTE86std.exe"><span style="COLOR: rgb(0,0,255)">here</span></a></span><span style="COLOR: rgb(0,0,255)"><span style="FONT-SIZE: small">.</span></span><br>
+<span style="FONT-SIZE: small">LabVIEW Vision Run-Time Engine 8.6 - Windows/2000/XP/Vista/Vista x64</span><br>
+<span style="FONT-SIZE: small">To download, click <a href="http://59.163.223.71/LabVIEW_RTE/visionrte.exe"><span style="COLOR: rgb(0,0,255)">here</span></a></span><span style="COLOR: rgb(0,0,255)"><span style="FONT-SIZE: small">.</span></span><br>
+<br>
+<span style="FONT-SIZE: small">Installation Instructions:</span><br>
+<span style="FONT-SIZE: small">Double-click the executable to start installation.</span><br>
+<br>
+<span style="FONT-SIZE: small; FONT-WEIGHT: bold">LabVIEW Run-Time Engine 8.6 for Linux:</span><br>
+<span style="FONT-SIZE: small">Download the labview-rte-aal-1.1-1.i386.rpm to your computer.</span><br>
+<span style="FONT-SIZE: small">To download, click <a href="http://59.163.223.71/LabVIEW_RTE/labview-rte-aal-1.1-1.i386.rpm"><span style="COLOR: rgb(0,0,255)">here</span></a></span><span style="COLOR: rgb(0,0,255)"><span style="FONT-SIZE: small">.</span></span><br>
+<span style="FONT-SIZE: small">Download the labview86-rte-8.6.0-1.i386.rpm files to your computer.</span><br>
+<span style="FONT-SIZE: small">To download, click <a href="http://59.163.223.71/LabVIEW_RTE/labview86-rte-8.6.0-1.i386.rpm"><span style="COLOR: rgb(0,0,255)">here</span></a></span><span style="COLOR: rgb(0,0,255)"><span style="FONT-SIZE: small">.</span></span><br>
+<br>
+<span style="FONT-SIZE: small">Installation Instructions:</span><br>
+<span style="FONT-SIZE: small">Run (must be logged in with root access for the machine)</span></p>
+<div style="TEXT-ALIGN: justify; MARGIN-LEFT: 80px"><span style="FONT-SIZE: small">rpm -Uvh labview-rte-aal-1.1-1.i386.rpm</span></div>
+<p style="TEXT-ALIGN: justify"><span style="FONT-SIZE: small">Run (must be logged in with root access for the machine)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="FONT-SIZE: small">rpm -Uvh labview86-rte-8.6.0-1.i386.rpm</span></p></div></div></td>
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+</div>		
+
+</body>
+</html>

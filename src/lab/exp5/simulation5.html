@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+
+<!--
+	This is a jQuery Tools standalone demo. Feel free to copy/paste.
+	                                                         
+	http://flowplayer.org/tools/demos/
+	
+	Do *not* reference CSS files and images from flowplayer.org when in production  
+
+	Enjoy!
+-->
+
+<head>
+	<title>Hybrid Lab Demo</title>
+
+	<!-- include the Tools -->
+	<script type="text/javascript" src="js/jquery.js"> </script>
+		<script src="js/jquery.tools.min.js"></script>
+		<link   type="text/css"  rel="stylesheet"  href="css/example.css"  />
+		<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src = "js/example.js"></script>
+		<script type="text/javascript" src="js/raphael.js"></script>
+		<script type="text/javascript" src="js/jquery.flot.js"></script>
+		<script type="text/javascript" src="js/utility.js"></script>
+	<!--		<script type="text/javascript" src="js/monostable.js"></script>-->
+		
+	
+	<!-- tab styling -->
+		<link   type="text/css"  rel="stylesheet"  href="css/tabs.css"  />
+	
+	
+	<!-- tab pane styling -->
+	<style>
+	div.wrap {
+		width:700px;
+		margin-bottom:40px;
+	}
+	
+	.wrap .pane  {	
+		background:#fff repeat-x 0 20px;
+		display:none;		
+		padding:20px;
+		border:1px solid #999;
+		border-top:0;
+		font-size:14px;	 
+		font-size:18px;
+		color:#456;	
+		padding-bottom: 20px;
+    padding-left: 9px;
+    padding-right: 20px;
+    padding-top: 11px;
+		
+		_background-image:none;
+	}
+	
+	.wrap .pane p {
+		font-size:38px;	
+		margin:-10px 0 -20px 0;	
+		text-align:right;
+		color:#578;
+	}
+	#header{
+	top:2px;
+	left:2px;
+	position:relative;
+	border:2px groove  #c4c4c4;
+	width:893px;
+	height:130px;
+	overflow:auto;
+	background : url("../images/ui-bg_gloss-wave_35_f6a828_500x100.png") repeat-x scroll 50% 50% #84BFDF;
+}
+.imag{position:absolute;z-index:9999;left:330px;top:4px;}
+	.imag1{position:absolute;z-index:9999;left:1000px;top:85px;}
+	</style>
+</head>
+
+<body>
+<div id = "tabs">
+<div id="header"><span style="font-size:20px; color: #ffffff;"><h3>&nbsp;Counter and Shift Register</h3></span><img class = "imag" src="../images/coep_logo_sim.png"><!--<a href="../../../logout.htm" ><img id="logout" class ="imag1" src="../../images/logout.png">--></a></div>
+	
+
+<div class="wrap">
+	<!-- experiment 3-->
+	<div class="wrap">
+		<ul class="tabs">
+			<li><a href="#">4Bit Binary Counter</a></li>
+			<li><a href="#">4Bit BCD Counter</a></li>
+			<li><a href="#">4Bit Johnson Counter</a></li> 
+			<li><a href="#">4Bit Ring Counter</a></li> 
+			<!--<li><a href="#">Universal Shift Counter</a></li> -->
+		</ul>
+		<!-- 4Bit Binary Counter-->
+		<div class="pane">4Bit Binary Counter
+			<img id="b3_binary_counter" style="position : absolute; top:263px ; left : 390px;" src="images/lightbulb_up.png">
+			<img id="b2_binary_counter" style="position : absolute; top:263px ; left : 442px;" src="images/lightbulb_up.png">
+			<img id="b1_binary_counter" style="position : absolute; top:263px ; left : 500px;" src="images/lightbulb_up.png">
+			<img id="b0_binary_counter" style="position : absolute; top:263px ; left : 561px;" src="images/lightbulb_up.png">
+			<div id="clock_binarycounter" style="position :relative; left :40px; top : 280px">
+			<input id="cbc" class="range" type="range" style="font-size: 17x;font-weight: normal;position :absolute;left : -20px;top:-106px;" step="1" max="1000" min="0">
+			<label style="font-size: 17x;font-weight: normal;position :absolute;left : 40px;top:-76px;" for="cbc"> - clock</label>
+			</div>
+			<img id="binary_counter" style="position : absolute; top:366px ; left : 368px;" src="images/counter.png">
+			<img id="binary_counter_graph" style="position : absolute; top:517px ; left : 260px;" src="images/binarycounter_graph.png">
+			<img id="binary_counter_graph" style="position : absolute; top:240px ; left : 848px;" src="images/binarycounter_tt.png">
+			<div id="decimaloutput_bc" style="position : absolute; top:256px ; left : 649px;">Decimal Output<br>																						<br>
+			<input id="Doutput_bc" type="text" disabled="true" size="1" name="Decimal Output" value="">
+			</div>
+			<button id="start_bc" style="position:relative; top:107px ">START</button>
+			<button id="stop_bc" style="position:relative; top:107px ">STOP</button>
+		</div>
+		<!-- 4Bit BCD Counter-->
+		<div class="pane">4Bit BCD Counter
+			<img id="b3_bcd_counter" style="position : absolute; top:277px ; left : 496px;" src="images/lightbulb_up.png">
+			<img id="b2_bcd_counter" style="position : absolute; top:277px ; left : 554px;" src="images/lightbulb_up.png">
+			<img id="b1_bcd_counter" style="position : absolute; top:277px ; left : 602px;" src="images/lightbulb_up.png">
+			<img id="b0_bcd_counter" style="position : absolute; top:277px ; left : 650px;" src="images/lightbulb_up.png">
+			<div id="clock_bcdcounter" style="position :relative; left :40px; top : 280px">
+				<input id="cbcdc" class="range" type="range" style="font-size: 17x;font-weight: normal;position :absolute;left : -20px;top:-88px;" step="1" max="1000" min="0">
+				<label style="font-size: 17x;font-weight: normal;position :absolute;left : -15px;top:-15px;" for="cbcdc"> - clock</label>
+			</div>
+			<img id="binary_counter" style="position : absolute; top:351px ; left : 307px;" src="images/bcdcounter.png">
+			<img id="binary_counter_graph" style="position : absolute; top:544px ; left : 260px;" src="images/bcdcounter_graph.png">
+			<img id="binary_counter_graph" style="position : absolute; top:300px ; left : 884px;" src="images/bcdcounter_tt.png">
+			<div id="decimaloutput_bcd" style="position : absolute; top:284px ; left : 716px;">
+			Decimal Output
+			<br>
+			<input id="Doutput_bcd" type="text" disabled="true" size="1" name="Decimal Output" value="">
+			</div>
+			<button id="start_bcd" style="position:relative; top:94px ">START</button>
+			<button id="stop_bcd" style="position:relative; top:94px ">STOP</button>
+		</div>
+		<!-- 4Bit Johnson Counter-->
+		<div  class="pane">4Bit Johnson Counter
+			<img id="b3_john_counter" style="position : absolute; top:260px ; left : 510px;" src="images/lightbulb_up.png">
+			<img id="b2_john_counter" style="position : absolute; top:260px ; left : 567px;" src="images/lightbulb_up.png">
+			<img id="b1_john_counter" style="position : absolute; top:260px ; left : 626px;" src="images/lightbulb_up.png">
+			<img id="b0_john_counter" style="position : absolute; top:260px ; left : 703px;" src="images/lightbulb_up.png">
+			<div id="clock_johncounter" style="position :relative; left :40px; top : 380px">
+				<input id="cjohnc" class="range" type="range" style="font-size: 17x;font-weight: normal;position :absolute;left : -20px;top:-100px;" step="1" max="1000" min="0">
+				<label style="font-size: 17x;font-weight: normal;position :absolute;left : 9px;top:-11px;" for="cjohnc"> - clock</label>
+			</div>
+			<img id="john_counter" style="position : absolute; top:324px ; left : 297px;" src="images/johncounter.png">
+			<img id="john_counter_graph" style="position : absolute; top:516px ; left : 341px;" src="images/johncounter_graph.png">
+			<img id="john_counter_graph" style="position : absolute; top:297px ; left : 918px;" src="images/johncounter_tt.png">
+			<button id="start_john" style="position:relative; top:73px ">START</button>
+			<button id="stop_john" style="position:relative; top:73px ">STOP</button>
+		</div>
+		<!-- 4Bit Ring Counter-->
+		<div class = "pane">4Bit Ring Counter
+			<img id="b3_ring_counter" style="position : absolute; top:236px ; left : 200px;" src="images/lightbulb_up.png">
+			<img id="b2_ring_counter" style="position : absolute; top:236px ; left : 280px;" src="images/lightbulb_up.png">
+			<img id="b1_ring_counter" style="position : absolute; top:236px ; left : 360px;" src="images/lightbulb_up.png">
+			<img id="b0_ring_counter" style="position : absolute; top:236px ; left : 440px;" src="images/lightbulb_up.png">
+			<div id="clock_ringcounter" style="position :relative; left :40px; top : 380px">
+				<input id="cringc" class="range" type="range" style="font-size: 17x;font-weight: normal;position :absolute;left : -20px;top:-87px;" step="1" max="1000" min="0">
+				<label style="font-size: 17x;font-weight: normal;position :absolute;left : 1px;top:-15px;" for="cringc"> - clock</label>
+			</div>
+			<img id="ring_counter" style="position : absolute; top:318px ; left : 314px;" src="images/ringcounter.png">
+			<img id="ring_counter_graph" style="position : absolute; top:528px ; left :329px;" src="images/ringcounter_graph.png">
+			<img id="ring_counter_graph" style="position : absolute; top:299px ; left : 922px;" src="images/ringcounter_tt.png">
+			<button id="start_ring" style="position:relative; top:76px ">START</button>
+			<button id="stop_ring" style="position:relative; top:76px ">STOP</button>
+		</div>
+	</div>
+	</div>
+
+<div style="position:absolute; top:777px; width:900px;margin:0 auto;">
+<div class="art-footer">
+                <div class="art-footer-t"></div>
+                <div class="art-footer-l"></div>
+                <div class="art-footer-b"></div>
+                <div class="art-footer-r"></div>
+                <div class="art-footer-body">
+                    <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+					    <div class="art-footer-text">
+                                <p><a href="#">About Us</a> | <a href="./../../../contacts.htm">Contact Us</a> | <a href="./../../../feedback.htm">Feedback</a></p><p>Copyright &#169;2011.COEP Virtual Lab.</p>
+                                                            </div>
+                    <div class="cleared"></div>
+                </div>
+            </div>
+</div>
+
+
+
+</div>
+</body>
+
+</html>

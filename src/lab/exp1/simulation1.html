@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html>
+
+<!--
+	This is a jQuery Tools standalone demo. Feel free to copy/paste.
+	                                                         
+	http://flowplayer.org/tools/demos/
+	
+	Do *not* reference CSS files and images from flowplayer.org when in production  
+
+	Enjoy!
+-->
+
+<head>
+	<title>Hybrid Lab Demo</title>
+	<link   type="text/css"  rel="stylesheet"  href="css/example.css"  />
+	<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/jquery.js"> </script>
+		<script src="js/jquery.tools.min.js"></script>
+		<script type="text/javascript" src = "js/exp7.js"></script>
+		
+		<script type="text/javascript" src="js/jquery.flot.js"></script>
+		<script type="text/javascript" src="js/utility.js"></script>
+	<link   type="text/css"  rel="stylesheet"  href="css/tabs.css"  />
+	<style>
+	div.wrap {
+		width:700px;
+		margin-bottom:40px;
+	}
+	
+	.wrap .pane  {	
+		background:#fff repeat-x 0 20px;
+		display:none;		
+		padding:20px;
+		border:1px solid #999;
+		border-top:0;
+		font-size:14px;	 
+		font-size:18px;
+		color:#456;	
+		padding-bottom: 20px;
+    padding-left: 9px;
+    padding-right: 256px;
+    padding-top: 11px;
+		
+		_background-image:none;
+	}
+	
+	.wrap .pane p {
+		font-size:38px;	
+		margin:-10px 0 -20px 0;	
+		text-align:right;
+		color:#578;
+	}
+		#header{
+	top:5px;
+	left:5px;
+	position:absolute;
+	border:2px groove  #c4c4c4;
+	width:1326px;
+	height:130px;
+	overflow:auto;
+	background : url("../images/ui-bg_gloss-wave_35_f6a828_500x100.png") repeat-x scroll 50% 50% #84BFDF;
+}
+.imag{position:absolute;z-index:9999;left:633px;top:4px;}
+	.imag1{position:absolute;z-index:9999;left:1000px;top:85px;}
+	</style>
+</head>
+	
+<body>
+	<div id="header"><span style="font-size:20px; color: #ffffff;"><h3>&nbsp;Comparator/Multiplier</h3></span><img class = "imag" src="../images/coep_logo_sim.png"><!--<a href="../../../logout.htm" ><img id="logout" class ="imag1" src="../../images/logout.png">--></a></div>
+	<div class="wrap" style="position:absolute; top:145px;">
+
+	<!-- the tabs -->
+	 <!-- the experiment 1 -->
+	<div class="wrap">
+			
+			<!-- the experiment 1 tabs -->
+			<ul class="tabs">
+				<li><a href="#">comparator</a></li>
+				<li><a href="#">multiplier</a></li>
+				
+			</ul>
+
+			
+			<div class="pane">
+						
+					<!-- the tabs -->
+						<ul class="tabs">
+							<li><a href="#">1bit comparator</a></li>
+							<li><a href="#">2bit comparator</a></li>
+							<li><a href="#">4bit comparator</a></li> 
+						</ul>
+						<div  class="pane"id = "halfadder">1bit comparator
+							<div id = "switch" style="position:absolute; top:-105px; left:10px;" >
+							<img src="images/gates.png" id= "img" style = "position : absolute;top:347px ; left :188px;"/>
+							
+							<!--<label id="output7">A < B </label>
+							<label id="output8"> A=B </label>
+							<label id="output9"> A>B </label>-->
+							
+							
+							<img id="truth_table" src="images/tt.png" style="position: absolute; top: 405px; left: 852px;"/>
+							
+							<div id="outputs4">
+							<img src="images/off.png" id = "a2_0" style = "position : absolute; top:396px ; left : 226px;"/>
+							<img src="images/off.png" id = "b2_1" style = "position : absolute; top:634px ; left : 226px;"/>
+							</div>
+							
+							
+							<img src="images/lightbulb.png" id = "led17" style = "position : absolute; top:530px ; left : 783px;"/>
+							<img src="images/lightbulb.png" id = "led18" style = "position : absolute; top:609px ; left : 780px;"/>
+							<img src="images/lightbulb.png" id = "led19" style = "position : absolute; top:414px ; left : 783px;"/>
+							</div>
+						</div>	
+						
+				        <div  class="pane">2bit comparator
+						    <div id = "switch1" style="position:absolute; top:-139px; left:-92px;">
+						     <img src="images/2bitcomp.png" id= "img1" style = "position : absolute;top:371px ; left :264px;"/>		
+							<!--<label id="input1">A0</label>
+							<label id="input2">A1</label>
+							<label id="input3">B0</label>
+							<label id="input4">B1</label>-->
+							
+							<label id="output1">Y1</label>
+							<label id="output2">Y2</label>
+							<label id="output3">Y3</label>
+							
+							 <img id="truth_table1" src="images/2bitcompTT.png" style="position: absolute; top: 456px; left: 965px;">
+							 
+							 <div id="outputs">
+							 <img src="images/off.png" id = "a_0" style = "position : absolute; top:585px ; left : 261px;"/>
+							<img src="images/off.png" id = "b_1" style = "position : absolute; top:537px ; left : 262px;"/>
+							<img src="images/off.png" id = "c_2" style = "position : absolute; top:485px ; left : 261px;"/>
+							<img src="images/off.png" id = "d_3" style = "position : absolute; top:436px ; left : 263px;"/>
+							</div>
+							
+							<img src="images/lightbulb.png" id = "led1" style = "position : absolute; top:678px ; left : 908px;"/>
+							<img src="images/lightbulb.png" id = "led2" style = "position : absolute; top:547px ; left : 908px;"/>
+							<img src="images/lightbulb.png" id = "led3" style = "position : absolute; top:421px ; left : 909px;"/>
+							 </div>
+						</div>	 
+						
+						<div  class="pane">4bit comparator
+						<div id = "switch2" style="position:absolute; top:-139px; left:-10px;" >
+						 <img src="images/4bitcomp.png" id= "img1" style = "position : absolute;top:246px ; left :359px;"/>		
+						   <!-- <label id="input5">A0</label>
+							<label id="input6">B0</label>
+							<label id="input7">A1</label>
+							<label id="input8">B1</label>
+							<label id="input9">A2</label>
+							<label id="input10">B2</label>
+							<label id="input11">A3</label>
+							<label id="input12">B3</label>
+							
+							<label id="output4">Y1</label>
+							<label id="output5">Y2</label>
+							<label id="output6">Y3</label>-->
+							
+							<div id="outputs1">
+						    <img src="images/off.png" id = "a1_0" style = "position : absolute; top:441px ; left : 389px;"/>
+							<img src="images/off.png" id = "b1_1" style = "position : absolute; top:338px ; left : 323px;"/>
+							<img src="images/off.png" id = "c1_2" style = "position : absolute; top:261px ; left : 325px;"/>
+							<img src="images/off.png" id = "d1_3" style = "position : absolute; top:293px ; left : 395px;"/>
+							<img src="images/off.png" id = "e1_4" style = "position : absolute; top:490px ; left : 322px;"/>
+							<img src="images/off.png" id = "f1_5" style = "position : absolute; top:217px ; left : 395px;"/>
+							<img src="images/off.png" id = "g1_6" style = "position : absolute; top:366px ; left : 394px;"/>
+							<img src="images/off.png" id = "h1_7" style = "position : absolute; top:412px ; left : 323px;"/>
+							</div>
+							
+							<img src="images/lightbulb.png" id = "led4" style = "position : absolute; top:714px ; left : 1083px;"/>
+							<img src="images/lightbulb.png" id = "led5" style = "position : absolute; top:586px ; left : 1083px;"/>
+							<img src="images/lightbulb.png" id = "led6" style = "position : absolute; top:374px ; left : 1083px;"/>
+							
+						 </div>
+						 </div>
+			</div>
+			
+				<div class="pane">
+						<ul class="tabs">
+							<li><a href="#">2bit multiplier</a></li>
+							<li><a href="#">3bit multiplier</a></li>
+						</ul>
+				
+				<div  class="pane">2bit multiplier
+					<div id = "switch3" style="position:absolute; top:-139px; left:-92px;" >
+					
+					<img src="images/mul2bit.png" id= "img2" style = "position : absolute;top:301px ; left :296px;"/>
+					<img id="truth_table2" src="images/mul2bitTT1.png" style="position: absolute; top: 311px; left: 1029px;">
+					
+					<div id="outputs2">
+					        <img src="images/off.png" id = "2bitb_0" style = "position : absolute; top:649px ; left : 273px;"/>
+							<img src="images/off.png" id = "2bitb_1" style = "position : absolute; top:601px ; left : 273px;"/>
+							<img src="images/off.png" id = "2bita_2" style = "position : absolute; top:356px ; left : 274px;"/>
+							<img src="images/off.png" id = "2bita_3" style = "position : absolute; top:307px ; left : 274px;"/>
+					</div>
+							
+					        <img src="images/lightbulb.png" id = "led7" style = "position : absolute; top:626px ; left : 924px;"/>
+							<img src="images/lightbulb.png" id = "led8" style = "position : absolute; top:548px ; left : 924px;"/>
+							<img src="images/lightbulb.png" id = "led9" style = "position : absolute; top:468px ; left : 924px;"/>
+							<img src="images/lightbulb.png" id = "led10" style = "position : absolute; top:395px ; left : 924px;"/>
+					</div>
+				</div>
+				
+				<div  class="pane">3bit multiplier
+					<div id = "switch3" style="position:absolute; top:-139px; left:-92px;" >
+					 <img src="images/3bitmul.png" id= "img2" style = "position : absolute;top:222px ; left :296px;"/>
+					 <img id="truth_table3" src="images/mul3bitTT.png" style="position: absolute; top: 307px; left: 968px;">
+					 <div id="outputs3">
+					        <img src="images/off.png" id = "m1_0" style = "position : absolute; top:864px ; left : 255px;"/>
+							<img src="images/off.png" id = "n1_1" style = "position : absolute; top:684px ; left : 255px;"/>
+							<img src="images/off.png" id = "o1_2" style = "position : absolute; top:503px ; left : 255px;"/>
+							<img src="images/off.png" id = "p1_3" style = "position : absolute; top:315px ; left : 255px;"/>
+							<img src="images/off.png" id = "q1_4" style = "position : absolute; top:774px ; left : 255px;"/>
+							<img src="images/off.png" id = "r1_5" style = "position : absolute; top:418px ; left : 255px;"/>
+					</div>
+							
+							<img src="images/lightbulb.png" id = "led11" style = "position : absolute; top:952px ; left : 932px;"/>
+							<img src="images/lightbulb.png" id = "led12" style = "position : absolute; top:893px ; left : 933px;"/>
+							<img src="images/lightbulb.png" id = "led13" style = "position : absolute; top:666px ; left : 919px;"/>
+							<img src="images/lightbulb.png" id = "led14" style = "position : absolute; top:329px ; left : 919px;"/>
+							<img src="images/lightbulb.png" id = "led15" style = "position : absolute; top:566px ; left : 919px;"/>
+							<img src="images/lightbulb.png" id = "led16" style = "position : absolute; top:230px ; left : 919px;"/>
+							
+					</div>
+				</div>
+				
+				</div>
+			</div>
+	</div>
+	<div style="position:absolute; top:1000px; width:1332px;margin:0 auto;">
+<div class="art-footer">
+                <div class="art-footer-t"></div>
+                <div class="art-footer-l"></div>
+                <div class="art-footer-b"></div>
+                <div class="art-footer-r"></div>
+                <div class="art-footer-body">
+                    <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+					<!--<a href="./../../../feedback.htm" class="art-rss-feedback-icon" title="RSS"></a>-->
+                            <div class="art-footer-text">
+                                <p><a href="#">About Us</a> | <a href="./../../../contacts.htm">Contact Us</a> | <a href="./../../../feedback.htm">Feedback</a></p><p>Copyright &#169;2011.COEP Virtual Lab.</p>
+                                                            </div>
+                    <div class="cleared"></div>
+                </div>
+            </div>
+</div>
+</body>	
+</html>
+	

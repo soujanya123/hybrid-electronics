@@ -1,0 +1,1281 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">Hybrid Electronics Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+    
+Design and Simulation of Various Counters and Shift Registers
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Aim
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+         
+<p>&nbsp;</p>
+<p><span style="color: rgb(51, 102, 255); font-family: trebuchet ms,geneva;"><em><span style="font-size: medium;">Aim</span></em></span></p>
+<p style="padding-left: 30px;">To design and simulate 4 bit binary counter, BCD counter, Johnson counter, ring counter and Universal shift register</p>
+<p style="padding-left: 30px;">&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
+<p><em><span style="font-size: medium; color: rgb(51, 102, 255); font-family: trebuchet ms,geneva;">Pre-Requisites</span></em></p>
+<ol>
+    <li>Knowledge of number system</li>
+    <li>NI LabVIEW tool</li>
+</ol>
+<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
+<p><span style="font-family: trebuchet ms,geneva;"><em><span style="font-size: medium; color: rgb(51, 102, 255);">Objectives</span></em></span></p>
+<ol>
+    <li>To study of different counters.</li>
+    <li>To design various counters using gates and flip-f.lops</li>
+    <li>To simulate various counters and shift registers.</li>
+    <li>To understand various applications of counters and shift registers.</li>
+</ol>
+        
+            </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/content_94.png" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag.-->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Pre Test 
+        </div> 
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag-->
+        <div id="experiment-article-section-2-content" 
+        class="content">
+
+
+<div class="divQuiz" ><div id="displayQuiz" ><form name="form11" id="form11" method="post"><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">1)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">The maximum numbers of states that a counter with six flip-flops can count are</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6207" style="vertical-align:middle" type="radio" name="ans0"  value="6207"> </input><label for="ans6207" id="textAnsChoice">6</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6210" style="vertical-align:middle" type="radio" name="ans0"  value="6210"> </input><label for="ans6210" id="textAnsChoice">256</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6209" style="vertical-align:middle" type="radio" name="ans0"  value="6209"> </input><label for="ans6209" id="textAnsChoice">64</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6208" style="vertical-align:middle" type="radio" name="ans0"  value="6208"> </input><label for="ans6208" id="textAnsChoice">8</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">2)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">The maximum numbers of flip-flops required for a mod 10 ripple counter are</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6214" style="vertical-align:middle" type="radio" name="ans1"  value="6214"> </input><label for="ans6214" id="textAnsChoice">10</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6213" style="vertical-align:middle" type="radio" name="ans1"  value="6213"> </input><label for="ans6213" id="textAnsChoice">6</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6211" style="vertical-align:middle" type="radio" name="ans1"  value="6211"> </input><label for="ans6211" id="textAnsChoice">2</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6212" style="vertical-align:middle" type="radio" name="ans1"  value="6212"> </input><label for="ans6212" id="textAnsChoice">4</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">3)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">The number of states in decade counter is</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6215" style="vertical-align:middle" type="radio" name="ans2"  value="6215"> </input><label for="ans6215" id="textAnsChoice">10</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6216" style="vertical-align:middle" type="radio" name="ans2"  value="6216"> </input><label for="ans6216" id="textAnsChoice">15</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6217" style="vertical-align:middle" type="radio" name="ans2"  value="6217"> </input><label for="ans6217" id="textAnsChoice">5</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6218" style="vertical-align:middle" type="radio" name="ans2"  value="6218"> </input><label for="ans6218" id="textAnsChoice">20</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">4)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">Flip-flop is used to store</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6220" style="vertical-align:middle" type="radio" name="ans3"  value="6220"> </input><label for="ans6220" id="textAnsChoice">two bits information</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6219" style="vertical-align:middle" type="radio" name="ans3"  value="6219"> </input><label for="ans6219" id="textAnsChoice">one bit information</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6222" style="vertical-align:middle" type="radio" name="ans3"  value="6222"> </input><label for="ans6222" id="textAnsChoice">none of the above</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6221" style="vertical-align:middle" type="radio" name="ans3"  value="6221"> </input><label for="ans6221" id="textAnsChoice">one byte of information</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">5)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">Any sequential circuit that goes through a prescribed sequence of states up to application of input pulses is called as</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6226" style="vertical-align:middle" type="radio" name="ans4"  value="6226"> </input><label for="ans6226" id="textAnsChoice">a and b</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6225" style="vertical-align:middle" type="radio" name="ans4"  value="6225"> </input><label for="ans6225" id="textAnsChoice">register</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6223" style="vertical-align:middle" type="radio" name="ans4"  value="6223"> </input><label for="ans6223" id="textAnsChoice">flip-flop</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6224" style="vertical-align:middle" type="radio" name="ans4"  value="6224"> </input><label for="ans6224" id="textAnsChoice">counter</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint14" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><input type="hidden" align="middle" id="loadTime" name="loadTime" value=1389867327/><br /><div style="padding-left:40px;"><input type="submit" name="submit1" id="submit1" value="&nbsp;Submit&nbsp;" style="width:8%;" onclick="get_radio_value();"  />&nbsp;&nbsp;<input type="reset" name="cancel1" id="cancel1" value="&nbsp;Cancel&nbsp;" style="width:8%;"  /></div></form><br /></div><br />
+
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.--> 
+	  <img src="../images/theory.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Theory
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+         
+
+         <span style="color: rgb(204, 0, 51);"><u>Theory</u></span></h1>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><strong>Counters</strong></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Counter is the most useful and versatile subsystem of digital branch. Counter is going to count number of clock pulses applied to it. Maximum count that binary counter can count is 2<sup>n</sup>- 1. Clock pulses occur at regular time interval, so that counter can be used to measure time or frequency. Digital counters are integrated circuits (ICs) that count events in computers and other digital systems. Because they must remember past states, digital counters include memory. Generally, digital counters consist of bistable devices or bistable multi vibrators called flip-flops. The number of flip-flops and the way in which they are connected determines the number of states and the sequence of states that digital counters complete in each full cycle.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Counters can be subdivided into 2 groups:</p>
+<p style="text-align: justify;">&nbsp;</p>
+<ul>
+    <li style="text-align: justify;">Asynchronous Counters</li>
+    <li style="text-align: justify;">Synchronous Counters</li>
+</ul>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">The way in which devices are clocked determines whether digital counters are categorized as synchronous or asynchronous. In synchronous devices (such as synchronous BCD counters and synchronous decade counters), one clock triggers all of the flip-flops simultaneously. With asynchronous devices, often called asynchronous ripple counters an external clock pulse triggers only the first first-flop. Each successive flip-flop is then clocked by one of the outputs (Q or Q&#039;) of the previous flip-flop. Digital counters are configured as UP (counting in increasing sequence), DOWN (counting in decreasing sequence) or Bidirectional (UP / DOWN).</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Synchronous / Asynchronous counter can be subdivided into following subgroups:</p>
+<p style="text-align: justify;">&nbsp;</p>
+<ol>
+    <li style="text-align: justify;">Sequential Counters: States of counter are sequential.</li>
+    <li style="text-align: justify;">Non-sequential Counters: Sequence or states of counter are sequential but irregular.</li>
+    <li style="text-align: justify;">Regular Counters: In this counters, FFs are used. There is direct relation between number of states and number of FFs used i.e. N=2m.</li>
+    <li style="text-align: justify;">Decade counter – counts through ten states per stage.</li>
+    <li style="text-align: justify;">Up down counter – counts both up and down, under command of a control input.</li>
+    <li style="text-align: justify;">Ring counter – formed by a shift register with feedback connection in a ring.</li>
+    <li style="text-align: justify;">Johnson counter – a twisted ring counter.</li>
+    <li style="text-align: justify;">Cascaded counter.</li>
+</ol>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Some of the commercial ICs used for design of Counters:</p>
+<p style="text-align: justify;">&nbsp;</p>
+<ol>
+    <li style="text-align: justify;">IC 7490-Decade Counter</li>
+    <li style="text-align: justify;">IC 7492 Divide by 10 Counter</li>
+    <li style="text-align: justify;">IC 7493 4 - bit binary Counter</li>
+    <li style="text-align: justify;">IC 74190 Up -Down Decade Counter</li>
+    <li style="text-align: justify;">IC74191 Binary Up-down Counter</li>
+</ol>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><br>
+<strong>BCD Counter</strong></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">BCD stands for Binary Coded Decimal. A BCD counter has four outputs usually labeled A, B, C, D. By convention A is the least significant bit, or LSB. The easiest way to understand what a BCD counter does is to follow the counting sequence in truth table form.<br>
+A BCD counter or decade counter can be constructed from a straight binary counter by terminating the "ripple-through" counting when the count reaches decimal 9 (binary 1001). Since the next toggle would set the two most significant bits, a NAND gate tied from those two outputs to the asynchronous clear line will start the count over after 9.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><strong>Asynchronous Decade Counters</strong></p>
+<p style="text-align: justify;"><br>
+A common modulus for counters with truncated sequences is ten.  A counter with ten states in its sequence is called a decade counter.  The circuit below is an implementation of a decade counter. Once the counter counts to ten (1010), all the flip-flops are being cleared.  Notice that only Q1 and Q3 are used to decode the count of ten.  This is called partial decoding, as none of the other states (zero to nine) have both Q1 and Q3 HIGH at the same time.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><strong>Synchronous Decade Counters</strong></p>
+<p style="text-align: justify;"><br>
+Similar to an asynchronous decade counter, a synchronous decade counter counts from 0 to 9 and then recycles to 0 again.  This is done by forcing the 1010 state back to the 0000 state.  This so called truncated sequence can be constructed by the following circuit.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<center> </center> <center>
+<table align="center" border="1" cellpadding="0" cellspacing="0">
+    <tbody>
+        <tr>
+            <td style="text-align: center;" valign="top" width="66">
+            <p>Clock Pulse</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>Q<sub>3</sub></p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>Q<sub>2</sub></p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>Q<sub>1</sub></p>
+            </td>
+            <td style="text-align: center;" valign="top" width="72">
+            <p>Q<sub>0</sub></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" valign="top" width="66">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="72">
+            <p>0</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" valign="top" width="66">
+            <p>1</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="72">
+            <p>1</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" valign="top" width="66">
+            <p>2</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>1</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="72">
+            <p>0</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" valign="top" width="66">
+            <p>3</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>1</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="72">
+            <p>1</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" valign="top" width="66">
+            <p>4</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>1</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="72">
+            <p>0</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" valign="top" width="66">
+            <p>5</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>1</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="72">
+            <p>1</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" valign="top" width="66">
+            <p>6</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>1</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>1</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="72">
+            <p>0</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" valign="top" width="66">
+            <p>7</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>1</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>1</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="72">
+            <p>1</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" valign="top" width="66">
+            <p>8</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>1</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="72">
+            <p>0</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" valign="top" width="66">
+            <p>9</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>1</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="60">
+            <p>0</p>
+            </td>
+            <td style="text-align: center;" valign="top" width="72">
+            <p>1</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</center>
+<p style="text-align: center;">Table 1: Sequence for Synchronous Decade Counter</p>
+<p style="text-align: justify;">&nbsp;</p>
+<ul>
+    <li style="text-align: justify;">Q0 toggles on each clock pulse.</li>
+    <li style="text-align: justify;">Q1changes on the next clock pulse each time Q0=1 and Q3=0.</li>
+    <li style="text-align: justify;">Q2 changes on the next clock pulse each time Q0= Q1=1.</li>
+    <li style="text-align: justify;">Q3 changes on the next clock pulse each time Q0=1, Q1=1 and Q3=1 (count 7), or when Q0 =1 and Q3=1 (count 9).</li>
+</ul>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Asynchronous counter circuit design is based on the fact that each bit toggle happens at the same time that the preceding bit toggles from a "high" to a "low" (from 1 to 0).  Since we cannot clock the toggling of a bit based on the toggling of a previous bit in a synchronous counter circuit (to do so would create a ripple effect) we must find some other pattern in the counting sequence that can be used to trigger a bit toggle.</p>
+<p style="text-align: center;"><img alt="" src="Theory/moz-screenshot.jpg"><img alt="" src="Theory/moz-screenshot-1.jpg"><img alt="" src="Theory/moz-screenshot-2.jpg"><img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Theory/fig01.JPG" border="0" height="460" hspace="0" vspace="0" width="317"></p>
+<p style="text-align: center;">Fig. 1: 4-bit Asynchronous Binary Counter</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">The result is a four-bit synchronous "up" counter. Each of the higher-order flip-flops are made ready to toggle (both J and K inputs "high") if the Q outputs of all previous flip-flops are "high." Otherwise, the J and K inputs for that flip-flop will both be "low," placing it into the "latch" mode where it will maintain its present output state at the next clock pulse. Since the first (LSB) flip-flop needs to toggle at every clock pulse, its J and K inputs are connected to Vcc or Vdd, where they will be "high" all the time. The next flip-flop need only "recognize" that the first flip-flop&#039;s Q output is high to be made ready to toggle, so no AND gate is needed. However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are "high," thus the need for AND gates.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">To make a synchronous "down" counter, we need to build the circuit to recognize the appropriate bit patterns predicting each toggle state while counting down. Not surprisingly, when we examine the four-bit binary count sequence, we see that all preceding bits are "low" prior to a toggle (following the sequence from bottom to top).</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Since each J-K flip-flop comes equipped with a Q&#039; output as well as a Q output, we can use the Q&#039; outputs to enable the toggle mode on each succeeding flip-flop, being that each Q&#039; will be "high" every time that the respective Q is "low"</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Taking this idea one step further, we can build a counter circuit with selectable between "up" and "down" count modes by having dual lines of AND gates detecting the appropriate bit conditions for an "up" and a "down" counting sequence, respectively, then use OR gates to combine the AND gate outputs to the J and K inputs of each succeeding flip-flop.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">This circuit isn&#039;t as complex as it might first appear. The Up/Down control input line simply enables either the upper string or lower string of AND gates to pass the Q / Q&#039; outputs to the succeeding stages of flip-flops. If the Up/Down control line is "high," the top AND gates become enabled, and the circuit functions exactly the same as the first ("up") synchronous counter circuit shown in this section. If the Up/Down control line is made "low," the bottom AND gates become enabled, and the circuit functions identically to the second ("down" counter) circuit shown in this section.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><strong>Ring counter</strong></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">A ring counter is a type of counter composed of a circular shift register. If the output of a shift register is fed back to the input a ring counter results. There are two types of ring counters:</p>
+<p style="text-align: justify;">&nbsp;</p>
+<ul>
+    <li style="text-align: justify;">A straight ring counter or Over beck counter connects the output of the last shift register to the first shift register input and circulates a single one (or zero) bit around the ring. For example, in a 4-register one-hot counter, with initial register values of 1000, the repeating pattern is: 1000, 0100, 0010, 0001, 1000... . Note that one of the registers must be pre-loaded with a 1 (or 0) in order to operate properly.</li>
+    <li style="text-align: justify;">A twisted ring counter (also called Johnson counter or Moebius counter) connects the complement of the output of the last shift register to its input and circulates a stream of ones followed by zeros around the ring. For example, in a 4-register counter, with initial register values of 0000, the repeating pattern is: 0000, 1000, 1100, 1110, 1111, 0111, 0011, 0001, 0000..</li>
+</ul>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Theory/fig02.JPG" border="0" height="175" hspace="0" vspace="0" width="500"></p>
+<p style="text-align: center;">Fig. 2: Ring counter shift register, output fed back to input</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify; line-height: 150%;"><span style="color: rgb(51, 51, 51);">The data pattern contained within the shift register will re-circulate as long as clock pulses are applied. For example, the data pattern will repeat every four clock pulses in the figure below. However, we must load a data pattern. All <span>0</span>&#039;s or all <span>1</span>&#039;s doesn&#039;t count. Is a continuous logic level from such a condition useful? We make provisions for loading data into the parallel-in/ serial-out shift register configured as a ring counter below. Any random pattern may be loaded. The most generally useful pattern is a single <span>1</span>.</span></p>
+<p style="text-align: justify; line-height: 150%;">&nbsp;</p>
+<p style="line-height: 150%; text-align: justify;"><img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Theory/fig03.JPG" border="0" height="188" hspace="0" vspace="0" width="439"></p>
+<p style="line-height: 150%; text-align: center;">Fig. 3: Parallel In Serial Out Shift Register using Ring Counter</p>
+<p style="line-height: 150%; text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Loading binary 1000 into the ring counter, above, prior to shifting yields a viewable pattern. The data pattern for a single stage repeats every four clock pulses in our 4-stage example. The waveforms for all four stages look the same, except for the one clock time delay from one stage to the next. See figure below.</p>
+<p style="text-align: justify;"><br>
+<br>
+<img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Theory/fig04.JPG" border="0" height="234" hspace="0" vspace="0" width="544"></p>
+<p style="text-align: center;">Fig. 4: Timing Diagram For Ring Counter</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">The circuit above is a divide by 4 counter. Comparing the clock input to any one of the outputs, shows a frequency ratio of 4:1. How may stages would we need for a divide by 10 ring counter? Ten stages would recirculate the 1 every 10 clock pulses.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">An alternate method of initializing the ring counter to 1000 is shown above. The shift waveforms are identical to those above, repeating every fourth clock pulse. The requirement for initialization is a disadvantage of the ring counter over a conventional counter. At a minimum, it must be initialized at power-up since there is no way to predict what state flip-flops will power up in. In theory, initialization should never be required again. In actual practice, the flip-flops could eventually be corrupted by noise, destroying the data pattern. A "self correcting" counters, like a conventional synchronous binary counter would be more reliable.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">The above binary synchronous counter needs only two stages, but requires decoder gates. The ring counter had more stages, but was self decoding, saving the decode gates above. Another disadvantage of the ring counter is that it is not "self starting". If we need the decoded outputs, the ring counter looks attractive, in particular, if most of the logic is in a single shift register package. If not, the conventional binary counter is less complex without the decoder.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">The waveforms decoded from the synchronous binary counter are identical to the previous ring counter waveforms. The counter sequence is (QA QB) = (00 01 10 11).</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><strong>Johnson counters</strong></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">The switch-tail ring counter, also know as the Johnson counter, overcomes some of the limitations of the ring counter. Like a ring counter a Johnson counter is a shift register fed back on its&#039; self. It requires half the stages of a comparable ring counter for a given division ratio. If the complement output of a ring counter is fed back to the input instead of the true output, a Johnson counter results. The difference between a ring counter and a Johnson counter is which output of the last stage is fed back (Q or Q&#039;). Carefully compare the feedback connection below to the previous ring counter.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">This "reversed" feedback connection has a profound effect upon the behavior of the otherwise similar circuits. Recirculating a single 1 around a ring counter divides the input clock by a factor equal to the number of stages. Whereas, a Johnson counter divides by a factor equal to twice the number of stages. For example, a 4-stage ring counter divides by 4. A 4-stage Johnson counter divides by 8.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Start a Johnson counter by clearing all stages to 0s before the first clock. This is often done at power-up time. Referring to the figure below, the first clock shifts three 0s from ( QA QB QC) to the right into ( QB QC QD). The 1 at QD&#039; (the complement of Q) is shifted back into QA. Thus, we start shifting 1s to the right, replacing the 0s. Where a ring counter recirculated a single 1, the 4-stage Johnson counter recirculates four 0s then four 1s for an 8-bit pattern, then repeats.</p>
+<p style="text-align: justify;"><img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Theory/fig05.JPG" border="0" height="184" hspace="0" vspace="0" width="527"></p>
+<p style="text-align: center;">Fig. 5: Timing Diagram for Johnson Counter</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">The above waveforms illustrates that multi-phase square waves are generated by a Johnson counter. The 4-stage unit above generates four overlapping phases of 50% duty cycle. How many stages would be required to generate a set of three phase waveforms? For example, a three stage Johnson counter, driven by a 360 Hertz clock would generate three 120o phased square waves at 60 Hertz. The outputs of the flop-flops in a Johnson counter are easy to decode to a single state.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><strong>Shift Registers</strong></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">In digital circuits, a shift register is a cascade of flip flops, sharing the same clock, which has the output of any one but the last flip-flop connected to the "data" input of the next one in the chain, resulting in a circuit that shifts by one position the one-dimensional "bit array" stored in it, shifting in the data present at its input and shifting out the last bit in the array, when enabled to do so by a transition of the clock input. More generally, a shift register may be multidimensional, such that its "data in" input and stage outputs are themselves bit arrays: this is implemented simply by running several shift registers of the same bit-length in parallel.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Shift registers can have both parallel and serial inputs and outputs. These are often configured as serial-in, parallel-out (SIPO) or as parallel-in, serial-out (PISO). There are also types that have both serial and parallel input and types with serial and parallel output. There are also bi-directional shift registers which allow shifting in both directions: L → R or R → L. The serial input and last output of a shift register can also be connected together to create a circular shift register.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Shift registers are a type of sequential logic circuit, mainly for storage of digital data.  They are a group of flip-flops connected in a chain so that the output from one flip-flop becomes the input of the next flip-flop.  Most of the registers possess no characteristic internal sequence of states.  All the flip-flops are driven by a common clock, and all are set or reset simultaneously. Contain several flip-flops in a row. One bit is input at one end on each clock pulse. Each other bit moves one place to the right (or left). The outputs of each flip-flop are available simultaneously.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">We can use shift registers for serial to parallel conversion. Input 8 bits on 8 pulses, then read data simultaneously.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">A basic four-bit shift register can be constructed using four D flip-flops, as shown below.  The operation of the circuit is as follows.  The register is first cleared, forcing all four outputs to zero.  The input data is then applied sequentially to the D input of the first flip-flop on the left (FF0).  During each clock pulse, one bit is transmitted from left to right.  Assume a data word to be 1001.  The least significant bit of the data has to be shifted through the register from FF0 to FF3.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">In order to get the data out of the register, they must be shifted out serially.  This can be done destructively or non-destructively.  For destructive readout, the original data is lost and at the end of the read cycle, all flip-flops are reset to zero.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">To avoid the loss of data, an arrangement for a non-destructive reading can be done by adding two AND gates, an OR gate and an inverter to the system.  The construction of this circuit is shown below.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">The data is loaded to the register when the control line is HIGH (ie WRITE).  The data can be shifted out of the register when the control line is LOW (ie READ).</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">For this kind of register, data bits are entered serially in the same manner as discussed in the last section.  The difference is the way in which the data bits are taken out of the register.  Once the data are stored, each bit appears on its respective output line, and all bits are available simultaneously.  A construction of a four-bit serial in - parallel out register is shown below.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">D0, D1, D2 and D3 are the parallel inputs, where D0 is the most significant bit and D3 is the least significant bit.  To write data in, the mode control line is taken to LOW and the data is clocked in.  The data can be shifted when the mode control line is HIGH as SHIFT is active high.  The register performs right shift operation on the application of a clock pulse, as shown in the animation below.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">For parallel in - parallel out shift registers, all data bits appear on the parallel outputs immediately following the simultaneous entry of the data bits.  The following circuit is a four-bit parallel in - parallel out shift register constructed by D flip-flops.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">The D&#039;s are the parallel inputs and the Q&#039;s are the parallel outputs.  Once the register is clocked, all the data at the D inputs appear at the corresponding Q outputs simultaneously.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">The registers discussed so far involved only right shift operations.  Each right shift operation has the effect of successively dividing the binary number by two.  If the operation is reversed (left shift), this has the effect of multiplying the number by two.  With suitable gating arrangement a serial shift register can perform both operations.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">A bidirectional, or reversible, shift register is one in which the data can be shift either left or right.  A four-bit bidirectional shift register using D flip-flops is shown below.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><strong>Registers</strong></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">The register is a group of flip-flop. An n bit register consists of group of n flip-flops capable of storing n bits of binary information. Register may have the combinational gates that perform certain data processing tasks.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Register consists of group of flip-flops and gates that affect their transition.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Counter is a register that goes through the predetermined sequence of steps. The gates in the counter are connected in such a way as to produce the prescribed the sequence of binary steps. Counters are special type of registers.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><strong>Shift registers</strong></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Register capable of shifting its binary information in one or both directions is called shift registers. The logical configuration of the shift registers consists of the chain of flip-flops in cascade, with the o/p of one flip-flop connected to input of next flip-flop. All flip-flops receive common clock pulses which activate the shift from one stage to the next.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><strong>4 bit shift register </strong></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">The output of the flip-flop is connected to the D input of the next flip-flop. Each clock pulse shifts the contents of the register one bit position to the right. The serial input data lines what goes into the leftmost flip-flop during the shift. The serial output is taken from the output of the right most flip-flops. Sometimes it is necessary to control the shift so that it occurs only with certain pulses but not with the others. This can be done by inhibiting the clock from the input of register to prevent it from shifting.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Theory/fig06.JPG" border="0" height="177" hspace="0" vspace="0" width="594"></p>
+<p style="text-align: center;">Fig. 6: 4-bit Shift Register</p>
+<p style="text-align: justify;"><br>
+<br>
+<img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Theory/fig07.JPG" border="0" height="225" hspace="0" vspace="0" width="498"></p>
+<p style="text-align: center;">Fig. 7: Serial Transfer</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><strong>4 Bit universal shift register</strong></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">A register capable of shifting in one direction only is a unidirectional shift register &amp; register that can shift in both directions is bi-directional shift registers. If the register has both the shifts &amp; parallel load capabilities, it is referred to as universal shift register.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<center> </center> <center>
+<table style="border: 1px solid; width: 200px; height: 100px;" align="center" border="1" cellpadding="0" cellspacing="0">
+    <tbody>
+        <tr style="height: 31.9pt;">
+            <td style="border: 1pt solid black; padding: 0in 5.4pt; width: 57.5pt; height: 31.9pt;" valign="top" width="77">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">S<sub>1</sub></span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; width: 44.25pt; height: 31.9pt;" valign="top" width="59">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">S<sub>0</sub></span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; width: 110.3pt; height: 31.9pt;" valign="top" width="147">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">Register   operation</span></p>
+            </td>
+        </tr>
+        <tr style="height: 32.5pt;">
+            <td style="padding: 0in 5.4pt; width: 57.5pt; height: 32.5pt;" valign="top" width="77">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">0</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; width: 44.25pt; height: 32.5pt;" valign="top" width="59">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">0</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; width: 110.3pt; height: 32.5pt;" valign="top" width="147">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">No   change</span></p>
+            </td>
+        </tr>
+        <tr style="height: 32.5pt;">
+            <td style="padding: 0in 5.4pt; width: 57.5pt; height: 32.5pt;" valign="top" width="77">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">0</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; width: 44.25pt; height: 32.5pt;" valign="top" width="59">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">1</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; width: 110.3pt; height: 32.5pt;" valign="top" width="147">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">Shift   right</span></p>
+            </td>
+        </tr>
+        <tr style="height: 33.3pt;">
+            <td style="padding: 0in 5.4pt; width: 57.5pt; height: 33.3pt;" valign="top" width="77">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">1</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; width: 44.25pt; height: 33.3pt;" valign="top" width="59">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">0</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; width: 110.3pt; height: 33.3pt;" valign="top" width="147">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">Shift   left</span></p>
+            </td>
+        </tr>
+        <tr style="height: 33.3pt;">
+            <td style="padding: 0in 5.4pt; width: 57.5pt; height: 33.3pt;" valign="top" width="77">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">1</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; width: 44.25pt; height: 33.3pt;" valign="top" width="59">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">1</span></p>
+            </td>
+            <td style="padding: 0in 5.4pt; width: 110.3pt; height: 33.3pt;" valign="top" width="147">
+            <p style="text-align: center; line-height: 150%;" class="MsoNormal"><span style="font-size: 12pt; line-height: 150%;">Parallel   load</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</center>
+<p style="margin: 0.25in 0in; background: none repeat scroll 0% 50% white; line-height: 150%; text-align: justify;" class="MsoNormal"><strong><span style="font-size: 12pt; line-height: 150%;" lang="EN-IN"> </span></strong><strong><span style="font-size: 12pt; line-height: 150%;"> </span></strong></p>
+<p style="line-height: 150%; text-align: center;">Table 2: Function table for the register</p>
+<p style="line-height: 150%; text-align: justify;">&nbsp;</p>
+<p style="line-height: 150%; text-align: justify;"><img alt="a" title="a" src="Theory/fig08.JPG" border="0" height="344" hspace="0" vspace="0" width="668"></p>
+<p style="line-height: 150%; text-align: center;">Fig.  8: 4- bit Universal Shift Register</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<div style="overflow: hidden; position: absolute; left: -10000px; top: 1209px; width: 1px; height: 1px;" class="mcePaste" id="_mcePaste">
+<p style="margin-left: 0.5in; text-align: justify; line-height: 150%;" class="MsoNormal"><strong><span style="font-size: 12pt; line-height: 150%;">Fig. 2: Ring counter shift register, output fed back to input</span></strong></p>
+</div>
+         
+          
+        </div>
+
+      </section>
+
+
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/procedure.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Procedure
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+
+<p>&nbsp;</p>
+<ol>
+    <li><span style="font-size: small;">Select appropriate counter and shift register from the tab menu. </span></li>
+    <li><span style="font-size: small;">Select and set appropriate clock period and understand its significance. </span></li>
+    <li><span style="font-size: small;">Execute the simulation by pressing the run button. </span></li>
+    <li><span style="font-size: small;">Repeat the procedure and observe the counter outputs. </span></li>
+    <li><span style="font-size: small;">Repeat the procedure for universal register. </span></li>
+</ol>
+<p>&nbsp;</p>
+
+        </div>
+
+      </section>
+
+     <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Lab Manual
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+       
+
+
+        <p style="text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 24pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Hybrid Electronics Laboratory</span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 18pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Experiment No.<span style="">&nbsp; </span>3</span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 18pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: center;" class="MsoNormal" align="center"><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Design and Simulation of Various Counters and Registers</span></p>
+<p class="MsoNormal"><span style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Aim:<span style="">&nbsp; </span></span></b><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">To design and simulate 4-bit Binary Counter, BCD Counter, Johnson Counter, Ring Counter <span style="">&nbsp;</span></span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>and Universal Shift Register</span></p>
+<p class="MsoNormal"><span style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Objectives:</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpFirst"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">1.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">To study different counters.</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">2.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">To design various counters using gates and flip-flops</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">3.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">To simulate various counters and shift registers.</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpLast"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">4.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">To understand various applications of counters and shift registers.</span></p>
+<p class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<p class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Theory </span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Counters</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>Counter is the most useful and versatile subsystem of digital branch. Counter is going to count number of clock pulses applied to it. Maximum count that binary counter can count is 2<sup>n</sup>- 1. Clock pulses occur at regular time interval, so that counter can be used to measure time or frequency. Digital counters are integrated circuits (ICs) that count events in computers and other digital systems. Because they must remember past states, digital counters include memory. Generally, digital counters consist of bistable devices or bistable multi vibrators called flip-flops. The number of flip-flops and the way in which they are connected determines the number of states and the sequence of states that digital counters complete in each full cycle.</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Counters can be subdivided into 2 groups:</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpFirst"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">1.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Asynchronous Counters</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpLast"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">2.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Synchronous Counters</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;</span></span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>The way in which devices are clocked determines whether digital counters are categorized as synchronous or asynchronous. In synchronous devices (such as synchronous BCD counters and synchronous decade counters), one clock triggers all of the flip-flops simultaneously. With asynchronous devices, often called asynchronous ripple counters an external clock pulse triggers only the first first-flop. Each successive flip-flop is then clocked by one of the outputs (Q or Q&#039;) of the previous flip-flop. Digital counters are configured as </span><span lang="EN-IN"><a target="_blank" href="http://www.globalspec.com/datasheets/3539/areaspec/counter_direction_up"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">UP</span></a></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"> (counting in increasing sequence), DOWN (counting in decreasing sequence) or Bidirectional (UP / DOWN).</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Synchronous / Asynchronous counter can be subdivided into following subgroups:</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpFirst"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Sequential Counters: States of counter are sequential.</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Non-sequential Counters: Sequence or states of counter are sequential but irregular.</span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Regular Counters: In this counters, FFs are used. There is direct relation between number of states and number of FFs used i.e. N=2m.</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Decade counter – counts through ten states per stage. </span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Up down counter – counts both up and down, under command of a control input. </span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Ring counter – formed by a shift register with feedback connection in a ring. </span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Johnson counter – a twisted ring counter. </span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpLast"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Cascaded counter. </span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;</span>Some of the commercial ICs used for design of Counters:</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpFirst"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">IC 7490-Decade Counter</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">IC 7492 Divide by 10 Counter</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">IC 7493 4 - bit binary Counter<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">IC 74190 Up -Down Decade Counter<span style="">&nbsp;&nbsp;&nbsp;</span></span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;</span></span><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">IC74191 Binary Up-down Counter<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+<p style="margin: 6pt 0in 0.0001pt;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<p style="margin: 6pt 0in 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">BCD Counter:</span></b></p>
+<p style="margin: 6pt 0in 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>BCD stands for Binary Coded Decimal. A BCD counter has four outputs usually labelled A, B, C, D. By convention A is the least significant bit, or LSB. The easiest way to understand what a BCD counter does is to follow the counting sequence in truth table form</span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">A BCD counter or decade counter can be constructed from a straight binary counter by terminating the "ripple-through" counting when the count reaches decimal 9 (binary 1001). Since the next toggle would set the two most significant bits, a NAND gate tied from those two outputs to the asynchronous clear line will start the count over after 9. </span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></i></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Asynchronous decade counter:</span></i></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></i></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">A common modulus for counters with truncated sequences is ten. A counter with ten states in its sequence is called a&nbsp;decade counter. &nbsp;The circuit below is an implementation of a decade counter. Once the counter counts to ten (1010), all the flip-flops are being cleared. &nbsp;Notice that only Q1 and Q3 are used to decode the count of ten. &nbsp;This is called partial decoding, as none of the other states (zero to nine) have both Q1 and Q3 HIGH at the same time. </span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></i></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></i></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Synchronous Decade Counters:</span></i></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></i></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Similar to an asynchronous decade counter, a synchronous decade counter counts from 0 to 9 and then recycles to 0 again. &nbsp;This is done by forcing the 1010 state back to the 0000 state. &nbsp;This so called truncated sequence can be constructed by the following circuit. </span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal">&nbsp;</p>
+<div align="center">
+<table style="" class="MsoNormalTable" border="0" cellpadding="0">
+    <tbody>
+        <tr style="">
+            <td style="padding: 1.5pt;">
+            <table style="border: medium none ; width: 3.5in; border-collapse: collapse; margin-left: 6.75pt; margin-right: 6.75pt;" class="MsoNormalTable" align="left" border="1" cellpadding="0" cellspacing="0" width="336">
+                <tbody>
+                    <tr style="height: 22pt;">
+                        <td style="border: 1pt solid black; padding: 0in 5.4pt; width: 67.25pt; height: 22pt;" width="90">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Clock Pulse</span></b></p>
+                        </td>
+                        <td style="border-style: solid solid solid none; border-color: black black black -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 22pt;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Q3</span></b></p>
+                        </td>
+                        <td style="border-style: solid solid solid none; border-color: black black black -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 22pt;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Q2</span></b></p>
+                        </td>
+                        <td style="border-style: solid solid solid none; border-color: black black black -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 22pt;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Q1</span></b></p>
+                        </td>
+                        <td style="border-style: solid solid solid none; border-color: black black black -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 49.75pt; height: 22pt;" width="66">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Q0</span></b></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 0.3in;">
+                        <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 67.25pt; height: 0.3in;" width="90">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.75pt; height: 0.3in;" width="66">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 0.3in;">
+                        <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 67.25pt; height: 0.3in;" width="90">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.75pt; height: 0.3in;" width="66">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 0.3in;">
+                        <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 67.25pt; height: 0.3in;" width="90">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">2</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.75pt; height: 0.3in;" width="66">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 0.3in;">
+                        <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 67.25pt; height: 0.3in;" width="90">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">3</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.75pt; height: 0.3in;" width="66">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 0.3in;">
+                        <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 67.25pt; height: 0.3in;" width="90">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">4</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.75pt; height: 0.3in;" width="66">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 0.3in;">
+                        <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 67.25pt; height: 0.3in;" width="90">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">5</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.75pt; height: 0.3in;" width="66">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 0.3in;">
+                        <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 67.25pt; height: 0.3in;" width="90">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">6</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.75pt; height: 0.3in;" width="66">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 0.3in;">
+                        <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 67.25pt; height: 0.3in;" width="90">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">7</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.75pt; height: 0.3in;" width="66">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 0.3in;">
+                        <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 67.25pt; height: 0.3in;" width="90">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">8</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.75pt; height: 0.3in;" width="66">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 0.3in;">
+                        <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 67.25pt; height: 0.3in;" width="90">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">9</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45pt; height: 0.3in;" width="60">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+                        </td>
+                        <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.75pt; height: 0.3in;" width="66">
+                        <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">T</span></i></b></p>
+            <p style="text-align: center;" class="MsoNormal" align="center">&nbsp;</p>
+            <p style="text-align: center;" class="MsoNormal" align="center">&nbsp;</p>
+            <p style="text-align: center;" class="MsoNormal" align="center">&nbsp;</p>
+        
+            <p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">able   1:</span></i></b><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">   Sequence for Synchronous Decade Counter</span></i></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<p style="text-align: justify; text-indent: -0.25in;" class="MsoListParagraphCxSpFirst"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Q0 toggles on each clock pulse.</span></p>
+<p style="text-align: justify; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Q1changes on the next clock pulse each time Q0=1 and Q3=0.</span></p>
+<p style="text-align: justify; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Q2 changes on the next clock pulse each time Q0= Q1=1.</span></p>
+<p style="text-indent: -0.25in;" class="MsoListParagraphCxSpLast"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Q3 changes on the next clock pulse each time Q0=1, Q1=1 and Q3=1 (count 7), or when Q0 =1 and Q3=1 (count 9).</span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Asynchronous counter circuit design is based on the fact that each bit toggle happens at the same time that the preceding bit toggles from a "high" to a "low" (from 1 to 0).<span style="">&nbsp; </span>Since we cannot clock the toggling of a bit based on the toggling of a previous bit in a synchronous counter circuit (to do so would create a ripple effect) we must find some other pattern in the counting sequence that can be used to trigger a bit toggle.</span></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Lab Manual/fig01.JPG" border="0" height="460" hspace="0" vspace="0" width="317"></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Fig. 1:</span></i></b><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"> 4-bit Synchronous Binary Counter</span></i></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The result is a four-bit synchronous "up" counter. Each of the higher-order flip-flops are made ready to toggle (both J and K inputs "high")<span style="">&nbsp; </span>if the Q outputs of all previous flip-flops are "high." Otherwise, the J and K inputs for that flip-flop will both be "low," placing it into the "latch" mode where it will maintain its present output state at the next clock pulse. Since the first (LSB) flip-flop needs to toggle at every clock pulse, its J and K inputs are connected to Vcc or Vdd, where they will be "high" all the time. The next flip-flop need only "recognize" that the first flip-flop&#039;s Q output is high to be made ready to toggle, so no AND gate is needed. However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are "high," thus the need for AND gates. </span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>To make a synchronous "down" counter, we need to build the circuit to recognize the appropriate bit patterns predicting each toggle state while counting down. Not surprisingly, when we examine the four-bit binary count sequence, we see that all preceding bits are "low" prior to a toggle (following the sequence from bottom to top).</span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Since each J-K flip-flop comes equipped with a Q&#039; output as well as a Q output, we can use the Q&#039; outputs to enable the toggle mode on each succeeding flip-flop, being that each Q&#039; will be "high" every time that the respective Q is "low".</span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Taking this idea one step further, we can build a counter circuit with selectable between "up" and "down" count modes by having dual lines of AND gates detecting the appropriate bit conditions for an "up" and a "down" counting sequence, respectively, then use OR gates to combine the AND gate outputs to the J and K inputs of each succeeding flip-flop.</span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>This circuit isn&#039;t as complex as it might first appear. The Up/Down control input line simply enables either the upper string or lower string of AND gates to pass the Q / Q&#039; outputs to the succeeding stages of flip-flops. If the Up/Down control line is "high," the top AND gates become enabled, and the circuit functions exactly the same as the first ("up") synchronous counter circuit shown in this section. If the Up/Down control line is made "low," the bottom AND gates become enabled, and the circuit functions identically to the second ("down" counter) circuit shown in this section. </span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><a name="Encoder,_rotary_shaft"></a><a name="Rotary_shaft_encoder"></a><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Ring counters:</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>A ring counter is a type of counter composed of a circular shift register. If the output of a shift register is fed back to the input a ring counter results. There are two types of ring counters:</span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify; text-indent: -0.25in;" class="MsoListParagraphCxSpFirst"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">A straight ring counter</span></i></b><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"> or Over beck counter connects the output of the last shift register to the first shift register input and circulates a single one (or zero) bit around the ring. For example, in a 4-register </span><span lang="EN-IN"><a title="One-hot" href="http://en.wikipedia.org/wiki/One-hot"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">one-hot</span></a></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"> counter, with initial register values of 1000, the repeating pattern is: 1000, 0100, 0010, 0001, 1000... . Note that one of the registers must be pre-loaded with a 1 (or 0) in order to operate properly. </span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify; text-indent: -0.25in;" class="MsoListParagraphCxSpLast"><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;" lang="EN-IN"><span style="">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">A <i style="">twisted ring counter</i></span></b><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"> </span></i><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">(also called Johnson counter or Moebius counter) connects the complement of the output of the last shift register to its input and circulates a stream of one’s followed by zeros around the ring. For example, in a 4-register counter, with initial register values of 0000, the repeating pattern is: 0000, 1000, 1100, 1110, 1111, 0111, 0011, 0001, 0000... . </span></p>
+<p style="text-align: justify;"><img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Lab Manual/fig02.JPG" border="0" height="175" hspace="0" vspace="0" width="500"></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Fig. 2</span></i></b><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">: Ring counter shift register, output fed back to input</span></i></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The data pattern contained within the shift register will re-circulate as long as clock pulses are applied. For example, the data pattern will repeat every four clock pulses in the figure below. However, we must load a data pattern. All 0&#039;s or all 1&#039;s doesn&#039;t count. Is a continuous logic level from such a condition useful? We make provisions for loading data into the parallel-in/ serial-out shift register configured as a ring counter below. Any random pattern may be loaded. The most generally useful pattern is a single 1. </span></p>
+<p style="line-height: 150%; text-align: justify;"><img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Lab Manual/fig03.JPG" border="0" height="188" hspace="0" vspace="0" width="439"></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Fig. 3:</span></i></b><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"> Parallel in serial out shift register using ring counter</span></i></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Loading binary 1000 into the ring counter, above, prior to shifting yields a viewable pattern. The data pattern for a single stage repeats every four clock pulses in our 4-stage example. The waveforms for all four stages look the same, except for the one clock time delay from one stage to the next. See figure below. </span></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Lab Manual/fig04.JPG" border="0" height="234" hspace="0" vspace="0" width="544"></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Fig. 4:</span></i></b><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"> Timing Diagram For Ring Counter</span></i></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The circuit above is a divide by 4 counter. Comparing the clock input to any one of the outputs, shows a frequency ratio of 4:1. How may stages would we need for a divide by 10 ring counter? Ten stages would recirculate the 1 every 10 clock pulses. </span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>An alternate method of initializing the ring counter to 1000 is shown above. The shift waveforms are identical to those above, repeating every fourth clock pulse. The requirement for initialization is a disadvantage of the ring counter over a conventional counter. At a minimum, it must be initialized at power-up since there is no way to predict what state flip-flops will power up in. In theory, initialization should never be required again. In actual practice, the flip-flops could eventually be corrupted by noise, destroying the data pattern. A "self correcting" counters, like a conventional synchronous binary counter would be more reliable. </span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The above binary synchronous counter needs only two stages, but requires decoder gates. The ring counter had more stages, but was self decoding, saving the decode gates above. Another disadvantage of the ring counter is that it is not "self starting". If we need the decoded outputs, the ring counter looks attractive, in particular, if most of the logic is in a single shift register package. If not, the conventional binary counter is less complex without the decoder. </span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The waveforms decoded from the synchronous binary counter are identical to the previous ring counter waveforms. The counter sequence is (QA QB) = (00 01 10 11). </span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Johnson counters:</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The switch-tail ring counter, also know as the Johnson counter, overcomes some of the limitations of the ring counter. Like a ring counter a Johnson counter is a shift register fed back on its&#039; self. It requires half the stages of a comparable ring counter for a given division ratio. If the complement output of a ring counter is fed back to the input instead of the true output, a Johnson counter results. The difference between a ring counter and a Johnson counter is which output of the last stage is fed back (Q or Q&#039;). Carefully compare the feedback connection below to the previous ring counter. </span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>This "reversed" feedback connection has a profound effect upon the behaviour of the otherwise similar circuits. Recirculating a single 1 around a ring counter divides the input clock by a factor equal to the number of stages. Whereas, a Johnson counter divides by a factor equal to twice the number of stages. For example, a 4-stage ring counter divides by 4. A 4-stage Johnson counter divides by 8. </span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Start a Johnson counter by clearing all stages to 0s before the first clock. This is often done at power-up time. Referring to the figure below, the first clock shifts three 0s from (QA QB QC) to the right into ( QB QC QD). The 1 at QD&#039; (the complement of Q) is shifted back into QA. Thus, we start shifting 1s to the right, replacing the 0s. Where a ring counter recirculated a single 1, the 4-stage Johnson counter recirculates four 0s then four 1s for an 8-bit pattern, then repeats. </span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<p style="text-align: justify;"><img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Lab Manual/fig05.JPG" border="0" height="184" hspace="0" vspace="0" width="527"></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Fig . 5:</span></i></b><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"> Timing Diagram For Johnson Counter</span></i></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The above waveforms illustrates that multi-phase square waves are generated by a Johnson counter. The 4-stage unit above generates four overlapping phases of 50% duty cycle. How many stages would be required to generate a set of three phase waveforms? For example, a three stage Johnson counter, driven by a 360 Hertz clock would generate three 120o phased square waves at 60 Hertz. The outputs of the flop-flops in a Johnson counter are easy to decode to a single state.</span></p>
+<p class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Shift Registers</span></b></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>In digital circuits, a shift register is a cascade of flip flops, sharing the same clock, which has the output of anyone but the last flip-flop connected to the "data" input of the next one in the chain, resulting in a circuit that shifts by one position the one-dimensional "bit array" stored in it, shifting in the data present at its input and shifting out the last bit in the array, when enabled to do so by a transition of the clock input. More generally, a shift register may be multidimensional; such that its "data in" input and stage outputs are themselves bit arrays: this is implemented simply by running several shift registers of the same bit-length in parallel.</span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Shift registers can have both parallel and serial inputs and outputs. These are often configured as serial-in, parallel-out (SIPO) or as parallel-in, serial-out (PISO). There are also types that have both serial and parallel input and types with serial and parallel output. There are also bi-directional shift registers which allow shifting in both directions: L → R or R → L. The serial input and last output of a shift register can also be connected together to create a circular shift register.</span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Shift registers are a type of sequential logic circuit, mainly for storage of digital data. They are a group of flip-flops connected in a chain so that the output from one flip-flop becomes the input of the next flip-flop. Most of the registers possess no characteristic internal sequence of states. All the flip-flops are driven by a common clock, and all are set or reset simultaneously. Contain several flip-flops in a row. One bit is input at one end on each clock pulse. Each other bit moves one place to the right (or left). The outputs of each flip-flop are available simultaneously.</span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>We can use shift registers for serial to parallel conversion. Input 8 bits on 8 pulses, then read data simultaneously.</span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>A basic four-bit shift register can be constructed using four D flip-flops, as shown below. The operation of the circuit is as follows. The register is first cleared, forcing all four outputs to zero. The input data is then applied sequentially to the D input of the first flip-flop on the left (FF0). During each clock pulse, one bit is transmitted from left to right. &nbsp;Assume a data word to be 1001. &nbsp;The least significant bit of the data has to be shifted through the register from FF0 to FF3. </span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>In order to get the data out of the register, they must be shifted out serially. This can be done destructively or non-destructively. &nbsp;For destructive readout, the original data is lost and at the end of the read cycle, all flip-flops are reset to zero. </span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>To avoid the loss of data, an arrangement for a non-destructive reading can be done by adding two AND gates, an OR gate and an inverter to the system. The construction of this circuit is shown below.</span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The data is loaded to the register when the control line is HIGH (ie WRITE). The data can be shifted out of the register when the control line is LOW (ie READ). &nbsp;</span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;</span><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>For this kind of register, data bits are entered serially in the same manner as discussed in the last section. The difference is the way in which the data bits are taken out of the register. Once the data are stored, each bit appears on its respective output line, and all bits are available simultaneously. &nbsp;A construction of a four-bit serial in - parallel out register is shown below. </span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>D0, D1, D2 and D3 are the parallel inputs, where D0 is the most significant bit and D3 is the least significant bit. To write data in, the mode control line is taken to LOW and the data is clocked in. The data can be shifted when the mode control line is HIGH as SHIFT is active high. The register performs right shift operation on the application of a clock pulse, as shown in the animation below. </span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>For parallel in - parallel out shift registers, all data bits appear on the parallel outputs immediately following the simultaneous entry of the data bits. The following circuit is a four-bit parallel in - parallel out shift register constructed by D flip-flops. </span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The D&#039;s are the parallel inputs and the Q&#039;s are the parallel outputs. Once the register is clocked, all the data at the D inputs appear at the corresponding Q outputs simultaneously. </span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The registers discussed so far involved only right shift operations. Each right shift operation has the effect of successively dividing the binary number by two. If the operation is reversed (left shift), this has the effect of multiplying the number by two. With suitable gating arrangement a serial shift register can perform both operations. </span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>A bidirectional, or reversible, shift register is one in which the data can be shift either left or right. A four-bit bidirectional shift register using D flip-flops is shown below. </span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Registers: </span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp; </span>The register is a group of flip-flop. An n bit register consists of group of n flip-flops capable of storing n bits of binary information. Register may have the combinational gates that perform certain data processing tasks. Register consists of group of flip-flops and gates that affect their transition. </span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>Counter is a register that goes through the predetermined sequence of steps. The gates in the counter are connected in such a way as to produce the prescribed the sequence of binary steps. Counters are special type of registers.</span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Shift registers:</span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>Register capable of shifting its binary information in one or both directions is called shift registers. The logical configuration of the shift registers consists of the chain of flip-flops in cascade, with the o/p of one flip-flop connected to input of next flip-flop. All flip-flops receive common clock pulses which activate the shift from one stage to the next. </span></p>
+<p style="text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">4 bit shift register:<span style="">&nbsp; </span></span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;</span></span></b><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The output of the flip-flop is connected to the D input of the next flip-flop. Each clock pulse shifts the contents of the register one bit position to the right. The serial input data lines what goes into the leftmost flip-flop during the shift. The serial output is taken from the output of the right most flip-flops. Sometimes it is necessary to control the shift so that it occurs only with certain pulses but not with the others. This can be done by inhibiting the clock from the input of register to prevent it from shifting.</span></p>
+<p style="text-align: justify;"><img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Lab Manual/fig06.JPG" border="0" height="177" hspace="0" vspace="0" width="594"></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Fig. 6:</span></i></b><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"> 4- bit Shift Register</span></i></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><img alt="a" title="a" style="display: block; margin-left: auto; margin-right: auto;" src="Lab Manual/fig07.JPG" border="0" height="225" hspace="0" vspace="0" width="498"></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Fig. 7</span></i></b><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">: Serial Transfer</span></i></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">4 Bit universal shift register:</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp; </span>A register capable of shifting in one direction only is a unidirectional shift register &amp; register that can shift in both directions is bi-directional shift registers. If the register has both the shifts &amp; parallel load capabilities, it is referred to as universal shift register.</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<table style="border: medium none ; margin-left: 147.75pt; border-collapse: collapse;" class="MsoNormalTable" border="1" cellpadding="0" cellspacing="0">
+    <tbody>
+        <tr style="height: 23.35pt;">
+            <td style="border: 1pt solid black; padding: 0in 5.4pt; width: 46.9pt; height: 23.35pt;" width="63">
+            <p style="text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">S1</span></b></p>
+            </td>
+            <td style="border-style: solid solid solid none; border-color: black black black -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 49.5pt; height: 23.35pt;" width="66">
+            <p style="text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">S0</span></b></p>
+            </td>
+            <td style="border-style: solid solid solid none; border-color: black black black -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 115.65pt; height: 23.35pt;" width="154">
+            <p style="text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Register operation</span></b></p>
+            </td>
+        </tr>
+        <tr style="height: 25.15pt;">
+            <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 46.9pt; height: 25.15pt;" width="63">
+            <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+            </td>
+            <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.5pt; height: 25.15pt;" width="66">
+            <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+            </td>
+            <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 115.65pt; height: 25.15pt;" width="154">
+            <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">No   change</span></p>
+            </td>
+        </tr>
+        <tr style="height: 25.6pt;">
+            <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 46.9pt; height: 25.6pt;" width="63">
+            <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+            </td>
+            <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.5pt; height: 25.6pt;" width="66">
+            <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+            </td>
+            <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 115.65pt; height: 25.6pt;" width="154">
+            <p class="MsoNormal" style="text-align: center;"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Shift   right</span></p>
+            </td>
+        </tr>
+        <tr style="height: 22pt;">
+            <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 46.9pt; height: 22pt;" width="63">
+            <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+            </td>
+            <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.5pt; height: 22pt;" width="66">
+            <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">0</span></p>
+            </td>
+            <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 115.65pt; height: 22pt;" width="154">
+            <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Shift   left</span></p>
+            </td>
+        </tr>
+        <tr style="height: 18.85pt;">
+            <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 46.9pt; height: 18.85pt;" width="63">
+            <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+            </td>
+            <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 49.5pt; height: 18.85pt;" width="66">
+            <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">1</span></p>
+            </td>
+            <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 115.65pt; height: 18.85pt;" width="154">
+            <p style="text-align: center;" class="MsoNormal" align="center"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Parallel   load</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Table 2</span></i></b><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">: Function table for the register</span></i></p>
+<p style="line-height: 150%; text-align: justify;"><img alt="a" title="a" src="Lab Manual/fig08.JPG" border="0" height="344" hspace="0" vspace="0" width="668"></p>
+<p style="text-align: center;" class="MsoNormal" align="center">&nbsp;</p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Fig.<span style="">&nbsp; </span>8:</span></i></b><i style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"> 4- bit Universal Shift Register</span></i></p>
+<p class="MsoNormal"><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Procedure:</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"> </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Select appropriate counter and shift register from the tab menu.</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">2.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Select and set appropriate clock period and understand its significance. </span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">3.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Execute the simulation by pressing the run button.</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpMiddle"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">4.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Repeat the procedure and observe the counter outputs.</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpLast"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">5.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Repeat the procedure for universal register.</span></p>
+<p class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><br>
+</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><br>
+</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><br>
+</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Simulation Screenshots:</span></b></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><img src="Lab Manual/L3_1.png" alt=""><img src="Lab Manual/L3_2.png" alt="" height="667" width="944"><img src="Lab Manual/L3_3.png" alt="" height="657" width="944"><img src="Lab Manual/L3_4.png" alt="" height="648" width="944"><br>
+</span></b></p>
+<p style="text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><br>
+</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Results</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Four bit binary, BCD, ring, Johnson counters and universal shift register are designed and simulated using the flip-flops and Gates.</span></p>
+<p class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Conclusion</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp; </span>Counters and shift registers are designed for various applications.</span></p>
+<p class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Assignment</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Design a counter with following repeated binary sequence: 0, 1, 2, 4, 6. Use D flip flops.</span></p>
+<p style="margin-bottom: 0.0001pt; text-indent: -0.25in;" class="MsoListParagraphCxSpLast"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">2.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Design a decade counter to count in ex-3 code sequence. Use JK flip-flops.</span></p>
+
+      
+          
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/content_94.png" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Post Test
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+
+            <div class="divQuiz" ><div id="displayQuiz" ><form name="form11" id="form11" method="post"><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">1)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">The type of register in which data is entered into it only one bit at a time but all data bits available at the output is</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6227" style="vertical-align:middle" type="radio" name="ans0"  value="6227"> </input><label for="ans6227" id="textAnsChoice">Serial in serial out</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6228" style="vertical-align:middle" type="radio" name="ans0"  value="6228"> </input><label for="ans6228" id="textAnsChoice">Parallel in serial out</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6230" style="vertical-align:middle" type="radio" name="ans0"  value="6230"> </input><label for="ans6230" id="textAnsChoice">Parallel in Parallel out</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6229" style="vertical-align:middle" type="radio" name="ans0"  value="6229"> </input><label for="ans6229" id="textAnsChoice">Serial in parallel out</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">2)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">The type of register in which we have access only to left most and right most flip-flop is</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6234" style="vertical-align:middle" type="radio" name="ans1"  value="6234"> </input><label for="ans6234" id="textAnsChoice">Serial in parallel out register</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6231" style="vertical-align:middle" type="radio" name="ans1"  value="6231"> </input><label for="ans6231" id="textAnsChoice">Shift left register</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6233" style="vertical-align:middle" type="radio" name="ans1"  value="6233"> </input><label for="ans6233" id="textAnsChoice">Serial in serial out register</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6232" style="vertical-align:middle" type="radio" name="ans1"  value="6232"> </input><label for="ans6232" id="textAnsChoice">Shift left and shift right register</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">3)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">A universal register is</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6237" style="vertical-align:middle" type="radio" name="ans2"  value="6237"> </input><label for="ans6237" id="textAnsChoice">Accept parallel input</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6235" style="vertical-align:middle" type="radio" name="ans2"  value="6235"> </input><label for="ans6235" id="textAnsChoice">Gives serial and parallel output</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6238" style="vertical-align:middle" type="radio" name="ans2"  value="6238"> </input><label for="ans6238" id="textAnsChoice">Is capable of all the input</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6236" style="vertical-align:middle" type="radio" name="ans2"  value="6236"> </input><label for="ans6236" id="textAnsChoice">Accept serial input</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">4)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">The ripple counter is</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6244" style="vertical-align:middle" type="radio" name="ans3"  value="6244"> </input><label for="ans6244" id="textAnsChoice">Asynchronous sequential circuit</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6243" style="vertical-align:middle" type="radio" name="ans3"  value="6243"> </input><label for="ans6243" id="textAnsChoice">Decade counter</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6246" style="vertical-align:middle" type="radio" name="ans3"  value="6246"> </input><label for="ans6246" id="textAnsChoice">All above</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6245" style="vertical-align:middle" type="radio" name="ans3"  value="6245"> </input><label for="ans6245" id="textAnsChoice">Synchronous sequential circuit</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">5)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">The number of flip-flops required for mod 16 ring counter are</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6248" style="vertical-align:middle" type="radio" name="ans4"  value="6248"> </input><label for="ans6248" id="textAnsChoice">8</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6250" style="vertical-align:middle" type="radio" name="ans4"  value="6250"> </input><label for="ans6250" id="textAnsChoice">16</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans6247" style="vertical-align:middle" type="radio" name="ans4"  value="6247"> </input><label for="ans6247" id="textAnsChoice">4</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans6249" style="vertical-align:middle" type="radio" name="ans4"  value="6249"> </input><label for="ans6249" id="textAnsChoice">12</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint14" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><input type="hidden" align="middle" id="loadTime" name="loadTime" value=1389865764/><br /><div style="padding-left:40px;"><input type="submit" name="submit1" id="submit1" value="&nbsp;Submit&nbsp;" style="width:8%;" onclick="get_radio_value();"  />&nbsp;&nbsp;<input type="reset" name="cancel1" id="cancel1" value="&nbsp;Cancel&nbsp;" style="width:8%;"  /></div></form><br />
+
+            
+          </div>
+
+        </section>
+
+   
+		
+        <section id="experiment-article-section-7">
+   
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/simulation.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+            Simulator
+          </div>
+
+          <div id="experiment-article-section-7-content" 
+          class="content">
+         
+
+<p style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<h3><big>&nbsp;<a href="simulation5.html" target="_blank">Click Here for Simulator</a>&nbsp;</big></h3>
+<p style="text-align: justify;">&nbsp;</p>
+<h3>&nbsp;</h3>
+<p style="text-align: justify;"><span style="font-size: small;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p style="text-align: justify;"><span style="font-size: small;">Click on the <a href="http://coepvlab.ac.in::20092/main.html"><span style="color: rgb(0, 0, 255);"><u><span class="nolink">link</span></u></span></a> to start simulation.</span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>&nbsp;Click here to <a href="http://coepvlab.ac.in:20092/Hybrid_Electronics_Laboratory/counter.zip"><span style="color: rgb(0, 0, 255);">download </span></a>simulation</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp; *Please download supported plug in to run this simulation from download tab</p>
+
+          </div>
+
+        </section>
+
+          <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+      <!-- Enclose the icon image of your lab.-->
+      <img src="../images/temp.gif" />
+    </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Conclusion
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+
+
+<span style="color: rgb(204, 0, 51);"><u>Conclusion</u></span></h1>
+<p>&nbsp;</p>
+<p><span style="color: rgb(51, 102, 255);"><em><span style="font-size: medium; font-family: trebuchet ms,geneva;">Result</span></em></span></p>
+<div style="padding-left: 30px;" class="entry">Four bit binary, BCD, ring, Johnson counters and universal shift register are designed and simulated using the flip-flops and Gates.</div>
+<div style="padding-left: 30px;" class="entry">&nbsp;</div>
+<hr>
+<p>&nbsp;</p>
+<p><em><span style="font-size: medium; font-family: trebuchet ms,geneva; color: rgb(51, 102, 255);">Assignment</span></em></p>
+<ol>
+    <li>Design a counter with following repeated binary sequence: 0, 1, 2, 4, 6. Use D flip flops.</li>
+    <li>Design a decade counter to count in ex-3 code sequence. Use JK flip-flops.</li>
+</ol>
+<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
+<p><em><span style="color: rgb(51, 102, 255); font-family: trebuchet ms,geneva; font-size: medium;">Further Reading</span></em></p>
+<ol>
+    <li>Digital Electronics, Tokheim, Tata-McGraw Hill, 4th Edition</li>
+    <li>Digital Design, M. Morris Mano, Pearson Education, 3rd Edition</li>
+</ol>
+</div>
+
+
+          </div>
+
+        </section>
+
+    
+
+          <section id="experiment-article-section-9">
+   
+          <div id="experiment-article-section-9-icon" 
+          class="icon">
+      <!-- Enclose the icon image of your lab.-->
+      <img src="../images/temp.gif" />
+    </div>
+
+          <div id="experiment-article-section-9-heading" 
+          class="heading">
+            Download
+          </div>
+
+          <div id="experiment-article-section-9-content" 
+          class="content">
+          
+          <div class="divContent"><p style="TEXT-ALIGN: justify"><span style="FONT-SIZE: small">Here are the files which are required for proper viewing of the Simulation.</span><br>
+<span style="FONT-SIZE: small">Install as per operating system. Installation instructions are given below along with the link to download files.</span><br>
+<br>
+<br>
+<span style="FONT-SIZE: small; FONT-WEIGHT: bold">LabVIEW 8.6 Run-Time Engine Patch for Windows:</span><br>
+<span style="FONT-SIZE: small">LabVIEW Run-Time Engine 8.6 - Windows/2000/XP/Vista/Vista x64 - 8.6f1 Patch</span><br>
+<span style="FONT-SIZE: small">To download, click <a href="http://59.163.223.71/LabVIEW_RTE/LVRTE86std.exe"><span style="COLOR: rgb(0,0,255)">here</span></a>.</span><br>
+<span style="FONT-SIZE: small">LabVIEW Vision Run-Time Engine 8.6 - Windows/2000/XP/Vista/Vista x64</span><br>
+<span style="FONT-SIZE: small">To download, click <a href="http://59.163.223.71/LabVIEW_RTE/visionrte.exe"><span style="COLOR: rgb(0,0,255)">here</span></a>.</span><br>
+<br>
+<span style="FONT-SIZE: small">Installation Instructions:</span><br>
+<span style="FONT-SIZE: small">Double-click the executable to start installation.</span><br>
+<br>
+<span style="FONT-SIZE: small; FONT-WEIGHT: bold">LabVIEW Run-Time Engine 8.6 for Linux:</span><br>
+<span style="FONT-SIZE: small">Download the labview-rte-aal-1.1-1.i386.rpm to your computer.</span><br>
+<span style="FONT-SIZE: small">To download, click <a href="http://59.163.223.71/LabVIEW_RTE/labview-rte-aal-1.1-1.i386.rpm"><span style="COLOR: rgb(0,0,255)">here</span></a>.</span><br>
+<span style="FONT-SIZE: small">Download the labview86-rte-8.6.0-1.i386.rpm files to your computer.</span><br>
+<span style="FONT-SIZE: small">To download, click <a href="http://59.163.223.71/LabVIEW_RTE/labview86-rte-8.6.0-1.i386.rpm"><span style="COLOR: rgb(0,0,255)">here</span></a>.</span><br>
+<br>
+<span style="FONT-SIZE: small">Installation Instructions:</span><br>
+<span style="FONT-SIZE: small">Run (must be logged in with root access for the machine)</span></p>
+<div style="TEXT-ALIGN: justify; MARGIN-LEFT: 80px"><span style="FONT-SIZE: small">rpm -Uvh labview-rte-aal-1.1-1.i386.rpm</span></div>
+<p style="TEXT-ALIGN: justify"><span style="FONT-SIZE: small">Run (must be logged in with root access for the machine)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="FONT-SIZE: small">rpm -Uvh labview86-rte-8.6.0-1.i386.rpm</span></p>
+
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+</div>		
+
+</body>
+</html>

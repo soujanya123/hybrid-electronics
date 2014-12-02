@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html>
+
+<!--
+	This is a jQuery Tools standalone demo. Feel free to copy/paste.
+	                                                         
+	http://flowplayer.org/tools/demos/
+	
+	Do *not* reference CSS files and images from flowplayer.org when in production  
+
+	Enjoy!
+-->
+
+<head>
+	<title>Hybrid Lab Demo</title>
+
+	<!-- include the Tools -->
+	<link   type="text/css"  rel="stylesheet"  href="css/example.css"  />
+	<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/jquery.js"> </script>
+		<script src="js/jquery.tools.min.js"></script>
+		<script type="text/javascript" src = "js/example.js"></script>
+		<script type="text/javascript" src="js/raphael.js"></script>
+		<script type="text/javascript" src="js/jquery.flot.js"></script>
+		<script type="text/javascript" src="js/utility.js"></script>
+		
+	<!--		<script type="text/javascript" src="js/monostable.js"></script>-->
+		
+	
+	<!-- tab styling -->
+		<link   type="text/css"  rel="stylesheet"  href="css/tabs.css"  />
+	
+	
+	<!-- tab pane styling -->
+	<style>
+	div.wrap {
+		width:700px;
+		margin-bottom:40px;
+	}
+	
+	.wrap .pane  {	
+		background:#fff repeat-x 0 20px;
+		display:none;		
+		padding:20px;
+		border:1px solid #999;
+		border-top:0;
+		font-size:14px;	 
+		font-size:18px;
+		color:#456;	
+		padding-bottom: 20px;
+    padding-left: 9px;
+    padding-right: 20px;
+    padding-top: 0px;
+		
+		_background-image:none;
+	}
+	
+	.wrap .pane p {
+		font-size:38px;	
+		margin:-10px 0 -20px 0;	
+		text-align:right;
+		color:#578;
+	}
+	#header{
+	top:2px;
+	left:2px;
+	position:relative;
+	border:2px groove  #c4c4c4;
+	width:892px;
+	height:130px;
+	/*overflow:auto;*/
+	background : url("../images/ui-bg_gloss-wave_35_f6a828_500x100.png") repeat-x scroll 50% 50% #84BFDF;
+}
+.imag{position:absolute;z-index:9999;left:339px;top:4px;}
+	.imag1{position:absolute;z-index:9999;left:1000px;top:85px;}
+	</style>
+</head>
+
+<body>
+<div id = "tabs">																					 
+	<div id="header"><span style="font-size:25px; color: #ffffff;"></span><img class = "imag" src="../images/coep_logo_sim.png"></a>
+	<span style="font-size:20px;font-weight: bold;color: #ffffff;	"><h3>Various Arithmetic Circuits</h3></span>
+	</div>
+
+<div class="wrap" style="position:absolute; top:145px;">
+
+	<!-- the tabs -->
+	 <!-- the experiment 1 -->
+	<div class="wrap">
+			
+			<!-- the experiment 1 tabs -->
+			<ul class="tabs">
+				<li><a href="#">Adder</a></li>
+				<li><a href="#">Subtracter</a></li>
+				<li><a href="#">4 bit Adder/Subtractor</a></li> 
+			</ul>
+
+			<!--Adder -->
+			<div class="pane">
+						
+					<!-- the tabs -->
+						<ul class="tabs">
+							<li><a href="#">Half Adder</a></li>
+							<li><a href="#">Full Adder</a></li>
+							<li><a href="#">2bit Adder</a></li> 
+						</ul>
+					<!--half adder-->
+					
+					<div  class="pane" id = "halfadder">
+						<div id = "switch" style="position:absolute; top:-105px; left:10px;" >
+							<img src="images/halfadd.png" id= "img" style = "position : relative;top:350px ; left :370px;"/>
+							<label id="halfinput1">A input</label>
+							<label id="halfinput2">B input</label>
+							<label id="halfsum">sum-Output</label>
+							<label id="halfcarry">carry-Output</label>
+							<div id="switch0">
+							<img src="images/off.png" id = "a_0" style = "position : absolute; top:300px ; left : 377px;"/>
+							<img src="images/off.png" id = "b_1" style = "position : absolute; top:300px ; left : 432px;"/>
+							</div>
+							
+							<img src="images/lightbulb.png" id = "sum" style = "position : absolute; top:635px ; left : 383px;"/>
+							<img src="images/lightbulb.png" id = "carry" style = "position : absolute; top:635px ; left : 441px;"/>
+						</div>
+					</div>
+					
+					<!--full adder-->
+					<div  class="pane">
+						<div id = "switch1" style="position:absolute; top:-139px; left:-92px;">
+						     <img src="images/fulladd.png" id= "img1" style = "position : relative;top:373px ; left :359px;"/>
+						     <label id="input1">input a</label>
+							 <label id="input2">input b</label>
+							 <label id="input3">input c</label>
+							 <label id="fullsum">sum-Output</label>
+							 <label id="fullcarry">carry-Output</label>
+							 <div id="switches1">
+							<img src="images/off.png" id = "button1_1" style = "position : absolute; top:330px ; left : 360px;"/>
+							<img src="images/off.png" id = "button2_2" style = "position : absolute; top:330px ; left : 416px;"/>
+							<img src="images/off.png" id = "button3_3" style = "position : absolute; top:519px ; left : 541px;"/>
+							</div>
+							<img src="images/lightbulb.png" id = "sum_fulladder" style = "position : absolute; top:675px ; left : 366px;"/>
+							<img src="images/lightbulb.png" id = "carry_fulladder" style = "position : absolute; top:674px ; left : 425px;"/>
+						</div>
+					</div>
+					 <!-- 2 bit adder-->
+					<div  class="pane">
+						<div id = "switch2" style="position:absolute; top:-139px; left:-10px;" >
+						<label id="a1_2bit">Input A1</label>
+						<label id= "b1_2bit">Input B1</label>
+						<label id= "a2_2bit">Input A2</label>
+						<label id= "b2_2bit">Input B2</label>
+						<!--<label id= "button5_2bit" style="position : absolute;top:384px ; left :45px;">C<sub></sub></label>-->
+						
+						
+						<img src="images/2bitadd.png"id= "img1" style = "position : absolute;top:330px ; left :207px;"/>
+						<div id="switches2">
+						<img src="images/off.png" id = "button1_0" style = "position : absolute; top:307px ; left : 355px;"/>
+						<img src="images/off.png" id = "button2_1" style = "position : absolute; top:307px ; left : 412px;"/>
+						<img src="images/off.png" id = "button3_2" style = "position : absolute; top:307px ; left : 555px;"/>
+						<img src="images/off.png" id = "button4_3" style = "position : absolute; top:307px ; left : 612px;"/>
+						<img src="images/off.png" id = "button5_4" style = "position : absolute; top:452px ; left : 755px;"/>
+						</div>
+						<img src="images/lightbulb.png" id = "sum2_2bit" style = "position : absolute; top:620px ; left : 390px;"/>
+						<img src="images/lightbulb.png" id = "sum1_2bit" style = "position : absolute; top:616px ; left : 587px;"/>
+						<img src="images/lightbulb.png" id = "carry_2bit" style = "position : absolute; top:563px ; left : 224px;"/>
+						</div>
+					</div>
+					</div>
+		
+			
+			<!--Subtracter-->
+			<div class="pane">
+				<ul class="tabs">
+					<li><a href="#">Half Subtractor</a></li>
+					<li><a href="#">Full Subtractor</a></li>
+				</ul>
+				<!--half Subtractor-->
+				<div  class="pane">
+					<div id = "switch3" style="position:absolute; top:-139px; left:-92px;" >
+					<img src="images/halfsub.png"id= "img1" style = "position : absolute;top:349px ; left :353px;"/>
+					<label id="subAinput"> A input</label>
+					<label id="subBinput"> B input</label>
+					<label id="suboutput"> Output</label>
+					<label id="subborrow"> Borrow</label>
+					
+					<div id="switches3">
+					<img src="images/off.png" id = "button_0" style = "position : absolute; top:302px ; left : 360px;"/>
+					<img src="images/off.png" id = "button_1" style = "position : absolute; top:302px ; left : 417px;"/>
+					</div>
+					
+					<img src="images/lightbulb.png" id = "sum_halfsub" style = "position : absolute; top:647px ; left : 360px;"/>
+					<img src="images/lightbulb.png" id = "carry_halfsub" style = "position : absolute; top:646px ; left : 417px;"/>
+					
+					</div>
+				</div>
+			<!--full subtractor-->
+				<div  class="pane">
+					<div id = "switch3" >
+					<img src="images/fullsub.png"id= "img1" style = "position : absolute;top:244px ; left :45px;"/>
+					<label id="fullAinput"> A input</label>
+					<label id="fullBinput"> B input</label>
+					<label id="fullCinput"> C input</label>
+					<label id="fulloutput"> Output</label>
+					<label id="fullborrow"> Borrow</label>
+					<div id="switches4">
+					<img src="images/off.png" id = "button6_0" style = "position : absolute; top:200px ; left : 355px;"/>
+					<img src="images/off.png" id = "button7_1" style = "position : absolute; top:200px ; left : 411px;"/>
+					<img src="images/off.png" id = "button8_2" style = "position : absolute; top:369px ; left : 527px;"/>
+					</div>
+					<img src="images/lightbulb.png" id = "sum_fullsub" style = "position : absolute; top:541px ; left : 353px;"/>
+					<img src="images/lightbulb.png" id = "carry_fullsub" style = "position : absolute; top:539px ; left : 411px;"/>
+					</div>
+				</div>
+			</div>
+			<!--4 bit addre & subtracter-->			
+			<div class="pane">
+				<div id = "switch4" >
+					<img src="images/4bit addsub.png"id= "4bit" style = "position : absolute;top:219px ; left :36px;"/>
+					<label id="b3_4as"> B3 input</label>
+					<label id="a3_4as"> A3 input</label>
+					<label id="b2_4as"> B2 input</label>
+					<label id="a2_4as"> A2 input</label>
+					<label id="b1_4as"> B1 input</label>
+					<label id="a1_4as"> A1 input</label>
+					<label id="b0_4as"> B0 input</label>
+					<label id="a0_4as"> A0 input</label>
+					<label id="count_4as"><span style="text-decoration: overline;">ADD</span>/SUB</label>
+					<label id="s3_4as"> S3</label>
+					<label id="s2_4as"> S2</label>
+					<label id="s1_4as"> S1</label>
+					<label id="s0_4as"> S0</label>
+					<label id="carry_4as">CARRY</label>
+					<div id="switches5">
+					<img src="images/off.png" id = "b3_0" style = "position : absolute; top:174px ; left : 110px;"/>
+					<img src="images/off.png" id = "a3_1" style = "position : absolute; top:174px ; left : 170px;"/>
+					<img src="images/off.png" id = "b2_2" style = "position : absolute; top:174px ; left : 309px;"/>
+					<img src="images/off.png" id = "a2_3" style = "position : absolute; top:174px ; left : 367px;"/>
+					<img src="images/off.png" id = "b1_4" style = "position : absolute; top:174px ; left : 480px;"/>
+					<img src="images/off.png" id = "a1_5" style = "position : absolute; top:174px ; left : 545px;"/>
+					<img src="images/off.png" id = "b0_6" style = "position : absolute; top:174px ; left : 673px;"/>
+					<img src="images/off.png" id = "a0_7" style = "position : absolute; top:174px ; left : 749px;"/>
+					<img src="images/off.png" id = "cout_8" style = "position : absolute; top:223px ; left : 838px;"/>
+					</div>
+					<img src="images/lightbulb.png" id = "carry_4bit" style = "position : absolute; top:420px ; left : 30px;"/>
+					<img src="images/lightbulb.png" id = "s3_4bit" style = "position : absolute; top:528px ; left : 150px;"/>
+					<img src="images/lightbulb.png" id = "s2_4bit" style = "position : absolute; top:528px ; left : 340px;"/>
+					<img src="images/lightbulb.png" id = "s1_4bit" style = "position : absolute; top:528px ; left : 530px;"/>
+					<img src="images/lightbulb.png" id = "s0_4bit" style = "position : absolute; top:528px ; left : 722px;"/>
+				</div>
+			</div>
+	</div>
+	
+	
+	</div>
+
+<div style="position:absolute; top:782px; width:900px;margin:0 auto;">
+<div class="art-footer">
+                <div class="art-footer-t"></div>
+                <div class="art-footer-l"></div>
+                <div class="art-footer-b"></div>
+                <div class="art-footer-r"></div>
+                <div class="art-footer-body">
+                    <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+					<!--<a href="./../../../feedback.htm" class="art-rss-feedback-icon" title="RSS"></a>-->
+                            <div class="art-footer-text">
+                                <p><a href="#">About Us</a> | <a href="./../../../contacts.htm">Contact Us</a> | <a href="../../../feedback.htm">Feedback</a></p><p>Copyright &#169;2011.COEP Virtual Lab.</p>
+                                                            </div>
+                    <div class="cleared"></div>
+                </div>
+            </div>
+</div>
+
+
+</body>
+
+</html>

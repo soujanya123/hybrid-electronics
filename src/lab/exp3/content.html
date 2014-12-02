@@ -1,0 +1,646 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">Hybrid Electronics Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+      
+Design and Simulation of Decoders, Encoders, Multiplexer and Demultiplexer
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Aim
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+          
+
+<h1 class="title"><a><span style="color: rgb(204, 0, 51);"><u>Aim</u></span></a></h1>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="color: rgb(51, 102, 255); font-family: trebuchet ms,geneva;"><em><span style="font-size: medium;">Aim</span></em></span></p>
+<p style="padding-left: 30px; text-align: justify;">To study decoders, encoders, multiplexer and demultiplexer&nbsp;</p>
+<p style="padding-left: 30px; text-align: justify;">&nbsp;</p>
+<hr>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><em><span style="font-size: medium; color: rgb(51, 102, 255); font-family: trebuchet ms,geneva;">Pre-Requisites</span></em></p>
+<ol>
+    <li style="text-align: justify;">Knowledge of number system</li>
+    <li style="text-align: justify;">NI LabVIEW tool</li>
+</ol>
+<p>&nbsp;</p>
+<hr>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: trebuchet ms,geneva;"><em><span style="font-size: medium; color: rgb(51, 102, 255);">Objectives</span></em></span></p>
+<ol>
+    <li style="text-align: justify;">Implement and simulate decoder and encoder</li>
+    <li style="text-align: justify;">Implement and Simulate multiplexer and demultiplexer</li>
+</ol>
+                
+            </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/content_94.png" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag.-->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Pre Test 
+        </div> 
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag-->
+        <div id="experiment-article-section-2-content" 
+        class="content">
+
+<div class="divQuiz" ><div id="displayQuiz" ><form name="form11" id="form11" method="post"><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">1)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">The output of a gate is HIGH if and only if all its inputs are LOW. It is true for</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5078" style="vertical-align:middle" type="radio" name="ans0"  value="5078"> </input><label for="ans5078" id="textAnsChoice">XOR</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5079" style="vertical-align:middle" type="radio" name="ans0"  value="5079"> </input><label for="ans5079" id="textAnsChoice">NAND</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5080" style="vertical-align:middle" type="radio" name="ans0"  value="5080"> </input><label for="ans5080" id="textAnsChoice">NOR</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5081" style="vertical-align:middle" type="radio" name="ans0"  value="5081"> </input><label for="ans5081" id="textAnsChoice">ALL</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">2)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">The output if a 2-input gate is 1 if and only if its input are unequal it is true for</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5082" style="vertical-align:middle" type="radio" name="ans1"  value="5082"> </input><label for="ans5082" id="textAnsChoice">OR</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5083" style="vertical-align:middle" type="radio" name="ans1"  value="5083"> </input><label for="ans5083" id="textAnsChoice">XNOR</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5084" style="vertical-align:middle" type="radio" name="ans1"  value="5084"> </input><label for="ans5084" id="textAnsChoice">XOR</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5085" style="vertical-align:middle" type="radio" name="ans1"  value="5085"> </input><label for="ans5085" id="textAnsChoice">NOR</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">3)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">The output of gate is low when at least one of the input is high</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5086" style="vertical-align:middle" type="radio" name="ans2"  value="5086"> </input><label for="ans5086" id="textAnsChoice">NOR</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5087" style="vertical-align:middle" type="radio" name="ans2"  value="5087"> </input><label for="ans5087" id="textAnsChoice">AND</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5088" style="vertical-align:middle" type="radio" name="ans2"  value="5088"> </input><label for="ans5088" id="textAnsChoice">NAND</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5089" style="vertical-align:middle" type="radio" name="ans2"  value="5089"> </input><label for="ans5089" id="textAnsChoice">OR</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">4)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">The output of the gate is high only if all its inputs are high. It is true for</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5090" style="vertical-align:middle" type="radio" name="ans3"  value="5090"> </input><label for="ans5090" id="textAnsChoice">AND</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5091" style="vertical-align:middle" type="radio" name="ans3"  value="5091"> </input><label for="ans5091" id="textAnsChoice">NAND</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5092" style="vertical-align:middle" type="radio" name="ans3"  value="5092"> </input><label for="ans5092" id="textAnsChoice">NOR</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5093" style="vertical-align:middle" type="radio" name="ans3"  value="5093"> </input><label for="ans5093" id="textAnsChoice">XOR</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">5)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">The output of the a gate is low if and only if all the inputs are low. It is true for</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5094" style="vertical-align:middle" type="radio" name="ans4"  value="5094"> </input><label for="ans5094" id="textAnsChoice">AND</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5095" style="vertical-align:middle" type="radio" name="ans4"  value="5095"> </input><label for="ans5095" id="textAnsChoice">OR</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5096" style="vertical-align:middle" type="radio" name="ans4"  value="5096"> </input><label for="ans5096" id="textAnsChoice">NAND</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5097" style="vertical-align:middle" type="radio" name="ans4"  value="5097"> </input><label for="ans5097" id="textAnsChoice">XOR</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint14" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><input type="hidden" align="middle" id="loadTime" name="loadTime" value=1389857285/><br /><div style="padding-left:40px;"><input type="submit" name="submit1" id="submit1" value="&nbsp;Submit&nbsp;" style="width:8%;" onclick="get_radio_value();"  />&nbsp;&nbsp;<input type="reset" name="cancel1" id="cancel1" value="&nbsp;Cancel&nbsp;" style="width:8%;"  /></div></form><br /></div>
+
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.--> 
+	  <img src="../images/theory.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Theory
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+         
+       <h1 class="title" style="text-align: justify;"><span style="color: rgb(204, 0, 51);"><u>Theory</u></span></h1>
+<p style="text-align: justify; ">&nbsp;&nbsp;</p>
+<p style="text-align: justify; "><strong>Decoder</strong></p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">In digital electronics, a decoder can take the form of a multiple-input, multiple-output logic circuit that converts coded inputs into coded outputs, where the input and output codes are different e.g. n-to-2n , binary-coded decimal decoders. Decoding is necessary in applications such as data multiplexing, 7 segment display and memory address decoding.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">The example decoder circuit would be an AND gate because the output of an AND gate is "High" (1) only when all its inputs are "High." Such output is called as "active High output". If instead of AND gate, the NAND gate is connected the output will be "Low" (0) only when all its inputs are "High". Such output is called as "active low output".</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">A slightly more complex decoder would be the n-to-2n type binary decoders. These types of decoders are combinational circuits that convert binary information from &#039;n&#039; coded inputs to a maximum of 2n unique outputs. In case the &#039;n&#039; bit coded information has unused bit combinations, the decoder may have less than 2n outputs. 2-to-4 decoder, 3-to-8 decoder or 4-to-16 decoder are other examples.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">The input to a decoder is parallel binary number and it is used to detect the presence of a particular binary number at the input. The output indicates presence or absence of specific number at the decoder input.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">Let us suppose that a logic network has 2 inputs A and B. They will give rise to 4 states A,    A’, B, B’ . The truth table for this decoder is shown below:</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: center; "><img width="227" height="252" alt="" src="Theory/table1.JPG"></p>
+<p style="text-align: center; ">Table 1: Truth Table of 2:4 decoder</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: center; ">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img width="281" height="397" alt="" src="/userfiles/5/image/COEP_Hybrid_Lab/Exp5/Fig1.JPG"></p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: center; ">Fig 1: Logic Diagram of 2:4 decoder</p>
+<p style="text-align: center; ">&nbsp;</p>
+<p style="text-align: center; "><img width="266" height="198" alt="" src="Theory/Fig2.JPG"></p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: center; ">Fig 2: Representation of 2:4 decoder</p>
+<p style="text-align: center; ">&nbsp;</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">For any input combination only one of the outputs is low and all others are high. The low value at the output represents the state of the input.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; "><strong>Decoder expansion</strong></p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">Combine two or more small decoders with enable inputs to form a larger decoder e.g. 3-to-8-line decoder constructed from two 2-to-4-line decoders.</p>
+<p style="text-align: justify; ">Decoder with enable input can function as demultiplexer.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; "><strong>3:8 decoder</strong></p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">It uses all AND gates, and therefore, the outputs are active- high. For active- low outputs, NAND gates are used. It has 3 input lines and 8 output lines. It is also called as binary to octal decoder it takes a 3-bit binary input code and activates one of the 8(octal) outputs corresponding to that code. The truth table is as follows:</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: center; ">&nbsp;<img width="350" height="379" alt="" src="Theory/table2.JPG"></p>
+<p style="text-align: center; ">Table 2: Truth Table of 3:8 decoder</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: center; "><img width="233" height="449" alt="" src="Theory/Fig3.JPG"></p>
+<p style="text-align: center; ">Fig 3: Logic Diagram of 3:8 decoder</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; "><strong>Encoder</strong></p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">An encoder is a device, circuit, transducer, software program, algorithm or person that converts information from one format or code to another. The purpose of encoder is standardization, speed, secrecy, security, or saving space by shrinking size. Encoders are combinational logic circuits and they are exactly opposite of decoders. They accept one or more inputs and generate a multibit output code.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">Encoders perform exactly reverse operation than decoder. An encoder has M input and N output lines. Out of M input lines only one is activated at a time and produces equivalent code on output N lines. If a device output code has fewer bits than the input code has, the device is usually called an encoder.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; "><strong>Octal to binary encoder</strong></p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">Octal-to-Binary take 8 inputs and provides 3 outputs, thus doing the opposite of what the 3-to-8 decoder does. At any one time, only one input line has a value of 1. The figure below shows the truth table of an Octal-to-binary encoder.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: center; ">&nbsp;<img width="363" height="177" alt="" src="Theory/table3.JPG"></p>
+<p style="text-align: center; ">Table 3: Truth Table of octal to binary encoder</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">For an 8-to-3 binary encoder with inputs I0-I7 the logic expressions of the outputs Y0-Y2 are:</p>
+<p style="text-align: justify; ">Y0 = I1 + I3 + I5 + I7</p>
+<p style="text-align: justify; ">Y1= I2 + I3 + I6 + I7</p>
+<p style="text-align: justify; ">Y2 = I4 + I5 + I6 +I7</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: center; ">&nbsp;<img width="387" height="458" alt="" src="Theory/Fig4.JPG"></p>
+<p style="text-align: center; ">Fig 4: Logic Diagram of octal to binary encoder</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; "><strong>Priority encoder</strong></p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">A priority encoder is a circuit or algorithm that compresses multiple binary inputs into a smaller number of outputs. The output of a priority encoder is the binary representation of the ordinal number starting from zero of the most significant input bit. They are often used to control interrupt requests by acting on the highest priority request. It includes priority function. If 2 or more inputs are equal to 1 at the same time, the input having the highest priority will take precedence. Internal hardware will check this condition and priority is set.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; "><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><span style="mso-bidi-font-weight:bold"><o:p></o:p></span></span></p>
+<p style="text-align: center; ">&nbsp;<img width="233" height="297" alt="" src="Theory/table4.JPG"></p>
+<p style="text-align: center; ">Table 4: Truth Table of 4 bit priority encoder/p&gt;</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: center; ">&nbsp;<img width="241" height="234" alt="" src="Theory/Fig5.JPG"></p>
+<p style="text-align: center; ">Fig 5: Logic Diagram of 4 bit priority encoder</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">IC 74148 is an 8-input priority encoder. 74147 is 10:4 priority encoder</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; "><strong>Multiplexer</strong></p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">In electronics, a multiplexer or mux is a device that selects one of several analog or digital input signals and forwards the selected input into a single line. A multiplexer of 2n inputs has n select lines, which are used to select which input line to send to the output. An electronic multiplexer can be considered as a multiple-input, single-output switch i.e. digitally controlled multi-position switch. The digital code applied at the select inputs determines which data inputs will be switched to output.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">A common example of multiplexing or sharing occurs when several peripheral devices share a single transmission line or bus to communicate with computer. Each device in succession is allocated a brief time to send and receive data. At any given time, one and only one device is using the line. This is an example of time multiplexing since each device is given a specific time interval to use the line.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">In frequency multiplexing, several devices share a common line by transmitting at different frequencies.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: center; ">&nbsp;<img width="133" height="176" alt="" src="Theory/table5.JPG"></p>
+<p style="text-align: center; ">Table 5: Truth Table of 8:1 MUX</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: center; ">&nbsp;<img width="552" height="523" alt="" src="Theory/Fig6.JPG"></p>
+<p style="text-align: center; ">Fig 6: Logic Diagram of 8:1 MUX</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; "><strong>Demultiplexer</strong></p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">A demultiplexer (or demux) is a device taking a single input signal and selecting one of many data-output-lines, which is connected to the single input. A multiplexer is often used with a complementary demultiplexer on the receiving end. A demultiplexer is a single-input, multiple-output switch. Demultiplexers take one data input and a number of selection inputs, and they have several outputs. They forward the data input to one of the outputs depending on the values of the selection inputs.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">Demultiplexers are sometimes convenient for designing general purpose logic, because if the demultiplexer&#039;s input is always true, the demultiplexer acts as a decoder. This means that any function of the selection bits can be constructed by logically OR-ing the correct set of outputs. Demultiplexer is called as a ‘distributro’, since it transmits the same data to different destinations.</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: justify; ">&nbsp;</p>
+<p style="text-align: center; ">&nbsp;<img width="372" height="180" alt="" src="Theory/table6.JPG"></p>
+<p style="text-align: center; ">Table 6: Truth Table of 1:8 DEMUX</p>
+<p style="text-align: center; ">&nbsp;<img width="429" height="534" alt="" src="Theory/Fig7.JPG"></p>
+<p style="text-align: center; ">Fig 7: Logic Diagram of 1:8 DEMUX</p></div></div></td>
+         
+        </div>
+
+      </section>
+
+
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/procedure.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Procedure
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+        -----
+        <h1 class="title"><span style="color: rgb(204, 0, 51);"><u>Procedure</u></span></h1>
+<p>&nbsp;&nbsp;</p>
+<p>1.Select appropriate combinational logic circuit from the tab menu.</p>
+<p>2.Select run button in the top to execute the operation.</p>
+<p>3.Observe the output on the output LEDs and observe digital waveforms on digital display.</p>
+<p>4.Repeat the procedure and observe the corresponding outputs of encoder, decoder, multiplexer and demultiplexer.</p>
+<p><span style="font-size: small;">Click on the <a href="http://59.163.223.90/main.html"><span style="color: rgb(0, 0, 255);"><span class="nolink">link</span></span></a> to start simulation.</span></p>
+<p><span style="font-size: small;">Click on the <span class="nolink">link</span> to start simulation of <a href="http://59.163.223.71/elx/Multplexer.swf"><span style="color: rgb(51, 102, 255);"><u>Multiplexer</u></span></a> and <a href="http://59.163.223.71/elx/Demultiplexer.swf"><span style="color: rgb(51, 102, 255);"><u>Demultiplexer</u></span></a><br>
+</span></p>
+        
+
+      </div>
+
+      </section>
+
+     <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Lab Manual
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+        
+        <p style="text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 24pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Hybrid Electronics Laboratory</span></b></p>
+<p style="margin-bottom: 0.0001pt; text-align: center;" class="MsoNormal" align="center"><b style=""><span style="font-size: 18pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Experiment No.<span style="">&nbsp; </span>5</span></b></p>
+<p class="MsoNormal"><span style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></p>
+<p style="text-align: center; line-height: 200%;" class="MsoNormal" align="center"><span style="font-size: 14pt; line-height: 200%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Design and Simulation of Decoders, Encoders, Multiplexer and Demultiplexer</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal">&nbsp;</p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Aim: </span></b><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">To study decoders, encoders, multiplexer and demultiplexer&nbsp;.</span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Objectives:</span></b></p>
+<ol start="1" type="1">
+    <li style="text-align: justify; line-height: normal;" class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Implement      and simulate decoder and encoder</span></li>
+    <li style="text-align: justify; line-height: normal;" class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Implement      and Simulate multiplexer and demultiplexer</span></li>
+</ol>
+<p class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Theory:</span></b></p>
+<p style="text-align: justify;"><strong>Decoder</strong></p>
+<p style="text-align: justify;"><span style="">&nbsp; </span><span style="">&nbsp;</span>In digital electronics, a decoder can take the form of a multiple-input, multiple-output logic circuit that converts coded inputs into coded outputs, where the input and output codes are different e.g. n-to-2n , binary-coded decimal decoders. Decoding is necessary in applications such as data multiplexing, 7 segment display and memory address decoding.</p>
+<p style="text-align: justify;">&nbsp;<span style="">&nbsp; </span>The example decoder circuit would be an AND gate because the output of an AND gate is "High" (1) only when all its inputs are "High." Such output is called as "active High output". If instead of AND gate, the NAND gate is connected the output will be "Low" (0) only when all its inputs are "High". Such output is called as "active low output".</p>
+<p style="text-align: justify;">&nbsp;<span style="">&nbsp; </span>A slightly more complex decoder would be the n-to-2n type binary decoders. These types of decoders are combinational circuits that convert binary information from &#039;n&#039; coded inputs to a maximum of 2n unique outputs. In case the &#039;n&#039; bit coded information has unused bit combinations, the decoder may have less than 2n outputs. 2-to-4 decoder, 3-to-8 decoder or 4-to-16 decoder are other examples.</p>
+<p style="text-align: justify;"><span style="">&nbsp; </span>The input to a decoder is parallel binary number and it is used to detect the presence of a particular binary number at the input. The output indicates presence or absence of specific number at the decoder input.</p>
+<p style="text-align: justify;">&nbsp;<span style="">&nbsp;&nbsp; </span>Let us suppose that a logic network has 2 inputs A and B. They will give rise to 4 states A, A’, B, B’ . The truth table for this decoder is shown below:</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: center;"><img alt="" src="Lab Manual/table1.JPG" height="252" width="227"></p>
+<p style="text-align: center;" align="center"><b style=""><i style="">Table 1:</i></b><i style=""> Truth Table of 2:4 decoder</i></p>
+<p style="text-align: center;" align="center"><img alt="" src="Lab Manual/Fig1.JPG" height="397" width="281"></p>
+<p style="text-align: center;" align="center"><b style=""><i style="">Fig 1:</i></b><i style=""> Logic Diagram of 2:4 decoder</i></p>
+<p style="text-align: center;"><img alt="" src="Lab Manual/Fig2.JPG" height="198" width="266"></p>
+<p style="text-align: center;" align="center"><b style=""><i style="">Fig 2: </i></b><i style="">Representation of 2:4 decoder</i></p>
+<p style="text-align: justify;">&nbsp;<span style="">&nbsp;&nbsp; </span>For any input combination only one of the outputs is low and all others are high. The low value at the output represents the state of the input.</p>
+<p style="text-align: justify;">&nbsp;<strong>Decoder expansion</strong></p>
+<p style="text-align: justify;">&nbsp;<span style="">&nbsp;&nbsp; </span>Combine two or more small decoders with enable inputs to form a larger decoder e.g. 3-to-8-line decoder constructed from two 2-to-4-line decoders.</p>
+<p style="text-align: justify;"><span style="">&nbsp;&nbsp;&nbsp; </span>Decoder with enable input can function as demultiplexer.</p>
+<p style="text-align: justify;">&nbsp;<strong>3:8 decoder</strong></p>
+<p style="text-align: justify;">&nbsp;<span style="">&nbsp;&nbsp; </span>It uses all AND gates, and therefore, the outputs are active- high. For active- low outputs, NAND gates are used. It has 3 input lines and 8 output lines. It is also called as binary to octal decoder it takes a 3-bit binary input code and activates one of the 8(octal) outputs corresponding to that code. The truth table is as follows:</p>
+<p style="text-align: center;" align="center"><img alt="" src="Lab Manual/table2.JPG" height="379" width="350"></p>
+<p style="text-align: center;" align="center"><b style=""><i style="">Table 2</i></b><i style="">: Truth Table of 3:8 decoder</i></p>
+<p style="text-align: center;"><img alt="" src="Lab Manual/Fig3.JPG" height="449" width="233"></p>
+<p style="text-align: center;" align="center"><b style=""><i style="">Fig 3:</i></b><i style=""> Logic Diagram of 3:8 decoder</i></p>
+<p style="text-align: justify;">&nbsp;&nbsp;</p>
+<p style="text-align: justify;"><strong>Encoder</strong></p>
+<p style="text-align: justify;">&nbsp;<span style="">&nbsp;&nbsp; </span>An encoder is a device, circuit, transducer, software program, algorithm or person that converts information from one format or code to another. The purpose of encoder is standardization, speed, secrecy, security, or saving space by shrinking size. Encoders are combinational logic circuits and they are exactly opposite of decoders. They accept one or more inputs and generate a multibit output code.</p>
+<p style="text-align: justify;">&nbsp;<span style="">&nbsp;&nbsp; </span>Encoders perform exactly reverse operation than decoder. An encoder has M input and N output lines. Out of M input lines only one is activated at a time and produces equivalent code on output N lines. If a device output code has fewer bits than the input code has, the device is usually called an encoder.</p>
+<p style="text-align: justify;">&nbsp;<strong>Octal to binary encoder</strong></p>
+<p style="text-align: justify;"><span style="">&nbsp;&nbsp;&nbsp; </span>Octal-to-Binary take 8 inputs and provides 3 outputs, thus doing the opposite of what the 3-to-8 decoder does. At any one time, only one input line has a value of 1. The figure below shows the truth table of an Octal-to-binary encoder.</p>
+<p style="text-align: center;" align="center"><img alt="" src="Lab Manual/table3.JPG" height="177" width="363"></p>
+<p style="text-align: center;" align="center"><b style=""><i style="">Table 3:</i></b><i style=""> Truth Table of octal to binary encoder</i></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">For an 8-to-3 binary encoder with inputs I0-I7 the logic expressions of the outputs Y0-Y2 are:</p>
+<p style="text-align: justify;">Y0 = I1 + I3 + I5 + I7</p>
+<p style="text-align: justify;">Y1= I2 + I3 + I6 + I7</p>
+<p style="text-align: justify;">Y2 = I4 + I5 + I6 +I7</p>
+<p style="text-align: center;" align="center"><img alt="" src="Lab Manual/Fig4.JPG" height="458" width="387"></p>
+<p style="text-align: center;" align="center"><b style=""><i style="">Fig 4:</i></b><i style=""> Logic Diagram of octal to binary encoder</i></p>
+<p style="text-align: justify;"><strong>Priority encoder</strong></p>
+<p style="text-align: justify;">&nbsp;<span style="">&nbsp;&nbsp;&nbsp; </span>A priority encoder is a circuit or algorithm that compresses multiple binary inputs into a smaller number of outputs. The output of a priority encoder is the binary representation of the ordinal number starting from zero of the most significant input bit. They are often used to control interrupt requests by acting on the highest priority request. It includes priority function. If 2 or more inputs are equal to 1 at the same time, the input having the highest priority will take precedence. Internal hardware will check this condition and priority is set.</p>
+<p style="text-align: justify;">&nbsp;&nbsp;</p>
+<p style="text-align: center;" align="center">&nbsp;<img alt="" src="Lab Manual/table4.JPG" height="297" width="233"></p>
+<p style="text-align: center;" align="center"><b style=""><i style="">Table 4:</i></b><i style=""> Truth Table of 4 bit priority encoder</i></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: center;" align="center">&nbsp;<img alt="" src="Lab Manual/Fig5.JPG" height="234" width="241"></p>
+<p style="text-align: center;" align="center"><b style=""><i style="">Fig 5:</i></b><i style=""> Logic Diagram of 4 bit priority encoder</i></p>
+<p style="text-align: justify;">&nbsp;IC 74148 is an 8-input priority encoder. 74147 is 10:4 priority encoder</p>
+<p style="text-align: justify;">&nbsp;<strong>Multiplexer</strong></p>
+<p style="text-align: justify;"><span style="">&nbsp;&nbsp; </span>&nbsp;In electronics, a multiplexer or mux is a device that selects one of several analog or digital input signals and forwards the selected input into a single line. A multiplexer of 2n inputs has n select lines, which are used to select which input line to send to the output. An electronic multiplexer can be considered as a multiple-input, single-output switch i.e. digitally controlled multi-position switch. The digital code applied at the select inputs determines which data inputs will be switched to output.</p>
+<p style="text-align: justify;">&nbsp;<span style="">&nbsp;&nbsp; </span>A common example of multiplexing or sharing occurs when several peripheral devices share a single transmission line or bus to communicate with computer. Each device in succession is allocated a brief time to send and receive data. At any given time, one and only one device is using the line. This is an example of time multiplexing since each device is given a specific time interval to use the line.</p>
+<p style="text-align: justify;">&nbsp;<span style="">&nbsp;&nbsp; </span>In frequency multiplexing, several devices share a common line by transmitting at different frequencies.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: center;" align="center">&nbsp;<img alt="" src="Lab Manual/table5.JPG" height="176" width="133"></p>
+<p style="text-align: center;" align="center"><b style=""><i style="">Table 5:</i></b><i style=""> Truth Table of 8:1 MUX</i></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: center;" align="center">&nbsp;<img alt="" src="Lab Manual/Fig6.JPG" height="523" width="552"></p>
+<p style="text-align: center;" align="center"><b style=""><i style="">Fig 6:</i></b><i style=""> Logic Diagram of 8:1 MUX</i></p>
+<p style="text-align: justify;">&nbsp;&nbsp;<strong>Demultiplexer</strong></p>
+<p style="text-align: justify;">&nbsp;<span style="">&nbsp;&nbsp;&nbsp; </span>A demultiplexer (or demux) is a device taking a single input signal and selecting one of many data-output-lines, which is connected to the single input. A multiplexer is often used with a complementary demultiplexer on the receiving end. A demultiplexer is a single-input, multiple-output switch. Demultiplexers take one data input and a number of selection inputs, and they have several outputs. They forward the data input to one of the outputs depending on the values of the selection inputs.</p>
+<p style="text-align: justify;">&nbsp;<span style="">&nbsp;&nbsp;&nbsp; </span>Demultiplexers are sometimes convenient for designing general purpose logic, because if the demultiplexer&#039;s input is always true, the demultiplexer acts as a decoder. This means that any function of the selection bits can be constructed by logically OR-ing the correct set of outputs. Demultiplexer is called as a ‘distributro’, since it transmits the same data to different destinations.</p>
+<p style="text-align: center;" align="center">&nbsp;<img alt="" src="Lab Manual/table6.JPG" height="180" width="372"></p>
+<p style="text-align: center;" align="center"><b style=""><i style="">Table 6:</i></b><i style=""> Truth Table of 1:8 DEMUX</i></p>
+<p style="text-align: center;" align="center">&nbsp;<img alt="" src="Lab Manual/Fig7.JPG" height="534" width="429"></p>
+<p style="text-align: center;" align="center"><b style=""><i style="">Fig 7:</i></b><i style=""> Logic Diagram of 1:8 DEMUX</i></p>
+<p class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b></p>
+<p class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Procedure:</span></b></p>
+<p>1. Select appropriate combinational logic circuit from the tab menu.</p>
+<p>2. Select run button in the top to execute the operation.</p>
+<p>3. Observe the output on the output LEDs and observe digital waveforms on digital display.</p>
+<p>4. Repeat the procedure and observe the corresponding outputs of encoder, decoder, multiplexer and demultiplexer.</p>
+<p class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b></p>
+<p class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Screen Shots:</span></b></p>
+<p class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><img alt="" src="Lab Manual/moz-screenshot-1.png"><img alt="" src="Lab Manual/moz-screenshot-2.png"></span></p>
+<p class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;<img src="Lab Manual/L5_1%281%29.png" alt="" style="width: 907px; height: 761px;"></span></p>
+<p class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><br>
+</span></p>
+<p class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><br>
+</span></p>
+<p class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><br>
+</span></p>
+<p class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;<img src="Lab Manual/L5_2.png" alt="" style="width: 914px; height: 681px;"><img src="Lab Manual/L5_3.png" alt="" style="width: 904px; height: 651px;"><img src="Lab Manual/L5_4.png" alt="" style="width: 921px; height: 735px;"></span></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Results:</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">&nbsp;&nbsp;&nbsp; </span>Combinational logic circuits decoder , encoder are designed and simulated using logic gates.</span></p>
+<p style="margin-bottom: 0.0001pt; text-align: justify;" class="MsoNormal"><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Assignment:</span></b></p>
+<p style="margin-bottom: 0.0001pt;" class="MsoNormal"><b style=""><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">&nbsp;</span></b><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN"><span style="">1.<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-IN">Design 4:1, 16:1 multiplexer and 1:4, 1:16 demultiplexer.</span></p></div></div></td>
+
+   
+          
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/content_94.png" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Post Test
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+
+<div class="divQuiz" ><div id="displayQuiz" ><form name="form11" id="form11" method="post"><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">1)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">In general, a multiplexer has</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td align="right" width="32px" id="textAnsChoice" style="vertical-align:middle"><input id="ans5098" type="radio" name="ans0"  value="5098"> </input></td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5098">One data input, several data outputs and selection input</label></td></tr><tr><td align="right" width="32px" id="textAnsChoice" style="vertical-align:middle"><input id="ans5099" type="radio" name="ans0"  value="5099"> </input></td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5099">One data input, one data output, and one selection input</label></td></tr><tr><td align="right" width="32px" id="textAnsChoice" style="vertical-align:middle"><input id="ans5100" type="radio" name="ans0"  value="5100"> </input></td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5100">several data inputs, one data outputs, and selection inputs</label></td></tr><tr><td align="right" width="32px" id="textAnsChoice" style="vertical-align:middle"><input id="ans5101" type="radio" name="ans0"  value="5101"> </input></td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5101">None of these</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">2)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">Which of the following codes exhibit even parity?</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5102" style="vertical-align:middle" type="radio" name="ans1"  value="5102"> </input><label for="ans5102" id="textAnsChoice">11111111</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5103" style="vertical-align:middle" type="radio" name="ans1"  value="5103"> </input><label for="ans5103" id="textAnsChoice">01111000</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5104" style="vertical-align:middle" type="radio" name="ans1"  value="5104"> </input><label for="ans5104" id="textAnsChoice">Both the above</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5105" style="vertical-align:middle" type="radio" name="ans1"  value="5105"> </input><label for="ans5105" id="textAnsChoice">111110000</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">3)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">Data selectors are basically the same as</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5106" style="vertical-align:middle" type="radio" name="ans2"  value="5106"> </input><label for="ans5106" id="textAnsChoice">Multiplexers</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5107" style="vertical-align:middle" type="radio" name="ans2"  value="5107"> </input><label for="ans5107" id="textAnsChoice">Decoders</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5108" style="vertical-align:middle" type="radio" name="ans2"  value="5108"> </input><label for="ans5108" id="textAnsChoice">Demultiplexers</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5109" style="vertical-align:middle" type="radio" name="ans2"  value="5109"> </input><label for="ans5109" id="textAnsChoice">Encoders</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><table border="0" style="width:100%" ><tr><td width="2%" valign="top"></td><td width="5%" style="width:1%;vertical-align:top;" ><b><span id="questionNum">4)</span></b></td><td width="70%" style="vertical-align:top;" colspan="2"><span id="question">The device used to convert a binary number to a 7-segment display format is</span></td><td colspan="3" width="3%">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td width="80%" colspan="5" ><table border="0" width="100%" align="left"><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5110" style="vertical-align:middle" type="radio" name="ans3"  value="5110"> </input><label for="ans5110" id="textAnsChoice">Decoder</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5111" style="vertical-align:middle" type="radio" name="ans3"  value="5111"> </input><label for="ans5111" id="textAnsChoice">Encoder</label></td></tr><tr><td id="textAnsChoice" style="padding-left:20px;" align='left' width='50%'><input id="ans5112" style="vertical-align:middle" type="radio" name="ans3"  value="5112"> </input><label for="ans5112" id="textAnsChoice">Register</label></td><td id="textAnsChoice" style="padding-left:20px;" align='left' ><input id="ans5113" style="vertical-align:middle" type="radio" name="ans3"  value="5113"> </input><label for="ans5113" id="textAnsChoice">Multiplexer</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine" /><input type="hidden" align="middle" id="loadTime" name="loadTime" value=1389862063/><br /><div style="padding-left:40px;"><input type="submit" name="submit1" id="submit1" value="&nbsp;Submit&nbsp;" style="width:8%;" onclick="get_radio_value();"  />&nbsp;&nbsp;<input type="reset" name="cancel1" id="cancel1" value="&nbsp;Cancel&nbsp;" style="width:8%;"  /></div></form><br /></div><br /></div></div></td>
+           
+          
+            
+          </div>
+
+        </section>
+
+   
+		
+        <section id="experiment-article-section-7">
+   
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/simulation.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+            Simulator
+          </div>
+
+          <div id="experiment-article-section-7-content" 
+          class="content">
+         
+        
+           <div class="divContent"><p style="text-align: justify;">&nbsp;</p>
+<h1 style="text-align: justify;" class="title"><span style="color: rgb(204, 0, 51);"><u>Simulation</u></span></h1>
+<p>&nbsp;</p>
+<h3><big>&nbsp;<a href="simulation3.html" target="_blank">Click Here for Simulator</a>&nbsp;</big></h3>
+<h3>&nbsp;</h3>
+<p><span style="font-size: small;">Click on the <a href="http://coepvlab.ac.in::20092/main.html"><span style="color: rgb(0, 0, 255);"><span class="nolink">link</span></span></a> to start simulation.</span></p>
+<p><span style="font-size: small;">&nbsp;&nbsp; </span></p>
+<p><span style="font-size: small;">Click on the <span class="nolink">link</span> to start simulation of <a href="http://59.163.223.71/elx/Multplexer.swf"><span style="color: rgb(51, 102, 255);"><u>Multiplexer</u></span></a> and <a href="http://59.163.223.71/elx/Demultiplexer.swf"><span style="color: rgb(51, 102, 255);"><u>Demultiplexer</u></span></a></span></p>
+<p>&nbsp;&nbsp;&nbsp;</p>
+<p>Click here to <a href="http://coepvlab.ac.in:20092/Hybrid_Electronics_Laboratory/encoder_decoder.zip"><span style="color: rgb(0, 0, 255);">download </span></a>simulation</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp; *Please download supported plug in to run this simulation from download tab</p>
+<p>&nbsp;</p></div>
+        
+          </div>
+
+        </section>
+
+          <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+      <!-- Enclose the icon image of your lab.-->
+      <img src="../images/temp.gif" />
+    </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Conclusion
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+          
+         <div class="divContent"><p style="text-align: justify;">&nbsp;</p>
+<h1 class="title" style="text-align: justify;"><span style="color: rgb(204, 0, 51);"><u>Conclusion</u></span></h1>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="color: rgb(51, 102, 255);"><em><span style="font-size: medium; font-family: trebuchet ms,geneva;">Result</span></em></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<div style="padding-left: 30px; text-align: justify;" class="entry">Combinational logic circuits decoder , encoder  are designed and simulated using logic gates.</div>
+<div style="padding-left: 30px; text-align: justify;" class="entry">&nbsp;</div>
+<hr>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><em><span style="font-size: medium; font-family: trebuchet ms,geneva; color: rgb(51, 102, 255);">Assignment</span></em></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="padding-left: 30px; text-align: justify;">Design 4:1, 16:1 multiplexer and 1:4, 1:16 demultiplexer.</p>
+<p style="padding-left: 30px; text-align: justify;">&nbsp;</p>
+<hr>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><em><span style="color: rgb(51, 102, 255); font-family: trebuchet ms,geneva; font-size: medium;">Further Reading</span></em></p>
+<p style="text-align: justify;">&nbsp;</p>
+<ol>
+    <li style="text-align: justify;">Digital Electronics, Tokheim, Tata-McGraw Hill, 4th Edition</li>
+    <li style="text-align: justify;">Digital Design, M. Morris Mano, Pearson Education, 3rd Edition</li>
+</ol>
+     
+          </div>
+
+        </section>
+
+          <section id="experiment-article-section-9">
+   
+          <div id="experiment-article-section-9-icon" 
+          class="icon">
+      <!-- Enclose the icon image of your lab.-->
+      <img src="../images/content_95.png" />
+    </div>
+
+          <div id="experiment-article-section-9-heading" 
+          class="heading">
+            Feedback
+          </div>
+
+          <div id="experiment-article-section-9-content" 
+          class="content">
+
+ <p>
+              <ul>
+                <li><a href="http://virtual-labs.ac.in/feedback/?lab=cse01" >Feedback </a>.</li>
+              </ul>
+            </p>
+
+
+          </div>
+
+        </section>
+
+          <section id="experiment-article-section-10">
+   
+          <div id="experiment-article-section-10-icon" 
+          class="icon">
+      <!-- Enclose the icon image of your lab.-->
+      <img src="../images/temp.gif" />
+    </div>
+
+          <div id="experiment-article-section-10-heading" 
+          class="heading">
+            Download
+          </div>
+
+          <div id="experiment-article-section-10-content" 
+          class="content">
+          
+         <div class="divContent"><p style="TEXT-ALIGN: justify"><span style="FONT-SIZE: small">Here are the files which are required for proper viewing of the Simulation.</span><br>
+<span style="FONT-SIZE: small">Install as per operating system. Installation instructions are given below along with the link to download files.</span><br>
+<br>
+<br>
+<span style="FONT-SIZE: small; FONT-WEIGHT: bold">LabVIEW 8.6 Run-Time Engine Patch for Windows:</span><br>
+<span style="FONT-SIZE: small">LabVIEW Run-Time Engine 8.6 - Windows/2000/XP/Vista/Vista x64 - 8.6f1 Patch</span><br>
+<span style="FONT-SIZE: small">To download, click <a href="http://59.163.223.71/LabVIEW_RTE/LVRTE86std.exe"><span style="COLOR: rgb(0,0,255)">here</span></a></span><span style="COLOR: rgb(0,0,255)"><span style="FONT-SIZE: small">.</span></span><br>
+<span style="FONT-SIZE: small">LabVIEW Vision Run-Time Engine 8.6 - Windows/2000/XP/Vista/Vista x64</span><br>
+<span style="FONT-SIZE: small">To download, click <a href="http://59.163.223.71/LabVIEW_RTE/visionrte.exe"><span style="COLOR: rgb(0,0,255)">here</span></a></span><span style="COLOR: rgb(0,0,255)"><span style="FONT-SIZE: small">.</span></span><br>
+<br>
+<span style="FONT-SIZE: small">Installation Instructions:</span><br>
+<span style="FONT-SIZE: small">Double-click the executable to start installation.</span><br>
+<br>
+<span style="FONT-SIZE: small; FONT-WEIGHT: bold">LabVIEW Run-Time Engine 8.6 for Linux:</span><br>
+<span style="FONT-SIZE: small">Download the labview-rte-aal-1.1-1.i386.rpm to your computer.</span><br>
+<span style="FONT-SIZE: small">To download, click <a href="http://59.163.223.71/LabVIEW_RTE/labview-rte-aal-1.1-1.i386.rpm"><span style="COLOR: rgb(0,0,255)">here</span></a></span><span style="COLOR: rgb(0,0,255)"><span style="FONT-SIZE: small">.</span></span><br>
+<span style="FONT-SIZE: small">Download the labview86-rte-8.6.0-1.i386.rpm files to your computer.</span><br>
+<span style="FONT-SIZE: small">To download, click <a href="http://59.163.223.71/LabVIEW_RTE/labview86-rte-8.6.0-1.i386.rpm"><span style="COLOR: rgb(0,0,255)">here</span></a></span><span style="COLOR: rgb(0,0,255)"><span style="FONT-SIZE: small">.</span></span><br>
+<br>
+<span style="FONT-SIZE: small">Installation Instructions:</span><br>
+<span style="FONT-SIZE: small">Run (must be logged in with root access for the machine)</span></p>
+<div style="TEXT-ALIGN: justify; MARGIN-LEFT: 80px"><span style="FONT-SIZE: small">rpm -Uvh labview-rte-aal-1.1-1.i386.rpm</span></div>
+<p style="TEXT-ALIGN: justify"><span style="FONT-SIZE: small">Run (must be logged in with root access for the machine)</span><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="FONT-SIZE: small">rpm -Uvh labview86-rte-8.6.0-1.i386.rpm</span></p></div></div></td>
+          
+        
+          </div>
+
+        </section>
+
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+</div>		
+
+</body>
+</html>

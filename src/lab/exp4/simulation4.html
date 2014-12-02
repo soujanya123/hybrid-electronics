@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+
+<!--
+	This is a jQuery Tools standalone demo. Feel free to copy/paste.
+	                                                         
+	http://flowplayer.org/tools/demos/
+	
+	Do *not* reference CSS files and images from flowplayer.org when in production  
+
+	Enjoy!
+-->
+
+<head>
+	<title>Hybrid Lab Demo</title>
+
+	<!-- include the Tools -->
+	<script type="text/javascript" src="js/jquery.js"> </script>
+		<script src="js/jquery.tools.min.js"></script>
+		<link   type="text/css"  rel="stylesheet"  href="css/example.css"  />
+		<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src = "js/example.js"></script>
+		<script type="text/javascript" src="js/raphael.js"></script>
+		<script type="text/javascript" src="js/jquery.flot.js"></script>
+		<script type="text/javascript" src="js/utility.js"></script>
+	<!--		<script type="text/javascript" src="js/monostable.js"></script>-->
+		
+	
+	<!-- tab styling -->
+		<link   type="text/css"  rel="stylesheet"  href="css/tabs.css"  />
+	
+	
+	<!-- tab pane styling -->
+	<style>
+	div.wrap {
+		width:700px;
+		margin-bottom:40px;
+	}
+	
+	.wrap .pane  {	
+		background:#fff repeat-x 0 20px;
+		display:none;		
+		padding:20px;
+		border:1px solid #999;
+		border-top:0;
+		font-size:14px;	 
+		font-size:18px;
+		color:#456;	
+		padding-bottom: 20px;
+    padding-left: 9px;
+    padding-right: 20px;
+    padding-top: 11px;
+		
+		_background-image:none;
+	}
+	
+	.wrap .pane p {
+		font-size:38px;	
+		margin:-10px 0 -20px 0;	
+		text-align:right;
+		color:#578;
+	}
+	#header{
+	top:5px;
+	left:5px;
+	position:absolute;
+	border:2px groove  #c4c4c4;
+	width:1276px;
+	height:130px;
+	overflow:auto;
+	background : url("../images/ui-bg_gloss-wave_35_f6a828_500x100.png") repeat-x scroll 50% 50% #84BFDF;
+}
+.imag{position:absolute;z-index:9999;left:633px;top:4px;}
+	.imag1{position:absolute;z-index:9999;left:1000px;top:85px;}
+	</style>
+</head>
+
+<body>
+
+<div id="header"><span style="font-size:20px; color: #ffffff;"><h3>&nbsp;Arithmetic Logic Gates</span><img class = "imag" src="../images/coep_logo_sim.png"><!--<a href="../../../logout.htm" ><img id="logout" class ="imag1" src="../../images/logout.png">--></a></div>
+	
+
+<div class="wrap">
+
+	<!-- experiment 4-->
+	<div class="wrap">
+		<ul class="tabs">
+			<li><a href="#">LOGIC</a></li>
+			<li><a href="#">ARITHMETIC</a></li>
+		</ul>
+		<!--LOGIC OPERATIONS -->
+		<div class="pane">LOGIC OPERATIONS
+			<label id="y3_l">Y3</label>
+			<label id="y2_l">Y2</label>
+			<label id="y1_l">Y1</label>
+			<label id="y0_l">Y0</label>
+			<img src="images/exp4.png"id= "exp_4" style = "position : absolute;top:282px ; left :90px;"/>
+			
+			<div id="switch0">
+			<img src="images/off.png" id = "a3_3" style = "position : absolute; top:327px ; left : 41px;"/>	
+			<img src="images/off.png" id = "a2_2" style = "position : absolute; top:394px ; left : 41px;"/>	
+			<img src="images/off.png" id = "a1_1" style = "position : absolute; top:527px ; left : 41px;"/>	
+			<img src="images/off.png" id = "a0_0" style = "position : absolute; top:462px ; left : 41px;"/>
+			<img src="images/off.png" id = "b3_4" style = "position : absolute; top:680px ; left : 41px;"/>	
+			<img src="images/off.png" id = "b2_5" style = "position : absolute; top:757px ; left : 41px;"/>
+			<img src="images/off.png" id = "b1_6" style = "position : absolute; top:818px ; left : 41px;"/>
+			<img src="images/off.png" id = "b0_7" style = "position : absolute; top:875px ; left : 41px;"/>
+			<img src="images/off.png" id = "s3_8" style = "position : absolute; top:1032px ; left : 280px;"/>
+			<img src="images/off.png" id = "s2_9" style = "position : absolute; top:1032px ; left : 360px;"/>
+			<img src="images/off.png" id = "s1_10" style = "position : absolute; top:1032px ; left : 440px;"/>
+			<img src="images/off.png" id = "s0_11" style = "position : absolute; top:1032px ; left : 510px;"/>
+			</div>
+			
+			<div id = "a_l" style = "position : absolute; top:598px ; left : 30px;">
+			<input type="text"  id = "a_logic" size = 4 disabled="true"  /></div>
+			
+			<div id = "b_l"   style = "position : absolute; top:936px ; left : 30px;"><input type="text"  id = "b_logic" size = 4 disabled="true"/></div>
+			
+			<img src="images/on.png" id = "mode_l" style = "position : absolute; top:253px ; left : 714px;"/>
+			<img src="images/lightbulb_up.png" id = "glow3" style = "position : absolute; top:669px ; left : 891px;"/>
+			<img src="images/lightbulb_up.png" id = "glow2" style = "position : absolute; top:669px ; left : 937px;"/>
+			<img src="images/lightbulb_up.png" id = "glow1" style = "position : absolute; top:669px ; left : 983px;"/>
+			<img src="images/lightbulb_up.png" id = "glow0" style = "position : absolute; top:669px ; left : 1029px;"/>
+			<div id = "y_l" style = "position : absolute; top:800px ; left : 930px;"><input type="text"  id = "y_logic" size = 4 disabled="true"/></div>
+			<img src="images/tt.png"id= "ttexp_4" style = "position : absolute;top:248px ; left :850px;"/>
+		</div>
+			<!-- ARITHMETIC-->
+			<div class="pane">ARITHMETIC OPERATIONS
+				
+				<label id="y3_a">Y3</label>
+				<label id="y2_a">Y2</label>
+				<label id="y1_a">Y1</label>
+				<label id="y0_a">Y0</label>
+				<label id="y_carry">Carry</label>
+				<label id="y_alu_arithmetic">Y</label>
+				
+			<img src="images/exp41.png"id= "exp_4" style = "position : absolute;top:277px ; left :90px;"/>
+			<div id="switch1">
+			<img src="images/off.png" id = "cin_12" style = "position : absolute; top:274px ; left : 41px;"/>	
+			<img src="images/off.png" id = "at0_0" style = "position : absolute; top:327px ; left : 41px;"/>	
+			<img src="images/off.png" id = "at1_1" style = "position : absolute; top:392px ; left : 41px;"/>	
+			<img src="images/off.png" id = "at2_2" style = "position : absolute; top:465px ; left : 41px;"/>	
+			<img src="images/off.png" id = "at3_3" style = "position : absolute; top:528px ; left : 41px;"/>	
+			<img src="images/off.png" id = "b0_4" style = "position : absolute; top:678px ; left : 41px;"/>	
+			<img src="images/off.png" id = "b1_5" style = "position : absolute; top:748px ; left : 41px;"/>
+			<img src="images/off.png" id = "b2_6" style = "position : absolute; top:821px ; left : 41px;"/>
+			<img src="images/off.png" id = "b3_7" style = "position : absolute; top:874px ; left : 41px;"/>
+			<img src="images/off.png" id = "s0_8" style = "position : absolute; top:1033px ; left : 280px;"/>
+			<img src="images/off.png" id = "s1_9" style = "position : absolute; top:1033px ; left : 360px;"/>
+			<img src="images/off.png" id = "s2_10" style = "position : absolute; top:1033px ; left : 440px;"/>
+			<img src="images/off.png" id = "s3_11" style = "position : absolute; top:1033px ; left : 510px;"/>
+			</div>
+			<div id = "a_a"  style = "position : absolute; top:603px ; left : 30px;"><input type="text"  id = "a_arith" size = 4 disabled="true"/></div>
+			
+			<div id = "b_a"  style = "position : absolute; top:934px ; left : 30px;"><input type="text"  id = "b_arith" style='top:50px'size = 4 disabled="true"/></div>
+			
+			<img src="images/off.png" id = "mode_a" style = "position : absolute; top:246px ; left : 715px;"/>
+			<img src="images/lightbulb_up.png" id = "glow4" style = "position : absolute; top:665px ; left : 891px;"/>
+			<img src="images/lightbulb_up.png" id = "glow5" style = "position : absolute; top:665px ; left : 937px;"/>
+			<img src="images/lightbulb_up.png" id = "glow6" style = "position : absolute; top:665px ; left : 983px;"/>
+			<img src="images/lightbulb_up.png" id = "glow7" style = "position : absolute; top:665px ; left : 1029px;"/>
+			<img src="images/lightbulb_up.png" id = "y_alu_carry" />
+			<div id = "y_a"  style = "position : absolute; top:822px ; left : 1022px;"><input type="text"  id = "y_arith" size = 4 disabled="true" /></div>
+			<img src="images/tt3.png"id= "tt1exp_4" style = "position : absolute;top:255px ; left :865px;"/>
+			<!--<img src="tt2.png"id= "tt1exp_4" style = "position : absolute;top:798px ; left :1129px;"/>-->
+			</div>
+	</div>
+	</div>
+<div style="position:absolute; top:1108px; width:1281px;margin:0 auto;">
+<div class="art-footer">
+                <div class="art-footer-t"></div>
+                <div class="art-footer-l"></div>
+                <div class="art-footer-b"></div>
+                <div class="art-footer-r"></div>
+                <div class="art-footer-body">
+                    <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+					<!--<a href="./../../../feedback.htm" class="art-rss-feedback-icon" title="RSS"></a>-->
+                            <div class="art-footer-text">
+                                <p><a href="#">About Us</a> | <a href="./../../../contacts.htm">Contact Us</a> | <a href="./../../../feedback.htm">Feedback</a></p><p>Copyright &#169;2011.COEP Virtual Lab.</p>
+                                                            </div>
+                    <div class="cleared"></div>
+                </div>
+            </div>
+</div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+
+
+</head>
+<body>
+<form name="myWebForm" method="post">
+   <input type="text" name="firstname" value=""/> Text Field 1<br />
+   <input type="submit" value="SUBMIT" onclick="window.popup(this.form)"/>
+</form>
+<!--
+<script type="text/javascript">
+var str="ghgjkj"
+   document.write(str); 
+function popup(var y) {
+   document.write(y); 
+}
+
+</script>
+-->
+
+
+<script>
+function popup(order)
+{
+var mycars = new Array();
+mycars= order.firstname.value;
+document.write(mycars);
+
+document.write(order.firstname.value);
+var txt = "Hello World!";
+document.write("<p>" + txt + "</p>");
+
+var txt="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.write("<p>" + txt.length + "</p>");
+}
+</script>
+</body>
+</html>
